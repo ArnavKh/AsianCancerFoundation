@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import OurTeam from "./pages/OurTeam/OurTeam.jsx";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
-import Home from "./pages/Home/home.jsx";
+import Home from "./pages/Home/Hero.jsx";
 import OurImpact from "./pages/OurImpact/OurImpact.jsx";
 import OurWorkInAction from "./pages/OurWorkInAction/OurWorkInAction.jsx";
 import FlagshipInitiatives from "./pages/FlagshipInitiatives/FlagshipInitiatives.jsx";
