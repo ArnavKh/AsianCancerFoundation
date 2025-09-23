@@ -53,10 +53,10 @@ export default function FlagshipInitiatives() {
 
   return (
     <section className="py-12 bg-[#f9f3ec]">
-      <h2 className="text-center text-5xl font-semibold text-purple-800 mb-10 font-visby">
+      <h2 className="text-center text-5xl font-semibold text-purple-800 mb-10 font-visby py-10">
         Flagship Initiatives
       </h2>
-      <div className="max-w-3xl mx-auto space-y-6">
+      <div className="space-y-6 max-w-4xl mx-auto">
         {initiatives.map((item, index) => (
           <div
             key={index}

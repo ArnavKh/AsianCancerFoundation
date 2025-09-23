@@ -2,6 +2,8 @@ import React from "react";
 import Logo from "./assets/Logo.png"
 import { FaRibbon } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import DonateOverlay from "./DonateOverlay";
+import DonateButton from "./DonateButton";
 
 const Navbar = () => {
   return (
@@ -41,10 +43,7 @@ const Navbar = () => {
           </div>
 
           <div className="hidden md:flex">
-            <button className="flex items-center font-visby space-x-2 bg-[#D2635D] text-white px-4 py-2 rounded-[10px] text-sm font-bold">
-              <FaRibbon className="w-4 h-4" />
-              <span>Donate</span>
-            </button>
+            <DonateButton/>
           </div>
         </div>
       </div>
