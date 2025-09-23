@@ -1,4 +1,5 @@
 import React from "react";
+import HeroImage from "../../assets/Contact/HeroImage.png";
 
 const ContactUs = () => {
   return (
@@ -8,23 +9,27 @@ const ContactUs = () => {
         <img
           src={HeroImage}
           alt="Contact Header"
-          className="w-full h-[350px] object-cover"
+          className="w-full h-108 object-cover"
         />
         <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
-          <h1 className="text-5xl font-bold text-white uppercase">Contact Us</h1>
+          <h1 className="text-5xl font-bold text-white uppercase">
+            Contact Us
+          </h1>
         </div>
       </div>
 
       {/* Contact Info + Form */}
-      <div className="container mx-12 grid md:grid-cols-2 gap-30 py-12">
+      <div className="container grid md:grid-cols-2 py-12 pt-25">
         {/* Contact Information */}
-        <div className="bg-[#6c3bbf] text-white rounded-4xl p-8 shadow-lg">
-          <h2 className="text-lg font-semibold mb-2">
+        <div className="bg-[#6c3bbf] text-white rounded-[30px] p-8 shadow-lg h-108 w-105 ml-20">
+          <h2 className="text-2xl font-visby font-medium mb-2 ">
             Contact Information
           </h2>
-          <p className="mb-20">Got questions? Let’s Connect!</p>
+          <p className="mb-20 font-didact text-lg">
+            Got questions? Let’s Connect!
+          </p>
 
-          <ul className="space-y-4">
+          <ul className="space-y-4 font-didact">
             <li className="flex items-center space-x-3">
               <span>📞</span>
               <span>+91 2262771134</span>
@@ -36,39 +41,45 @@ const ContactUs = () => {
             <li className="flex items-center space-x-3">
               <span>📍</span>
               <span>
-                ACI Cumbala Hill Hospital 92/95,<br /> August Kranti Marg,
-                Kemps Corner, Mumbai 400036
+                ACI Cumbala Hill Hospital 92/95,
+                <br /> August Kranti Marg, Kemps Corner, Mumbai 400036
               </span>
             </li>
           </ul>
         </div>
 
         {/* Contact Form */}
-        <form className="rounded-xl space-y-6">
+        <form className="rounded-xl space-y-6 pr-10 font-visby">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
-              <label className="block text-sm mb-2">First Name</label>
+              <label className="block text-lg mb-2 font-semibold">
+                First Name
+              </label>
               <input
                 type="text"
                 className="w-full border-b border-gray-400 focus:border-purple-500 outline-none py-2"
               />
             </div>
             <div>
-              <label className="block text-sm mb-2">Last Name</label>
+              <label className="block text-lg mb-2 font-semibold">
+                Last Name
+              </label>
               <input
                 type="text"
                 className="w-full border-b border-gray-400 focus:border-purple-500 outline-none py-2"
               />
             </div>
             <div>
-              <label className="block text-sm mb-2">Email</label>
+              <label className="block text-lg mb-2 font-semibold">Email</label>
               <input
                 type="email"
                 className="w-full border-b border-gray-400 focus:border-purple-500 outline-none py-2"
               />
             </div>
             <div>
-              <label className="block text-sm mb-2">Phone Number</label>
+              <label className="block text-lg mb-2 font-semibold">
+                Phone Number
+              </label>
               <input
                 type="text"
                 className="w-full border-b border-gray-400 focus:border-purple-500 outline-none py-2"
@@ -78,7 +89,7 @@ const ContactUs = () => {
 
           {/* Subject */}
           <div>
-            <label className="block text-sm mb-2">Subject</label>
+            <label className="block text-lg mb-2 font-semibold">Subject</label>
             <div className="flex gap-6">
               <label className="flex items-center gap-2">
                 <input type="radio" name="subject" /> Volunteer
@@ -94,7 +105,7 @@ const ContactUs = () => {
 
           {/* Message */}
           <div>
-            <label className="block text-sm mb-2">Message</label>
+            <label className="block text-lg mb-2 font-semibold">Message</label>
             <textarea
               rows="1"
               className="w-full border-b border-gray-400 focus:border-purple-500 outline-none py-2"
@@ -103,25 +114,24 @@ const ContactUs = () => {
 
           <button
             type="submit"
-            className="bg-purple-600 text-white px-6 py-3 rounded-md shadow hover:bg-purple-700"
+            className="bg-[#EDE2FF] text-lg px-6 py-3 rounded-[10px] shadow"
           >
             Send Message
           </button>
         </form>
       </div>
 
-      <section className="p-10 pb-15 bg-purple-800 text-white m-12 rounded-4xl">
-
-        <h3 className="text-lg md:text-3xl text-orange-400 font-semibold mb-6">
+      <section className="p-10 m-20 px-4 md:px-20 pb-15 bg-purple-800 text-white rounded-[30px]">
+        <h3 className="text-lg md:text-3xl text-orange-400 font-semibold mb-6 font-visby">
           Help us save lives. Donate or partner today.
         </h3>
 
         {/* Bank Details */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm md:text-base">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm md:text-base font-didact">
           <div>
             <h4 className="mb-2 md:text-xl">Bank Details</h4>
             <div className="overflow-x-auto">
-              <table className="min-w-full text-white rounded-lg border border-gray-300 border-collapse">
+              <table className="w-124 text-white rounded-lg border border-gray-300 border-collapse">
                 <tbody>
                   <tr>
                     <td className="py-2 px-3 font-medium border border-gray-300 bg-purple-600">
@@ -176,9 +186,11 @@ const ContactUs = () => {
 
           {/* International Donors */}
           <div>
-            <h4 className="mb-2 md:text-xl">Bank Details</h4>
+            <h4 className="mb-2 md:text-xl">
+              Bank Details (For International Donors)
+            </h4>
             <div className="overflow-x-auto">
-              <table className="min-w-full text-white rounded-lg border border-gray-300 border-collapse">
+              <table className="w-124 text-white rounded-lg border border-gray-300 border-collapse">
                 <tbody>
                   <tr>
                     <td className="py-2 px-3 font-medium border border-gray-300 bg-purple-600">
@@ -235,11 +247,11 @@ const ContactUs = () => {
         </div>
       </section>
 
-      <section className="px-4 md:px-15 py-12">
-        <h2 className="text-2xl md:text-3xl font-bold mb-6 text-orange-400">
+      <section className="md:px-20 py-12 pb-35">
+        <h2 className="text-2xl md:text-4xl font-bold mb-6 text-orange-400 font-visby">
           Why Give to Asian Cancer Foundation?
         </h2>
-        <ul className="space-y-3 mb-8 text-base md:text-xl">
+        <ul className="space-y-3 mb-8 text-base md:text-2xl font-didact">
           <li>
             • Regular updates on how your contribution is used (photos, progress
             notes, impact reports).
@@ -253,7 +265,7 @@ const ContactUs = () => {
             donors
           </li>
         </ul>
-    </section>
+      </section>
     </div>
   );
 };
