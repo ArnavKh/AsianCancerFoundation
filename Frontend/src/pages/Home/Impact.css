@@ -1,0 +1,48 @@
+/* Only affect elements inside .impact-wrapper */
+.impact-wrapper *,
+.impact-wrapper *::before,
+.impact-wrapper *::after {
+  box-sizing: border-box;
+  margin: 0; /* now only affects animation cards */
+}
+
+.impact-wrapper {
+  width: 100%;
+  max-width: 1536px;
+  margin-inline: auto;
+  position: relative;
+  height: 289px;
+  margin-top: 5rem;
+  overflow: hidden;
+}
+
+@keyframes scrollLeft {
+  to {
+    left: -264px;
+  }
+}
+
+.impact-wrapper .kard {
+  width: 264px;
+  height: 289px;
+  background-color: #F8F2EB;
+  border-radius: 30px;
+  position: absolute;
+  left: max(calc(264px * 10), 100%);
+  animation-name: scrollLeft;
+  animation-duration: 30s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+/* Animation delays for each card */
+.impact-wrapper .kard1 { animation-delay: calc(30s / 10 * (10 - 1) * -1); }
+.impact-wrapper .kard2 { animation-delay: calc(30s / 10 * (10 - 2) * -1); }
+.impact-wrapper .kard3 { animation-delay: calc(30s / 10 * (10 - 3) * -1); }
+.impact-wrapper .kard4 { animation-delay: calc(30s / 10 * (10 - 4) * -1); }
+.impact-wrapper .kard5 { animation-delay: calc(30s / 10 * (10 - 5) * -1); }
+.impact-wrapper .kard6 { animation-delay: calc(30s / 10 * (10 - 6) * -1); }
+.impact-wrapper .kard7 { animation-delay: calc(30s / 10 * (10 - 7) * -1); }
+.impact-wrapper .kard8 { animation-delay: calc(30s / 10 * (10 - 8) * -1); }
+.impact-wrapper .kard9 { animation-delay: calc(30s / 10 * (10 - 9) * -1); }
+.impact-wrapper .kard10 { animation-delay: calc(30s / 10 * (10 - 10) * -1); }
