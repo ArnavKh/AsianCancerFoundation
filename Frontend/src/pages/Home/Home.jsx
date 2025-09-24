@@ -1,10 +1,10 @@
 import React from 'react'
-import Hero from './Hero';
-import Stats from './Stats';
-import Mission from './Mission';
-import Impact from './Impact';
-import Board from './Board';
-import FooterBanner from './FooterBanner';
+import Hero from './Hero.jsx';
+import Stats from './Stats.jsx';
+import Mission from './Mission.jsx';
+import Impact from './Impact.jsx';
+import Board from './Board.jsx';
+import FooterBanner from './FooterBanner.jsx';
 
 const Home = () => {
   return (
