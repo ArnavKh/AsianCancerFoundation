@@ -26,7 +26,7 @@ const OurWorkInAction = () => {
         </Link>
 
         <Link to="/workinaction/tobaccoawareness">
-          <div className="w-96 h-109 bg-white rounded-3xl border-6 border-[#EF8B67] shadow-[0_0_20px_#EF8B67] p-6 hover:shadow-lg transition-shadow">
+          <div className="w-96 h-109 bg-white rounded-3xl border-6 border-[#EF8B67] shadow-[0_0_20px_#EF8B67] p-6 transition-shadow">
             <h2 className="text-2xl font-bold mb-1 pt-4">
               Tobacco Awareness Session
             </h2>
@@ -42,7 +42,7 @@ const OurWorkInAction = () => {
 
         {/* Medical Camp */}
         <Link to="/workinaction/medicalcamp">
-          <div className="w-96 h-109 bg-white rounded-3xl border-6 border-[#EF8B67] shadow-[0_0_20px_#EF8B67] p-6 hover:shadow-lg transition-shadow">
+          <div className="w-96 h-109 bg-white rounded-3xl border-6 border-[#EF8B67] shadow-[0_0_20px_#EF8B67] p-6 transition-shadow">
             <h2 className="text-2xl font-bold mb-1 pt-4">Cancer Screening Camp</h2>
             <p className="text-sm text-gray-700 mb-4">
               Sindkhedraja, Buldhana District, Maharashtra
@@ -59,7 +59,7 @@ const OurWorkInAction = () => {
 
         {/* Mobile Screening */}
         <Link to="/workinaction/mobilescreening">
-          <div className="w-96 h-109 bg-white rounded-3xl border-6 border-[#D2635D] shadow-[0_0_20px_#D2635D] p-6 hover:shadow-lg transition-shadow">
+          <div className="w-96 h-109 bg-white rounded-3xl border-6 border-[#D2635D] shadow-[0_0_20px_#D2635D] p-6 transition-shadow">
             <h2 className="text-2xl font-bold mb-1 pt-4">
               Mobile Screening Camps
             </h2>

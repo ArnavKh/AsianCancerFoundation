@@ -7,7 +7,7 @@ const Mission = () => {
     <section className="bg-[#f8f5f0] px-6 md:px-16 py-35 pb-40 flex flex-col md:flex-row items-center justify-center gap-50">
   {/* Left image with colored background */}
   <div className="relative w-[300px] md:w-[350px]">
-    <div className="absolute -top-5 -left-5 w-full h-50 bg-[#dc6458] rounded-[30px]"></div>
+    <div className="absolute -top-10 -left-10 w-full h-50 bg-[#dc6458] rounded-[30px]"></div>
     <img
       src={MissionImage}
       alt="Mission"
