@@ -1,131 +1,42 @@
 import React from "react";
+import TopLeft from "../../assets/Our Impact/Topleft.png"
+import TopRight from "../../assets/Our Impact/Topigh.png";
+import Middle from "../../assets/Our Impact/Middle.png";
+import BottomLeft from "../../assets/Our Impact/bottomLeft.png";
+import BottomMiddle from "../../assets/Our Impact/MiddleBottom.png";
+import BottomRight from "../../assets/Our Impact/bottomRight.png";
 
 export default function OurImpact() {
   return (
-    <div className="bg-[#fdf9f6] py-20 px-6 md:px-20">
-      <h2 className="text-3xl font-bold text-center text-purple-800 mb-15">
+    <div className="bg-[#fdf9f6] py-20 px-6 md:px-20 text-white">
+      <h2 className="font-bold text-center text-purple-800 mb-15 font-visby text-[40px]">
         Our Impact
       </h2>
 
-      <div
-        className="grid grid-cols-1 md:grid-cols-3 gap-6"
-        style={{ gridAutoRows: "minmax(120px, auto)" }}
-      >
-        {/* ---------------- BLOCK 1 (Image - top-left) ---------------- */}
-        <div
-          className="rounded-2xl overflow-hidden shadow-md bg-white md:row-span-2"
-        >
-          <div className="h-full flex items-center justify-center bg-gray-300">
-            Image placeholder 1
-          </div>
+      <div className="grid grid-cols-3 gap-3">
+
+        <div className="mt-20 space-y-5">
+        <div className="h-78 rounded-[30px]"><img className="w-full h-full rounded-[30px]"src={TopLeft}/></div>
+        <div className="bg-[#EF8B67] h-54 rounded-[30px] text-center text-4xl font-visby font-bold"><h1 className="pt-10">100+</h1><p className="pt-4">Medical<br></br>Consultations</p></div>
+        <div className="bg-[#D2635D] h-93 rounded-[30px] font-didact text-lg p-7 pt-9"><p>“Asian Cancer Foundation partnered with us to conduct virtual awareness sessions on oral & lung cancer across six community centres in Mumbai, reaching senior citizens, youth & patients with chronic illnesses […] We are grateful to ACF for recognising the importance of health education in underserved communities & look forward to continued collaboration.”</p> <p className="pt-12">- Rangoonwala Foundation (India) Trust</p></div>
+        <div className="h-91 rounded-[30px]"><img className="w-full h-full rounded-[30px]"src={BottomLeft}/></div>
         </div>
 
-        {/* ---------------- BLOCK 2 (Stat - top-center: surgeries) ---------------- */}
-        <div className="rounded-2xl shadow-md bg-[#EF8B67] flex items-center justify-center p-6 text-center text-white font-semibold md:row-span-2">
-          <div>
-            <div className="text-3xl">0</div>
-            <div >Life-saving surgeries funded</div>
-          </div>
+        <div className="mt-10 space-y-5">
+        <div className="bg-[#EF8B67] h-78 rounded-[30px] text-center text-4xl font-visby font-bold"><h1 className="pt-15">100+</h1><p className="pt-4">Life-saving<br></br>surgeries<br></br>funded</p></div>
+        <div className="h-104 rounded-[30px]"><img className="w-full h-full rounded-[30px]"src={Middle}/></div>
+        <div className="bg-[#EF8B67] h-101 rounded-[30px] font-didact text-lg p-7 pt-9"><p>“I was admitted in June 2024 with a stomach tumour […] Thanks to the Asian Cancer Foundation, I received timely surgery at Cumballa Hill Hospital, with all doctors, nurses, and foundation members being kind and supportive […] I am truly blessed for their financial and emotional support.”</p><p className="pt-13">-  Arjun Rahis Sohorat, </p></div>
+        <div className="h-63 rounded-[30px]"><img className="w-full h-full rounded-[30px]"src={BottomMiddle}/></div>
         </div>
 
-        {/* ---------------- BLOCK 3 (Image - top-right) ---------------- */}
-        <div className="rounded-2xl overflow-hidden shadow-md bg-white md:row-span-2">
-          <div className="h-full flex items-center justify-center bg-gray-300">
-            Image placeholder 2
-          </div>
-        </div>
-
-        {/* ---------------- BLOCK 4 (Stat - under left image: Medical consultations) ---------------- */}
-        <div className="rounded-2xl shadow-md bg-[#EF8B67] flex items-center justify-center p-6 text-center font-semibold h-65 text-white">
-          <div>
-            <div className="text-2xl">0</div>
-            <div>Medical consultations</div>
-          </div>
-        </div>
-
-        {/* ---------------- BLOCK 5 (Image - center: doctors / camp) ---------------- */}
-        <div className="rounded-2xl overflow-hidden shadow-md bg-white md:row-span-2">
-          <div className="h-full flex items-center justify-center bg-gray-300">
-            Image placeholder 3 (doctors / camp)
-          </div>
-        </div>
-
-        {/* ---------------- BLOCK 6 (Stat - right middle: 100+ patients) ---------------- */}
-        <div className="rounded-2xl shadow-md bg-[#EF8B67] flex items-center justify-center p-6 text-center text-white font-semibold">
-          <div>
-            <div className="text-3xl">100+</div>
-            <div>Patients supported</div>
-          </div>
-        </div>
-
-        {/* ---------------- BLOCK 7 (Testimonial - left big pink box) ---------------- */}
-        <div className="rounded-2xl shadow-md bg-[#D2635D] p-6 md:h-70 text-white">
-          <p className="text-sm mb-4 text-white">
-            “Asian Cancer Foundation partnered with us to conduct virtual
-            awareness sessions on oral & lung cancer across six community
-            centres in Mumbai, reaching senior citizens, youth & patients with
-            chronic illnesses […] We are grateful to ACF for recognising the
-            importance of health education in underserved communities & look
-            forward to continued collaboration.”
-          </p>
-          <p className="font-medium">- Rangoonwala Foundation (India) Trust</p>
-        </div>
-
-        {/* ---------------- BLOCK 8 (Testimonial - center small orange) ---------------- */}
-        <div className="rounded-2xl shadow-md bg-[#D2635D] p-6 flex flex-col justify-center text-white">
-          <p className="text-sm text-white mb-4 ">
-            “On behalf of my family, we thank the Asian Cancer Foundation for
-            their financial support […] Your generosity allowed me to access
-            critical medical care and focus on healing instead of financial
-            stress.”
-          </p>
-          <p className="font-medium">- Anonymous</p>
-        </div>
-        {/* ---------------- BLOCK 9 (Testimonial - right small pink) ---------------- */}
-        <div className="rounded-2xl overflow-hidden shadow-md bg-white">
-          <div className="h-full flex items-center justify-center bg-gray-300">
-            Image placeholder 4
-          </div>
-        </div>
-
-        {/* ---------------- BLOCK 10 (Image bottom-left small) ---------------- */}
-        <div className="rounded-2xl shadow-md bg-[#EF8B67] p-6 flex flex-col justify-center md:h-70">
-          <p className="text-sm text-white mb-4">
-            “I was admitted in June 2024 with a stomach tumour […] Thanks to the
-            Asian Cancer Foundation, I received timely surgery at Cumballa Hill
-            Hospital, with all doctors, nurses, and foundation members being
-            kind and supportive […]”
-          </p>
-          <p className="font-medium text-white">- Arjun Rahis Sohorat</p>
-        </div>
-
-        {/* ---------------- BLOCK 11 (Image bottom-center small) ---------------- */}
-        <div className="rounded-2xl overflow-hidden shadow-md bg-white">
-          <div className="h-full flex items-center justify-center bg-gray-300">
-            Image placeholder 5
-          </div>
-        </div>
-        {/* ---------------- BLOCK 12 (Image bottom-center small 2) ---------------- */}
-        <div className="rounded-2xl overflow-hidden shadow-md bg-white md:col-start-2 md:h-50">
-          <div className="h-full flex items-center justify-center bg-gray-300">
-            Image placeholder 6
-          </div>
-        </div>
-
-        {/* ---------------- BLOCK 13 (Stat bright orange bottom-right: 550 tests) ---------------- */}
-        <div className="rounded-2xl shadow-md bg-[#EF8B67] flex items-center justify-center p-6 text-center text-white font-semibold md:col-start-3">
-          <div>
-            <div className="text-3xl">550</div>
-            <div>Screening & diagnostic tests</div>
-          </div>
+        <div className=" space-y-5">
+        <div className="h-78 rounded-[30px]"><img className="w-full h-full rounded-[30px]"src={TopRight}/></div>
+        <div className="bg-[#EF8B67] h-39 rounded-[30px] text-center text-4xl font-visby font-bold"><h1 className="pt-7">100+</h1><p className="pt-4">Patients Supported</p></div>
+        <div className="bg-[#D2635D] h-89 rounded-[30px] font-didact text-lg p-7 pt-9"><p>“On behalf of my family, we thank the Asian Cancer Foundation for their financial support […] Your generosity allowed me to access critical medical care and focus on healing instead of financial stress […] Your kindness has had a profound medical and emotional impact, giving me and my family hope in difficult times.”</p><p className="pt-7">- Anonymous</p></div>
+        <div className="h-78 rounded-[30px]"><img className="w-full h-full rounded-[30px]"src={BottomRight}/></div>
+        <div className="bg-[#EF8B67] h-67 rounded-[30px] text-4xl font-visby font-bold text-center"><h1 className="pt-10 text-5xl">550</h1><p className="pt-4">Screening &<br></br>diagnostic<br></br>tests</p></div>
         </div>
       </div>
-
-      {/* --------- Quick notes for adjusting ---------- 
-         - To change a block's width: add `md:col-span-2` (or 3) to that block's className
-         - To change a block's height: add `md:row-span-2` (or 3) or add `h-64` / `h-80` inside the block
-         - Blocks are independent — change any block and the grid will re-flow
-      */}
     </div>
   );
 }

@@ -3,6 +3,8 @@ import Logo from "./assets/Logo.png"
 import { FaRibbon } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import DonateButton from "./DonateButton";
+import DonateOverlay from "./DonateOverlay";
+import DonateButton from "./DonateButton";
 
 const Navbar = () => {
   return (

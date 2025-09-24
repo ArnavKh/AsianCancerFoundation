@@ -1,6 +1,7 @@
 import React from "react";
 import { FaRibbon } from "react-icons/fa";
-import FooterImage from "../../assets/Home/Footer.png";
+import FooterImage from "../../assets/Home/Footer.png"
+import DonateButton from "../../DonateButton";
 
 const FooterBanner = () => {
   return (
@@ -25,10 +26,7 @@ const FooterBanner = () => {
             those who need<br />
             it most.
           </h2>
-          <button className="flex items-center space-x-2 bg-[#D2635D] text-white px-4 py-2 rounded-[10px] text-sm font-bold font-visby">
-            <FaRibbon className="w-4 h-4" />
-            <span>Donate</span>
-          </button>
+          <DonateButton/>
         </div>
       </div>
     </section>

@@ -4,6 +4,7 @@ import BlueImage from "../../assets/Home/Blue.jpg";
 import TeachingImage from "../../assets/Home/teaching.png";
 import vibgyor from "../../assets/Home/vibgyor.jpeg";
 import MotherSon from "../../assets/Home/Hero.JPG";
+import DonateButton from "../../DonateButton";
 
 const Hero = () => {
   return (
@@ -28,10 +29,7 @@ const Hero = () => {
                 ensure everyone has access to timely and <br />
                 quality treatment.
               </p>
-              <button className="flex items-center space-x-2 bg-[#d35c4c] hover:bg-[#c44b3b] text-white px-4 py-2 rounded-md text-sm font-medium">
-                <FaRibbon className="w-4 h-4" />
-                <span>Donate</span>
-              </button>
+              <DonateButton/>
             </div>
           </div>
         </div>

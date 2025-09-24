@@ -2,6 +2,7 @@ import { useState } from "react";
 import DonateImage from "./assets/DonateOverlay.png";
 import Logo from "./assets/Logo.png";
 import { ArrowLeft } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function DonateOverlay({ isOpen, onClose }) {
   const [donationType, setDonationType] = useState("monthly");
@@ -29,6 +30,7 @@ export default function DonateOverlay({ isOpen, onClose }) {
       <button onClick={onClose} className="absolute top-4 right-4 text-white">
         ✕
       </button>
+      <button onClick={onClose} className="absolute top-4 right-4 text-white">✕</button>
       <div className="flex flex-col md:flex-row gap-6 relative">
         {/* Left Panel */}
         <div className="bg-white rounded-[20px] shadow h-159 w-125 flex flex-col">
@@ -54,7 +56,8 @@ export default function DonateOverlay({ isOpen, onClose }) {
               education.
             </p>
             <p className="text-xs mt-18 font-didact">
-              Privacy Notice · Contact us
+              <Link to="/privacypolicy">Privacy Notice</Link>{" "}
+              <Link to="/contactus"> · Contact us</Link>
             </p>
           </div>
         </div>
@@ -150,37 +153,41 @@ export default function DonateOverlay({ isOpen, onClose }) {
             )}
 
             {panelView === "once" && (
-              <div className="flex flex-col h-full relative">
-                {/* Top row with back button + heading */}
-                <div className="flex items-center justify-center relative p-4">
-                  <button
-                    onClick={() => setPanelView("donation")}
-                    className="absolute left-4"
-                  >
-                    <ArrowLeft size={24} />
-                  </button>
-                  <h2 className="font-bold mb-4 font-visby text-xl text-center">
-                    Secure Donation
-                  </h2>
-                </div>
+              <div>
+                <button
+                  onClick={() => setPanelView("donation")}
+                  className="absolute top-6 left-4"
+                >
+                  <ArrowLeft size={24} />
+                </button>
+                <div className="">
+                  <div className="">
+                    <h2 className="font-visby text-lg font-semibold text-center mb-5">
+                      Become a regular donor
+                    </h2>
+                    <hr className="absolute right-0 left-0 border-0 h-px bg-gray-300"></hr>
+                  </div>
 
-                {/* Paragraph */}
-                <div className="px-6 text-center">
-                  <p className="font-visby text-lg font-medium">
-                    Will you convert your ₹ 1000 contribution into a monthly
-                    donation? Your ongoing support can help us focus better on
-                    our work.
+                  <div>
+                    <p className="font-visby font-medium text-center pb-65 mt-15">
+                      Will you convert your ₹ 1000 contribution into a monthly
+                      donation?Your ongoing support can help us focus better on
+                      our work.{" "}
+                    </p>
+                  </div>
+
+                  <div className="space-y-2">
+                    <button className="px-4 py-2 bg-[#EDE2FF] text-lg rounded-[10px] w-full font-visby font-semibold ">
+                      Donate ₹1200/month
+                    </button>
+                    <button className="px-4 py-2 bg-[#EDE2FF] text-lg rounded-[10px] w-full font-visby font-semibold ">
+                      Donate ₹1500/month
+                    </button>
+                  </div>
+
+                  <p className="text-center font-visby font-semibold py-3 text-[14px]">
+                    No, keep my one-time ₹ 1000 gift
                   </p>
-                </div>
-
-                {/* Buttons at bottom */}
-                <div className="mt-auto p-6 space-y-2">
-                  <button className="px-4 py-2 bg-purple-600 text-white rounded-lg w-full">
-                    Donate ₹1200/month
-                  </button>
-                  <button className="px-4 py-2 bg-purple-600 text-white rounded-lg w-full">
-                    Donate ₹1500/month
-                  </button>
                 </div>
               </div>
             )}
@@ -195,17 +202,21 @@ export default function DonateOverlay({ isOpen, onClose }) {
                   <ArrowLeft size={24} />
                 </button>
                 <div className="">
-                  <h2 className="font-visby text-lg font-semibold pb-12 text-center">
-                    Comment
-                  </h2>
+                  <div className="pb-6">
+                    <h2 className="font-visby text-lg font-semibold text-center mb-5">
+                      Comment
+                    </h2>
+
+                    <hr className="absolute right-0 left-0 border-0 h-px bg-gray-300"></hr>
+                  </div>
                   <textarea
-                    className="w-full border rounded-lg p-4 mb-4"
+                    className="w-full border-2 rounded-lg p-4 mb-4 font-didact border-purple-600 shadow-purple-600 shadow-sm"
                     rows={18}
                     placeholder="Enter your comment"
                   ></textarea>
                   <button
                     onClick={() => setPanelView("donation")}
-                    className="px-4 py-2 bg-purple-600 text-white rounded-lg w-full"
+                    className="px-4 py-2 bg-[#EDE2FF] text-lg rounded-[10px] w-full font-visby font-semibold "
                   >
                     Save
                   </button>

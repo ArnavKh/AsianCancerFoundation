@@ -1,5 +1,6 @@
 import React from "react";
 import Logo from "./assets/Logo.png"
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -47,6 +48,9 @@ const Footer = () => {
           <a href="#" className="hover:text-gray-900">
             Contact Us
           </a>
+          <Link to="/privacypolicy" className="hover:text-gray-900">
+            Privacy Policy
+          </Link>
         </div>
         
         <div className="text-gray-700 font-didact text-center py-8">
