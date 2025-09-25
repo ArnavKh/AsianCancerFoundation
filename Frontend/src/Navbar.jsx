@@ -2,8 +2,8 @@ import React from "react";
 import Logo from "./assets/Logo.png"
 import { FaRibbon } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import DonateOverlay from "./DonateOverlay";
 import DonateButton from "./DonateButton";
+import DonateOverlay from "./DonateOverlay";
 
 const Navbar = () => {
   return (

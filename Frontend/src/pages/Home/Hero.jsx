@@ -11,10 +11,10 @@ const Hero = () => {
     <section className="bg-[#583490] text-white py-30 px-20">
       <div className="container pl-20 grid md:grid-cols-2">
         <div>
-          <h1 className="text-4xl md:text-5xl font-visby font-semibold pt-12">
+          <h1 className="text-7xl font-visby font-semibold pt-12">
             Asian Cancer <br></br>Foundation
           </h1>
-          <p className="mt-4 text-lg font-visby pb-3">
+          <p className="mt-4 text-lg font-visby pb-3 font-medium">
             A future where quality cancer care is <br /> accessible to all
           </p>
           <div className="flex items-center py-[16px] px-[8px] bg-white text-black rounded-[30px] w-[464px] h-[167px]">
@@ -35,14 +35,14 @@ const Hero = () => {
         </div>
 
         {/* Right Side */}
-        <div className="flex space-x-4">
+        <div className="grid grid-cols-2">
 
-          <div>
-          <div className="w-56 h-46"> <img src={vibgyor} alt="" className="rounded-[30px] object-cover"/></div>
-          <div className="ml-8 w-47 h-59"><img src={BlueImage} alt="" className="rounded-[30px] object-cover h-59"/></div>
+          <div className="space-y-4 ml-16">
+          <div className="w-55 h-38"> <img src={vibgyor} alt="" className="w-full h-full rounded-[30px] object-cover"/></div>
+          <div className="w-55 h-59"><img src={BlueImage} alt="" className="w-full h-full rounded-[30px] object-cover"/></div>
           </div>
           
-          <div className="w-56 h-80"> <img src={TeachingImage} alt="" className="w-full h-full rounded-[30px] object-cover"/></div>
+          <div className="w-55 h-101"> <img src={TeachingImage} alt="" className="rounded-[30px] object-cover"/></div>
         
         </div>
       </div>

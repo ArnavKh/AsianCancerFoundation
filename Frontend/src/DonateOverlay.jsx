@@ -27,6 +27,9 @@ export default function DonateOverlay({ isOpen, onClose }) {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60">
+      <button onClick={onClose} className="absolute top-4 right-4 text-white">
+        ✕
+      </button>
       <button onClick={onClose} className="absolute top-4 right-4 text-white">✕</button>
       <div className="flex flex-col md:flex-row gap-6 relative">
         {/* Left Panel */}
