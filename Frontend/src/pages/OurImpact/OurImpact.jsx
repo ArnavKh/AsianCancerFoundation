@@ -9,11 +9,11 @@ import BottomRight from "../../assets/Our Impact/bottomRight.png";
 export default function OurImpact() {
   return (
     <div className="bg-[#fdf9f6] py-20 px-6 md:px-20 text-white pb-65">
-      <h2 className="font-bold text-center text-purple-800 mb-15 font-visby text-[40px]">
+      <h2 className="font-bold text-center text-[#583490] mb-15 font-visby text-[40px]">
         Our Impact
       </h2>
 
-      <div className="grid grid-cols-3 gap-3">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
 
         <div className="mt-10 space-y-5">
         <div className="h-78 rounded-[30px]"><img className="w-full h-full rounded-[30px]"src={TopLeft}/></div>

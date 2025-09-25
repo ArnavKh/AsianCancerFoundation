@@ -1,6 +1,7 @@
 import React from "react";
 import HeroImage from "../../assets/Contact/HeroImage.png";
 import { PhoneCall, Mail, MapPin } from "lucide-react";
+import { FaFacebook } from "react-icons/fa";
 
 const ContactUs = () => {
   return (
@@ -53,7 +54,7 @@ const ContactUs = () => {
           </ul>
 
           {/* Facebook icon at bottom-left */}
-          <div className="absolute bottom-4 left-4 bg-white rounded-full p-2"></div>
+          <div className="absolute bottom-3 left-4 bg-white rounded-full p-1"><FaFacebook className="text-black w-4 h-4" /></div>
 
           {/* Decorative circles bottom-right */}
           <div className="absolute bottom-[-40px] right-[-20px] w-40 h-40 bg-[#4B1B95] rounded-full opacity-90"></div>

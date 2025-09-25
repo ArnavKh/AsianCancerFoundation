@@ -1,6 +1,6 @@
 import React from "react";
 import ProfileCard from "./ProfileCard";
-import Anjali from "../../assets/Our Team/Advisors/Anjali.png"
+import Anjali from "../../assets/Our Team/Advisors/Anjali.jpg"
 import Hosi from "../../assets/Our Team/Advisors/Hosi.png"
 import Nilesh from "../../assets/Our Team/Advisors/Nilesh.png"
 import Purvish from "../../assets/Our Team/Advisors/Purvish.png"
