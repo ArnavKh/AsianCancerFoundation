@@ -26,9 +26,9 @@ export default function App() {
         <Route path="/ourteam" element={<OurTeam />} />
         <Route path="/ourimpact" element={<OurImpact />} />
         <Route path="/workinaction" element={<OurWorkInAction />} />
-        <Route path="/workinaction/medicalcamp" element={<CancerScreening />} />
-        <Route path="/workinaction/tobaccoawareness" element={<TobaccoAwareness />} />
         <Route path="/workinaction/vibgyor" element={<VIBGYOR />} />
+        <Route path="/workinaction/tobaccoawareness" element={<TobaccoAwareness />} />
+        <Route path="/workinaction/medicalcamp" element={<CancerScreening />} />
         <Route path="/workinaction/mobilescreening" element={<MobileScreening />} />
         <Route path="/flagshipninit" element={<FlagshipInitiatives />} />
         <Route path="/support" element={<Support/>} />

@@ -8,7 +8,7 @@ import Mobile from "../../assets/VIBGYOR/MobileScreening.png";
 
 const VIBGYOR = () => {
   return (
-      <div className="bg-[#f8f5f0] min-h-screen py-8 px-4">
+      <div className="bg-[#f8f5f0] min-h-screen py-8">
         <div className="relative mb-6 mt-8">
           <Link
             to="/workinaction"
@@ -23,16 +23,16 @@ const VIBGYOR = () => {
         </div>
   
         {/* Top image */}
-        <div className="max-w-3xl mx-auto rounded-[30px] overflow-hidden mb-6 w-242 h-88">
+        <div className="mx-auto rounded-[30px] overflow-hidden mb-6 w-270 h-88">
           <img
             src={VIBGYORImage}
             alt="Medical Camp"
-            className="w-242 h-88 object-cover"
+            className="w-full h-full object-cover"
           />
         </div>
   
         {/* Beneficiaries & Date */}
-        <div className="max-w-3xl mx-auto bg-[rgba(125,165,134,0.31)] rounded-[30px] grid grid-cols-2 text-center py-4 mb-6">
+        <div className="w-270 mx-auto bg-[rgba(125,165,134,0.31)] rounded-[30px] grid grid-cols-2 text-center py-4 my-10">
           <div className="border-r border-gray-400">
             <p className="text-3xl font-bold font-visby text-[#7DA586]">900</p>
             <p className="text-xl font-didact text-gray-800">Attendees</p>
@@ -44,13 +44,13 @@ const VIBGYOR = () => {
         </div>
   
         {/* Highlight & Key Partner */}
-        <div className="max-w-3xl mx-auto mb-6 text-gray-800">
+        <div className="w-270 mx-auto mb-6 text-gray-800">
           <p className="text-2xl mb-2 font-didact">
             <span className="font-bold font visby">Highlight - </span>
             Fundraising for paedatric cancer care through musical performances & community engagement
           </p>
           <p className="text-2xl mb-15 font-didact">
-            <span className="font-bold font visby">Key Partner - </span>
+            <span className="font-bold font-visby">Key Partner - </span>
             C-Kids
           </p>
   
@@ -63,9 +63,9 @@ const VIBGYOR = () => {
         </div>
   
         {/* Cards Section */}
-        <div className="max-w-5xl mx-auto px-33 grid grid-cols-1 md:grid-cols-3 gap-6 mt-30 mb-40">
+        <div className="w-270 mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 mt-30 mb-40">
           {/* Card 1 */}
-          <div className="bg-white rounded-[30px] shadow-md hover:shadow-lg transition flex flex-col h-72">
+          <div className="bg-white rounded-[30px] shadow-md hover:shadow-lg transition flex flex-col h-104">
             <div className="h-1/2 w-full overflow-hidden rounded-t-[30px]">
               <img
                 src={Cancer}
@@ -73,8 +73,8 @@ const VIBGYOR = () => {
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="flex-1 flex items-center justify-center p-4">
-              <h2 className="text-purple-900 text-center text-2xl font-semibold">
+            <div className="flex-1 flex items-center justify-center">
+              <h2 className="text-purple-900 text-center text-3xl font-visby font-semibold">
                 Cancer Screening
                 <br />
                 Camp
@@ -83,7 +83,7 @@ const VIBGYOR = () => {
           </div>
   
           {/* Card 2 */}
-          <div className="bg-white rounded-[30px] shadow-md hover:shadow-lg transition flex flex-col h-72">
+          <div className="bg-white rounded-[30px] shadow-md hover:shadow-lg transition flex flex-col h-104">
             <div className="h-1/2 w-full overflow-hidden rounded-t-[30px]">
               <img
                 src={Mobile}
@@ -92,14 +92,14 @@ const VIBGYOR = () => {
               />
             </div>
             <div className="flex-1 flex items-center justify-center p-4">
-              <h2 className="text-purple-900 text-center text-2xl font-semibold">
+              <h2 className="text-purple-900 text-center text-3xl font-visby font-semibold">
                 Mobile Screening <br></br>Camps
               </h2>
             </div>
           </div>
   
           {/* Card 3 */}
-          <div className="bg-white rounded-[30px] shadow-md hover:shadow-lg transition flex flex-col h-72">
+          <div className="bg-white rounded-[30px] shadow-md hover:shadow-lg transition flex flex-col h-104">
             <div className="h-1/2 w-full overflow-hidden rounded-t-[30px]">
               <img
                 src={Tobacco}
@@ -108,7 +108,7 @@ const VIBGYOR = () => {
               />
             </div>
             <div className="flex-1 flex items-center justify-center p-4">
-              <h2 className="text-purple-900 text-center text-2xl font-semibold">
+              <h2 className="text-purple-900 text-center text-3xl font-visby font-semibold">
                 Tobacco<br></br>Awareness<br></br>Session
               </h2>
             </div>

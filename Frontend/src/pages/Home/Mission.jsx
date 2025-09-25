@@ -24,7 +24,7 @@ const Mission = () => {
     className="absolute bottom-37 right-51 translate-x-1/2 md:translate-x-0 w-27 h-18"
   />
   
-  <h2 className="relative text-4xl md:text-4xl font-extrabold text-purple-900 font-visby text-center">
+  <h2 className="relative text-4xl md:text-4xl font-extrabold text-[#583490] font-visby text-center">
     Our Mission
   </h2>
   <p className="mt-4 text-xl md:text-2xl text-gray-800 font-didact leading-relaxed text-center">

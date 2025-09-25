@@ -2,7 +2,7 @@ import React from "react";
 
 const ProfileCard = ({ image, name, role }) => {
   return (
-    <div className="relative w-[264px] h-[300px] rounded-[30px] overflow-hidden shadow-lg">
+    <div className="relative w-[317px] h-[360px] rounded-[30px] overflow-hidden shadow-lg">
       {/* Image */}
       <img
         src={image}
@@ -15,9 +15,9 @@ const ProfileCard = ({ image, name, role }) => {
 
       {/* Text content */}
       <div className="absolute bottom-0 w-full text-center p-4">
-        <div className="bg-white/90 text-gray-900 rounded-xl p-1">
-          <h3 className="text-[20px] font-semibold">{name}</h3>
-          <p className="text-[16px] text-purple-600">{role}</p>
+        <div className="bg-white/84 text-gray-900 rounded-xl p-1">
+          <h3 className="text-[20px] font-visby font-extrabold">{name}</h3>
+          <p className="text-[16px] text-[#583490] font-visby font-medium">{role}</p>
         </div>
       </div>
     </div>
