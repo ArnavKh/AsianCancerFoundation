@@ -1,10 +1,10 @@
 import React from "react";
-import FooterBanner from "./FooterBanner";
-import WhyGiveUs from "./WhyGiveUs";
-import BankDetails from "./BankDetails";
-import EveryPennyCounts from "./EveryPennyCounts";
-import HeroSection from "./HeroSection";
-import SupportCards from "./SupportCards";
+import FooterBanner from "../Home/FooterBanner.jsx";
+import WhyGiveUs from "./WhyGiveUs.jsx";
+import BankDetails from "./BankDetails.jsx";
+import EveryPennyCounts from "./EveryPennyCounts.jsx";
+import HeroSection from "./HeroSection.jsx";
+import SupportCards from "./SupportCards.jsx";
 
 const Support = () => {
   return (

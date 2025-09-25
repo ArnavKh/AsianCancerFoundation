@@ -27,9 +27,6 @@ export default function DonateOverlay({ isOpen, onClose }) {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60">
-      <button onClick={onClose} className="absolute top-4 right-4 text-white">
-        ✕
-      </button>
       <button onClick={onClose} className="absolute top-4 right-4 text-white">✕</button>
       <div className="flex flex-col md:flex-row gap-6 relative">
         {/* Left Panel */}
@@ -44,12 +41,12 @@ export default function DonateOverlay({ isOpen, onClose }) {
             <img src={Logo} className="w-40 h-18" alt="Logo" />
           </div>
 
-          <div className="p-5">
+          <div className="p-5 text-black">
             <p className="mb-4 font-visby font-bold text-lg">
               Donate to the Asian Cancer Foundation
             </p>
 
-            <p className="mb-4 font-didact text-sm">
+            <p className="mb-4 font-didact text-sm text-black">
               Our mission to prevent cancer and save lives is only possible with
               your support. A contribution of just ₹1,000 can help us expand
               access to quality cancer care and spread vital awareness and
@@ -63,7 +60,7 @@ export default function DonateOverlay({ isOpen, onClose }) {
         </div>
 
         {/* Right Panel - Interactive */}
-        <div className="bg-white rounded-[20px] shadow p-6 h-159 w-87 flex items-center justify-center relative">
+        <div className="bg-white rounded-[20px] shadow p-6 h-159 w-87 flex items-center justify-center relative text-black">
           <div className="w-full max-w-md">
             {panelView === "donation" && (
               <>

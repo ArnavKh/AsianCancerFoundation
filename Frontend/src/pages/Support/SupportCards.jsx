@@ -2,7 +2,7 @@ import React from 'react'
 
 const SupportCards = () => {
   return (
-    <section className="px-4 md:px-20 py-12 grid grid-cols-1 sm:grid-cols-2 gap-6 pb-35">
+    <section className="px-4 md:px-20 py-12 grid grid-cols-1 sm:grid-cols-2 gap-6 space-x-0 pb-35 mr-76">
         {[
           {
             title: "CSR Partnerships",
@@ -28,7 +28,7 @@ const SupportCards = () => {
             <h3 className="text-lg md:text-3xl font-semibold font-visby mb-2">
               {item.title}
             </h3>
-            <p className="text-purple-700 text-sm md:text-lg font-semibold font-visby">
+            <p className="text-[#583490] text-sm md:text-lg font-semibold font-visby">
               {item.subtitle}
             </p>
           </div>
