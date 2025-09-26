@@ -4,8 +4,8 @@ import "./EveryPennyCounts.css";
 const EveryPennyCounts = () => {
   return (
     <section className="px-4 md:px-20 py-12 md:py-16 bg-white">
-        <h2 className="text-4xl md:text-3xl text-[#583490] mb-8 font-visby font-extrabold">
-          EVERY PENNY COUNTS
+        <h2 className="text-3xl md:text-3xl text-[#583490] mb-8 font-visby font-extrabold">
+          EVERY DONATION COUNTS
         </h2>
 
         <p className="text-base md:text-3xl mb-6 font-visby font-semibold">

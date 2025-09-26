@@ -8,7 +8,7 @@ const Card = ({ image, name, description, short }) => {
 
   return (
     <div
-      className="relative w-[331px] h-[373px] cursor-pointer"
+      className="relative w-[280px] sm:w-[300px] md:w-[331px] h-[350px] sm:h-[360px] md:h-[373px] cursor-pointer"
       style={{ perspective: "1000px" }}
       onClick={() => setFlipped(!flipped)}
     >
@@ -27,7 +27,7 @@ const Card = ({ image, name, description, short }) => {
 
           <div className="absolute bottom-0 w-full text-center p-4">
             <div className="bg-[#5F6D82]/70 rounded-[18px] py-2 text-white">
-              <h3 className="text-[20px] font-didact">{name}</h3>
+              <h3 className="text-[18px] sm:text-[19px] md:text-[20px] font-didact">{name}</h3>
             </div>
           </div>
 
@@ -35,7 +35,7 @@ const Card = ({ image, name, description, short }) => {
           <div className="absolute inset-0 bg-black/80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
             <div className="text-center px-4 pt-10">
               <p className="text-white text-sm mb-4 font-didact">{short}</p>
-                <p className="text-white font-didact text-xl pt-45">Click to read more</p>
+              <p className="text-white font-didact text-xl pt-45">Click to read more</p>
             </div>
           </div>
         </div>
@@ -62,11 +62,11 @@ const Card = ({ image, name, description, short }) => {
 const Board = () => {
   return (
     <section className="bg-[#f8f5f0] px-6 md:px-16 pb-20 pt-35">
-      <h2 className="text-[40px] font-bold text-purple-900 mb-8 font-visby">
+      <h2 className="text-[32px] sm:text-[36px] md:text-[40px] font-bold text-purple-900 mb-8 font-visby text-center md:text-left">
         OUR BOARD OF DIRECTORS
       </h2>
 
-      <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-25 justify-items-center space-y-25">
+      <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-25 justify-items-center space-y-12 md:space-y-25">
         <Card
           image={Ramakant}
           name="Dr. Ramakant Deshpande"

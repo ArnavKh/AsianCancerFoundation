@@ -1,62 +1,48 @@
 import React from "react";
-import Logo from "./assets/Logo.png"
+import Logo from "./assets/Logo.png";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
     <footer className="bg-[#f8f5f0] py-12 border-t border-gray-200">
-      <div className="max-w-7xl mx-auto px-20 sm:px-6 lg:px-8">
-        <div className="flex items-center space-x-120">
-          {/* Left section: logo */}
-          <div className="">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Top section */}
+        <div className="flex flex-col md:flex-row items-center md:items-start justify-between gap-8">
+          {/* Logo */}
+          <div className="flex-shrink-0">
             <img
-              src={Logo} // put your logo here
+              src={Logo}
               alt="Logo"
-              className="h-34 w-70"
+              className="h-20 w-auto object-contain"
             />
           </div>
 
-          {/* Right section: text */}
-          <div className="">
-          <p className="text-2xl font-didact ">
-            Your support helps us bring timely<br></br> diagnosis, compassionate care &<br></br>
-            treatment to those who need it most.
-          </p>
+          {/* Text */}
+          <div className="text-center md:text-left">
+            <p className="text-xl sm:text-2xl font-didact text-gray-800 leading-relaxed">
+              Your support helps us bring timely<br />
+              diagnosis, compassionate care &<br />
+              treatment to those who need it most.
+            </p>
           </div>
         </div>
 
-        {/* Bottom nav */}
-        <div className="mt-8 flex justify-center space-x-20 text-gray-700 text-sm font-didact">
-          <a href="/" className="hover:text-gray-900">
-            Home
-          </a>
-          <a href="/ourteam" className="hover:text-gray-900">
-            Our Team
-          </a>
-          <a href="/ourimpact" className="hover:text-gray-900">
-            Our Impact
-          </a>
-          <a href="/workinaction" className="hover:text-gray-900">
-            Our Work in Action
-          </a>
-          <a href="/flagshipninit" className="hover:text-gray-900">
-            Flagship Initiatives
-          </a>
-          <a href="/support" className="hover:text-gray-900">
-            Support
-          </a>
-          <a href="/contactus" className="hover:text-gray-900">
-            Contact Us
-          </a>
-          <a href="/privacypolicy" className="hover:text-gray-900">
-            Privacy Policy
-          </a>
-        </div>
-        
-        <div className="text-gray-700 font-didact text-center py-8">
-          <p>&copy; Copyright. Asian Cancer Foundations. All rights reserved.</p>
+        {/* Navigation links */}
+        <div className="mt-10 flex flex-wrap justify-center gap-6 text-gray-700 text-sm font-didact">
+          <Link to="/" className="hover:text-gray-900">Home</Link>
+          <Link to="/ourteam" className="hover:text-gray-900">Our Team</Link>
+          <Link to="/ourimpact" className="hover:text-gray-900">Our Impact</Link>
+          <Link to="/workinaction" className="hover:text-gray-900">Our Work in Action</Link>
+          <Link to="/flagshipninit" className="hover:text-gray-900">Flagship Initiatives</Link>
+          <Link to="/support" className="hover:text-gray-900">Support</Link>
+          <Link to="/contactus" className="hover:text-gray-900">Contact Us</Link>
+          <Link to="/privacypolicy" className="hover:text-gray-900">Privacy Policy</Link>
         </div>
 
+        {/* Copyright */}
+        <div className="text-gray-700 font-didact text-center pt-8">
+          <p>&copy; {new Date().getFullYear()} Asian Cancer Foundations. All rights reserved.</p>
+        </div>
       </div>
     </footer>
   );
