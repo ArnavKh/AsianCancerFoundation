@@ -1,4 +1,5 @@
 import React from 'react'
+import "./EveryPennyCounts.css";
 
 const EveryPennyCounts = () => {
   return (
@@ -14,7 +15,7 @@ const EveryPennyCounts = () => {
           {["₹ 1,000", "₹ 2,500", "₹ 5,000", "₹ 10,000+"].map((amt, i) => (
             <button
               key={i}
-              className="bg-[#f9f3ec] border-3 border-[#583490] rounded-[10px]
+              className="donation-card bg-[#f9f3ec] border-3 border-[#583490] rounded-[10px]
                text-[#583490] font-bold w-59 h-29 text-2xl font-visby shadow-[#583490] shadow-sm"
             >
               {amt}

@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "./OurWorkInAction.css";
 
 const OurWorkInAction = () => {
   return (
@@ -11,12 +12,12 @@ const OurWorkInAction = () => {
 
         {/* VIBGYOR */}
         <Link to="/workinaction/vibgyor">
-          <div className="relative w-96 h-109 bg-white rounded-3xl border-6 shadow-[0_0_20px_#D2635D] border-[#D2635D]  p-8 transition-shadow">
-            <h2 className="text-3xl font-bold mb-1 pt-4 font-visby">
-              VIBGYOR Fundraising Concert
+          <div className="card card-vibgyor">
+            <h2 className="text-3xl font-bold font-visby text-black">
+              VIBGYOR<br></br> Fundraising Concert
             </h2>
-            <p className="text-sm mb-4 font-didact ">Worli, Mumbai</p>
-            <p className="font-didact text-lg pt-5">
+            <p className="text-sm mb-4 font-didact  text-black">Worli, Mumbai</p>
+            <p className="font-didact text-lg pt-5 text-black">
               VIBGYOR was a unique musical<br></br> fundraiser for children with<br></br> cancer,
               featuring seven music<br></br> genres inspired by the chakras &<br></br> musical
               notes, including classical,<br></br> devotional, Sufi, ghazals,<br></br>
@@ -26,14 +27,14 @@ const OurWorkInAction = () => {
         </Link>
 
         <Link to="/workinaction/tobaccoawareness">
-          <div className="w-96 h-109 bg-white rounded-3xl border-6 border-[#EF8B67] shadow-[0_0_20px_#EF8B67]  p-8 transition-shadow">
-            <h2 className="text-3xl font-bold mb-1 pt-4 font-visby">
+          <div className="card card-tobacco">
+            <h2 className="text-3xl font-bold mb-1 pt-4 font-visby text-black">
               Tobacco Awareness Session
             </h2>
-            <p className="text-sm mb-4 font-didact ">
+            <p className="text-sm mb-4 font-didact  text-black">
               Awami School, Bandra West, Mumbai
             </p>
-            <p className="font-didact text-lg pt-5">
+            <p className="font-didact text-lg pt-5 text-black">
               In partnership with the Nargis Dutt<br></br> Foundation, ACF conducted an<br></br>
               engaging tobacco awareness<br></br> session for 100 students aged 12–16.
             </p>
@@ -42,12 +43,12 @@ const OurWorkInAction = () => {
 
         {/* Medical Camp */}
         <Link to="/workinaction/medicalcamp">
-          <div className="w-96 h-109 bg-white rounded-3xl border-6 border-[#EF8B67] shadow-[0_0_20px_#EF8B67]  p-8 transition-shadow">
-            <h2 className="text-3xl font-bold mb-1 pt-4 font-visby">Cancer Screening Camp</h2>
-            <p className="text-sm mb-4 font-didact ">
+          <div className="card card-medical">
+            <h2 className="text-3xl font-bold mb-1 pt-4 font-visby text-black">Cancer Screening Camp</h2>
+            <p className="text-sm mb-4 font-didact  text-black">
               Sindkhedraja, Buldhana District,<br></br> Maharashtra
             </p>
-            <p className="font-didact text-lg pt-5">
+            <p className="font-didact text-lg pt-5 text-black">
               A free medical camp was held in<br></br> Sindkhedraja with the support<br></br> from
               ACF, HCG-Manavata Cancer<br></br> Centre, Jeevan Amrut Hospital, &<br></br> Aslan
               Hospital.
@@ -59,14 +60,14 @@ const OurWorkInAction = () => {
 
         {/* Mobile Screening */}
         <Link to="/workinaction/mobilescreening">
-          <div className="w-96 h-109 bg-white rounded-3xl border-6 border-[#D2635D] shadow-[0_0_20px_#D2635D]  p-8 transition-shadow">
-            <h2 className="text-3xl font-bold mb-1 pt-4 font-visby">
+          <div className="card card-mobile">
+            <h2 className="text-3xl font-bold mb-1 pt-4 font-visby text-black">
               Mobile Screening Camps
             </h2>
-            <p className="text-sm mb-4 font-didact ">
+            <p className="text-sm mb-4 font-didact  text-black">
               Sindkhedraja, Buldhana District,<br></br> Maharashtra
             </p>
-            <p className="font-didact text-lg pt-5">
+            <p className="font-didact text-lg pt-5 text-black">
               The initiative offered screenings<br></br> for oral, breast, & cervical
               cancer,<br></br> along with tobacco de-addiction<br></br> counselling.
             </p>
