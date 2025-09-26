@@ -35,10 +35,12 @@ const EveryPennyCounts = () => {
        font-bold font-visby w-59 h-29 sm:w-auto text-center text-2xl"
             >
               <div>
+                <a href="/contactus">
                 <div className="text-[#583490] text-2xl font-bold">{amt}</div>
                 <div className="text-sm md:text-base font-normal mt-1">
                   {i === 0 ? "Per Surgery" : "For 100 Surgeries"}
                 </div>
+              </a>
               </div>
             </button>
           ))}
@@ -56,10 +58,12 @@ const EveryPennyCounts = () => {
        font-bold font-visby w-59 h-29 sm:w-auto text-center text-2xl"
             >
               <div>
+              <a href="/contactus">
                 <div className="text-[#583490] text-2xl font-bold">{amt}</div>
                 <div className="text-sm md:text-base font-normal mt-1">
                   {i === 0 ? "Per Surgery" : "For 100 Surgeries"}
                 </div>
+                </a>
               </div>
             </button>
           ))}
