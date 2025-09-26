@@ -33,8 +33,8 @@ const Card = ({ image, name, description, short }) => {
 
           {/* Hover overlay */}
           <div className="absolute inset-0 bg-black/80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
-            <div className="text-center px-4">
-              <p className="text-white text-sm mb-4 font-didact pb-10">{short}</p>
+            <div className="text-center px-4 pt-10">
+              <p className="text-white text-sm mb-4 font-didact">{short}</p>
                 <p className="text-white font-didact text-xl pt-45">Click to read more</p>
             </div>
           </div>
@@ -42,10 +42,10 @@ const Card = ({ image, name, description, short }) => {
 
         {/* BACK */}
         <div
-          className="absolute inset-0 rounded-[30px] overflow-hidden shadow-lg bg-[#583490] text-white p-6 rotate-y-180"
+          className="flex items-center justify-center absolute inset-0 rounded-[30px] overflow-hidden shadow-lg bg-[#583490] text-white p-6 rotate-y-180"
           style={{ backfaceVisibility: "hidden" }}
         >
-          <p className="text-sm leading-relaxed">{description}</p>
+          <p className="text-sm leading-relaxed text-center">{description}</p>
         </div>
       </div>
 

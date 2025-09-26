@@ -69,6 +69,7 @@ const TobaccoAwareness = () => {
       {/* Cards Section */}
       <div className="w-270 mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 mt-30 mb-40">
         {/* Card 1 */}
+        <Link to="/workinaction/medicalcamp">
         <div className="bg-white rounded-[30px] shadow-md hover:shadow-lg transition flex flex-col h-104">
           <div className="h-1/2 w-full overflow-hidden rounded-t-[30px]">
             <img
@@ -85,8 +86,10 @@ const TobaccoAwareness = () => {
             </h2>
           </div>
         </div>
+        </Link>
 
         {/* Card 2 */}
+        <Link to="/workinaction/vibgyor">
         <div className="bg-white rounded-[30px] shadow-md hover:shadow-lg transition flex flex-col h-104">
           <div className="h-1/2 w-full overflow-hidden rounded-t-[30px]">
             <img
@@ -101,8 +104,10 @@ const TobaccoAwareness = () => {
             </h2>
           </div>
         </div>
+        </Link>
 
         {/* Card 3 */}
+        <Link to="/workinaction/mobilescreening">
         <div className="bg-white rounded-[30px] shadow-md hover:shadow-lg transition flex flex-col h-104">
           <div className="h-1/2 w-full overflow-hidden rounded-t-[30px]">
             <img
@@ -117,6 +122,7 @@ const TobaccoAwareness = () => {
             </h2>
           </div>
         </div>
+        </Link>
       </div>
     </div>
   );

@@ -2,9 +2,9 @@ import React from 'react'
 
 const BankDetails = () => {
   return (
-    <section className="px-4 md:px-20 pb-15 bg-purple-800 text-white">
+    <section className="px-4 md:px-20 pb-15 bg-[#583490] text-white mb-25">
 
-        <h3 className="text-lg md:text-3xl text-orange-400 font-semibold mb-6 font-visby">
+        <h3 className="text-lg md:text-3xl text-[#D2635D] font-semibold mb-6 font-visby">
           Help us save lives. Donate or partner today.
         </h3>
 
@@ -16,10 +16,10 @@ const BankDetails = () => {
               <table className="w-124 text-white rounded-lg border border-gray-300 border-collapse">
                 <tbody>
                   <tr>
-                    <td className="py-2 px-3 font-medium border border-gray-300 bg-purple-600">
+                    <td className="py-2 px-3 font-medium border border-gray-300 bg-[#60438f]">
                       Account Name
                     </td>
-                    <td className="py-2 px-3 border border-gray-300 bg-purple-600">
+                    <td className="py-2 px-3 border border-gray-300 bg-[#60438f]">
                       Asian Cancer Foundation
                     </td>
                   </tr>
@@ -73,10 +73,10 @@ const BankDetails = () => {
               <table className="w-124 text-white rounded-lg border border-gray-300 border-collapse">
                 <tbody>
                   <tr>
-                    <td className="py-2 px-3 font-medium border border-gray-300 bg-purple-600">
+                    <td className="py-2 px-3 font-medium border border-gray-300 bg-[#60438f]">
                       Account Name
                     </td>
-                    <td className="py-2 px-3 border border-gray-300 bg-purple-600">
+                    <td className="py-2 px-3 border border-gray-300 bg-[#60438f]">
                       Asian Cancer Foundation
                     </td>
                   </tr>

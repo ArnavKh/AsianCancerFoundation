@@ -40,7 +40,7 @@ const Impact = () => {
       <img
         src={ImpactImage}
         alt="Impact"
-        className="absolute right-0 top-1/2 -translate-y-1/2 z-0 object-cover"
+        className="absolute right-0 top-1/2 -translate-y-1/2 z-0 object-cover hidden md:block"
       />
 
       <div className="impact-wrapper relative z-10">

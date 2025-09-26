@@ -72,6 +72,7 @@ const MobileScreening = () => {
       {/* Cards Section */}
       <div className="w-270 mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 mt-30 mb-40">
         {/* Card 1 */}
+        <Link to="/workinaction/medicalcamp">
         <div className="bg-white rounded-[30px] shadow-md hover:shadow-lg transition flex flex-col h-104">
           <div className="h-1/2 w-full overflow-hidden rounded-t-[30px]">
             <img
@@ -81,15 +82,17 @@ const MobileScreening = () => {
             />
           </div>
           <div className="flex-1 flex items-center justify-center p-4">
-            <h2 className="text-purple-900 text-center text-2xl font-semibold">
+            <h2 className="text-purple-900 text-center text-3xl font-visby font-semibold">
               Cancer Screening
               <br />
               Camp
             </h2>
           </div>
         </div>
+        </Link>
 
         {/* Card 2 */}
+        <Link to="/workinaction/vibgyor">
         <div className="bg-white rounded-[30px] shadow-md hover:shadow-lg transition flex flex-col h-104">
           <div className="h-1/2 w-full overflow-hidden rounded-t-[30px]">
             <img
@@ -99,13 +102,15 @@ const MobileScreening = () => {
             />
           </div>
           <div className="flex-1 flex items-center justify-center p-4">
-            <h2 className="text-purple-900 text-center text-2xl font-semibold">
+            <h2 className="text-purple-900 text-center text-3xl font-visby font-semibold">
               VIBGYOR Fundraising Concert
             </h2>
           </div>
         </div>
+        </Link>
 
         {/* Card 3 */}
+        <Link to="/workinaction/tobaccoawareness">
         <div className="bg-white rounded-[30px] shadow-md hover:shadow-lg transition flex flex-col h-104">
           <div className="h-1/2 w-full overflow-hidden rounded-t-[30px]">
             <img
@@ -115,11 +120,12 @@ const MobileScreening = () => {
             />
           </div>
           <div className="flex-1 flex items-center justify-center p-4">
-            <h2 className="text-purple-900 text-center text-2xl font-semibold">
+            <h2 className="text-purple-900 text-center text-3xl font-visby font-semibold">
               Tobacco Awareness Session
             </h2>
           </div>
         </div>
+        </Link>
       </div>
     </div>
   );

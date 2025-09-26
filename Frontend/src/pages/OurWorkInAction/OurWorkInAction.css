@@ -1,0 +1,83 @@
+/* Base Card */
+.card {
+    position: relative;
+    width: 24rem;                 /* w-96 */
+    height: 27.25rem;             /* h-109 */
+    background: #ffffff;          /* white background stays intact */
+    border-radius: 1.5rem;        /* rounded-3xl */
+    box-shadow: 0 0 20px currentColor;
+    padding: 2rem;
+    z-index: 0;                   /* to layer above pseudo-elements */
+  
+    /* Static solid border when not hovered */
+    border: 6px solid currentColor;
+  }
+  
+  /* Register the animatable custom property */
+  @property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+  }
+  
+  /* Gradient border layers (only visible during hover) */
+  .card::before,
+  .card::after {
+    --angle: 0deg;
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 1.5rem;
+    padding: 6px;
+    background: conic-gradient(from var(--angle), transparent 50%, currentColor);
+    z-index: -1;
+  
+    /* Show only the border ring */
+    -webkit-mask: 
+        linear-gradient(#000 0 0) content-box,
+        linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+  
+    animation: none;              /* no animation until hover */
+    opacity: 0;                   /* invisible until hover */
+  }
+  
+  /* Soft glowing outer layer */
+  .card::before {
+    filter: blur(1.2rem);
+  }
+  
+  /* On hover: hide solid border, show animated gradient */
+  .card:hover {
+    border: none;                 /* remove static border */
+  }
+  
+  .card:hover::before,
+  .card:hover::after {
+    opacity: 1;                   /* reveal gradient border */
+    animation: spin 3s linear infinite;
+  }
+  
+  /* Spinning animation */
+  @keyframes spin {
+    from { --angle: 0deg; }
+    to   { --angle: 360deg; }
+  }
+  
+
+  .card-vibgyor {
+  color: #D2635D;                  /* reddish */
+}
+
+.card-tobacco {
+  color: #EF8B67;                  /* orange */
+}
+
+.card-medical {
+  color: #EF8B67;                  /* same orange */
+}
+
+.card-mobile {
+  color: #D2635D;                  /* reddish again */
+}

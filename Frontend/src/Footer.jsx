@@ -27,30 +27,30 @@ const Footer = () => {
 
         {/* Bottom nav */}
         <div className="mt-8 flex justify-center space-x-20 text-gray-700 text-sm font-didact">
-          <a href="#" className="hover:text-gray-900">
+          <a href="/" className="hover:text-gray-900">
             Home
           </a>
-          <a href="#" className="hover:text-gray-900">
+          <a href="/ourteam" className="hover:text-gray-900">
             Our Team
           </a>
-          <a href="#" className="hover:text-gray-900">
+          <a href="/ourimpact" className="hover:text-gray-900">
             Our Impact
           </a>
-          <a href="#" className="hover:text-gray-900">
+          <a href="/workinaction" className="hover:text-gray-900">
             Our Work in Action
           </a>
-          <a href="#" className="hover:text-gray-900">
+          <a href="/flagshipninit" className="hover:text-gray-900">
             Flagship Initiatives
           </a>
-          <a href="#" className="hover:text-gray-900">
+          <a href="/support" className="hover:text-gray-900">
             Support
           </a>
-          <a href="#" className="hover:text-gray-900">
+          <a href="/contactus" className="hover:text-gray-900">
             Contact Us
           </a>
-          <Link to="/privacypolicy" className="hover:text-gray-900">
+          <a href="/privacypolicy" className="hover:text-gray-900">
             Privacy Policy
-          </Link>
+          </a>
         </div>
         
         <div className="text-gray-700 font-didact text-center py-8">
