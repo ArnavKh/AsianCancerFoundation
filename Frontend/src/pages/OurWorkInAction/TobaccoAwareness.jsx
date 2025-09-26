@@ -8,13 +8,13 @@ import Mobile from "../../assets/Tobacco/MobileScreening.png";
 
 const TobaccoAwareness = () => {
   return (
-    <div className="bg-[#f8f5f0] min-h-screen py-8">
-      <div className="relative mb-6 mt-8">
+    <div className="bg-[#f8f5f0] min-h-screen py-8 px-4 md:px-0">
+      <div className="relative mb-6 mt-8 max-w-[1080px] mx-auto px-4 md:px-0">
         <Link
           to="/workinaction"
           className="absolute left-0 top-1/2 -translate-y-1/2"
         >
-          <CircleChevronLeft className="ml-15 w-10 h-10" />
+          <CircleChevronLeft className="absolute left-[-7rem] top-1/3 -translate-y-1/2 w-10 h-10" />
         </Link>
 
         <h1 className="text-2xl md:text-3xl font-bold font-visby text-purple-900 text-center">
@@ -23,33 +23,33 @@ const TobaccoAwareness = () => {
       </div>
 
       {/* Top image */}
-      <div className="mx-auto rounded-[30px] overflow-hidden mb-6 w-270 h-88">
+      <div className="mx-auto rounded-[30px] overflow-hidden mb-6 w-[270px] md:w-270 md:h-88 h-[280px]">
         <img
           src={Tobacco}
-          alt="Medical Camp"
+          alt="Tobacco Awareness Session"
           className="w-full h-full object-cover"
         />
       </div>
 
       {/* Beneficiaries & Date */}
-      <div className="w-270 mx-auto bg-[rgba(125,165,134,0.31)] rounded-[30px] grid grid-cols-2 text-center py-4 my-10">
+      <div className="md:w-270 mx-auto bg-[rgba(125,165,134,0.31)] rounded-[30px] grid grid-cols-2 text-center py-4 my-10">
         <div className="border-r border-gray-400">
-          <p className="text-3xl font-bold font-visby text-[#7DA586]">100+</p>
-          <p className="text-xl font-didact text-gray-800">Beneficiaries</p>
+          <p className="md:text-3xl font-bold font-visby text-[#7DA586]">100+</p>
+          <p className="md:text-xl font-didact text-gray-800">Beneficiaries</p>
         </div>
         <div>
-          <p className="text-3xl font-bold font-visby text-[#7DA586]">11th</p>
-          <p className="text-xl font-didact text-gray-800">January 2023</p>
+          <p className="md:text-3xl font-bold font-visby text-[#7DA586]">11th</p>
+          <p className="md:text-xl font-didact text-gray-800">January 2023</p>
         </div>
       </div>
 
       {/* Highlight & Key Partner */}
-      <div className="w-270 mx-auto mb-6 text-gray-800">
+      <div className="md:w-270 mx-auto mb-6 text-gray-800">
         <p className="text-2xl mb-2 font-didact">
           <span className="font-bold font-visby">Highlight - </span>
           Preventive awareness on tobacco consumption
         </p>
-        <p className="text-2xl mb-6 font-didact">
+        <p className="text-2xl mb-15 font-didact">
           <span className="font-bold font-visby">Key Partner - </span>
           Nargis Dutt Foundation
         </p>
@@ -67,61 +67,63 @@ const TobaccoAwareness = () => {
       </div>
 
       {/* Cards Section */}
-      <div className="w-270 mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 mt-30 mb-40">
-        {/* Card 1 */}
-        <Link to="/workinaction/medicalcamp">
-        <div className="bg-white rounded-[30px] shadow-md hover:shadow-lg transition flex flex-col h-104">
-          <div className="h-1/2 w-full overflow-hidden rounded-t-[30px]">
-            <img
-              src={Cancer}
-              alt="Tobacco Awareness Session"
-              className="w-full h-full object-cover"
-            />
+      <div
+        className="mx-auto
+          grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 mb-10 px-2 md:px-0
+          max-w-[1080px]
+          sm:max-w-[1050px]"
+      >
+        <Link to="/workinaction/medicalcamp" className="group">
+          <div className="bg-white rounded-[30px] shadow-md hover:shadow-lg transition flex flex-col h-104 max-w-[331px] mx-auto md:max-w-none md:mx-0">
+            <div className="h-1/2 w-full overflow-hidden rounded-t-[30px]">
+              <img
+                src={Cancer}
+                alt="Tobacco Awareness Session"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div className="flex-1 flex items-center justify-center p-4">
+              <h2 className="text-purple-900 text-center text-3xl font-visby font-semibold">
+                Cancer Screening
+                <br />
+                Camp
+              </h2>
+            </div>
           </div>
-          <div className="flex-1 flex items-center justify-center p-4">
-            <h2 className="text-purple-900 text-center text-3xl font-visby font-semibold">
-              Cancer Screening
-              <br />
-              Camp
-            </h2>
-          </div>
-        </div>
         </Link>
 
-        {/* Card 2 */}
-        <Link to="/workinaction/vibgyor">
-        <div className="bg-white rounded-[30px] shadow-md hover:shadow-lg transition flex flex-col h-104">
-          <div className="h-1/2 w-full overflow-hidden rounded-t-[30px]">
-            <img
-              src={VIBGYOR}
-              alt="VIBGYOR Fundraising Concert"
-              className="w-full h-full object-cover"
-            />
+        <Link to="/workinaction/vibgyor" className="group">
+          <div className="bg-white rounded-[30px] shadow-md hover:shadow-lg transition flex flex-col h-104 max-w-[331px] mx-auto md:max-w-none md:mx-0">
+            <div className="h-1/2 w-full overflow-hidden rounded-t-[30px]">
+              <img
+                src={VIBGYOR}
+                alt="VIBGYOR Fundraising Concert"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div className="flex-1 flex items-center justify-center p-4">
+              <h2 className="text-purple-900 text-center text-3xl font-visby font-semibold">
+                VIBGYOR Fundraising Concert
+              </h2>
+            </div>
           </div>
-          <div className="flex-1 flex items-center justify-center p-4">
-            <h2 className="text-purple-900 text-center text-3xl font-visby font-semibold">
-              VIBGYOR Fundraising Concert
-            </h2>
-          </div>
-        </div>
         </Link>
 
-        {/* Card 3 */}
-        <Link to="/workinaction/mobilescreening">
-        <div className="bg-white rounded-[30px] shadow-md hover:shadow-lg transition flex flex-col h-104">
-          <div className="h-1/2 w-full overflow-hidden rounded-t-[30px]">
-            <img
-              src={Mobile}
-              alt="Mobile Screening Camps"
-              className="w-full h-full object-cover"
-            />
+        <Link to="/workinaction/mobilescreening" className="group">
+          <div className="bg-white rounded-[30px] shadow-md hover:shadow-lg transition flex flex-col h-104 max-w-[331px] mx-auto md:max-w-none md:mx-0">
+            <div className="h-1/2 w-full overflow-hidden rounded-t-[30px]">
+              <img
+                src={Mobile}
+                alt="Mobile Screening Camps"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div className="flex-1 flex items-center justify-center p-4">
+              <h2 className="text-purple-900 text-center text-3xl font-visby font-semibold">
+                Mobile Screening Camps
+              </h2>
+            </div>
           </div>
-          <div className="flex-1 flex items-center justify-center p-4">
-            <h2 className="text-purple-900 text-center text-3xl font-visby font-semibold">
-              Mobile Screening Camps
-            </h2>
-          </div>
-        </div>
         </Link>
       </div>
     </div>

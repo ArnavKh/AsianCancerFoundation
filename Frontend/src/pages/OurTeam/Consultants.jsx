@@ -5,7 +5,7 @@ import Neha from "../../assets/Our Team/Consultants/Neha.png";
 const Consultants = () => {
   return (
     <div className="font-visby px-20 pb-45">
-      <h2 className="text-4xl font-bold text-black mt-10 text-left w-full pl-20 pt-15">
+      <h2 className="text-4xl font-bold text-black mt-10 pt-15 text-center md:text-left md:pl-15">
         Consultants
       </h2>
 

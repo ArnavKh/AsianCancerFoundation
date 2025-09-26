@@ -51,7 +51,7 @@ const BankDetails = () => {
                     <td className="py-2 px-3 font-medium border border-gray-300">
                       Branch
                     </td>
-                    <td className="py-2 px-3 border border-gray-300">Warli</td>
+                    <td className="py-2 px-3 border border-gray-300">Worli</td>
                   </tr>
                   <tr>
                     <td className="py-2 px-3 font-medium border border-gray-300">

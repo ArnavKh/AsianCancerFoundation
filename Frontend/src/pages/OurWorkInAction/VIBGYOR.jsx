@@ -8,73 +8,79 @@ import Mobile from "../../assets/VIBGYOR/MobileScreening.png";
 
 const VIBGYOR = () => {
   return (
-      <div className="bg-[#f8f5f0] min-h-screen py-8">
-        <div className="relative mb-6 mt-8">
-          <Link
-            to="/workinaction"
-            className="absolute left-0 top-1/2 -translate-y-1/2"
-          >
-            <CircleChevronLeft className="ml-15 w-10 h-10" />
-          </Link>
-  
-          <h1 className="text-2xl md:text-3xl font-bold font-visby text-purple-900 text-center">
-            VIBGYOR Fundraising Concert
-          </h1>
+    <div className="bg-[#f8f5f0] min-h-screen py-8 px-4 md:px-0">
+      <div className="relative mb-6 mt-8 max-w-[1080px] mx-auto px-4 md:px-0">
+        <Link
+          to="/workinaction"
+          className="absolute left-0 top-1/2 -translate-y-1/2"
+        >
+          <CircleChevronLeft className="absolute left-[-7rem] top-1/3 -translate-y-1/2 w-10 h-10" />
+        </Link>
+
+        <h1 className="text-2xl md:text-3xl font-bold font-visby text-purple-900 text-center">
+             VIBGYOR Fundraising Concert
+           </h1>
+      </div>
+
+      {/* Top image */}
+      <div className="mx-auto rounded-[30px] overflow-hidden mb-6 
+        w-[270px] md:w-270 md:h-88 h-[280px]
+      ">
+        <img
+          src={VIBGYORImage}
+          alt="Medical Camp"
+          className="w-full h-full object-cover"
+        />
+      </div>
+
+      {/* Beneficiaries & Date */}
+      <div className=" md:w-270 mx-auto bg-[rgba(125,165,134,0.31)] rounded-[30px] grid grid-cols-2 text-center py-4 my-10">
+        <div className="border-r border-gray-400">
+          <p className="md:text-3xl font-bold font-visby text-[#7DA586]">900</p>
+          <p className="md:text-xl font-didact text-gray-800">Attendees</p>
         </div>
-  
-        {/* Top image */}
-        <div className="mx-auto rounded-[30px] overflow-hidden mb-6 w-270 h-88">
-          <img
-            src={VIBGYORImage}
-            alt="Medical Camp"
-            className="w-full h-full object-cover"
-          />
+        <div>
+          <p className="md:text-3xl font-bold font-visby text-[#7DA586]">5th</p>
+          <p className="md:text-xl font-didact text-gray-800">November 2022</p>
         </div>
+      </div>
+
+      {/* Highlight & Key Partner */}
+      <div className="md:w-270 mx-auto mb-6 text-gray-800">
+           <p className="text-2xl mb-2 font-didact">
+             <span className="font-bold font visby">Highlight - </span>
+             Fundraising for paedatric cancer care through musical performances & community engagement
+           </p>
+           <p className="text-2xl mb-15 font-didact">
+             <span className="font-bold font-visby">Key Partner - </span>
+             C-Kids
+           </p>
   
-        {/* Beneficiaries & Date */}
-        <div className="w-270 mx-auto bg-[rgba(125,165,134,0.31)] rounded-[30px] grid grid-cols-2 text-center py-4 my-10">
-          <div className="border-r border-gray-400">
-            <p className="text-3xl font-bold font-visby text-[#7DA586]">900</p>
-            <p className="text-xl font-didact text-gray-800">Attendees</p>
-          </div>
-          <div>
-            <p className="text-3xl font-bold font-visby text-[#7DA586]">5th</p>
-            <p className="text-xl font-didact text-gray-800">November 2022</p>
-          </div>
-        </div>
-  
-        {/* Highlight & Key Partner */}
-        <div className="w-270 mx-auto mb-6 text-gray-800">
-          <p className="text-2xl mb-2 font-didact">
-            <span className="font-bold font visby">Highlight - </span>
-            Fundraising for paedatric cancer care through musical performances & community engagement
-          </p>
-          <p className="text-2xl mb-15 font-didact">
-            <span className="font-bold font-visby">Key Partner - </span>
-            C-Kids
-          </p>
-  
-          <p className="text-2xl mb-4 font-didact">
-            VIBGYOR was a unique musical fundraiser for children with cancer, featuring seven music genres inspired by the chakras & musical notes, including classical, devotional, Sufi, ghazals, instrumental & cotemporary styles.
-          </p>
-          <p className="text-2xl font-didact">
-            Proceeds supported the C-Kids program that provides care for underprivileged children undergoing cancer treatment.
-          </p>
-        </div>
-  
-        {/* Cards Section */}
-        <div className="w-270 mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 mt-30 mb-40">
-          <Link to="/workinaction/medicalcamp">
+           <p className="text-2xl mb-4 font-didact">
+             VIBGYOR was a unique musical fundraiser for children with cancer, featuring seven music genres inspired by the chakras & musical notes, including classical, devotional, Sufi, ghazals, instrumental & cotemporary styles.
+           </p>
+           <p className="text-2xl font-didact">
+             Proceeds supported the C-Kids program that provides care for underprivileged children undergoing cancer treatment.
+           </p>
+         </div>
+
+      {/* Cards Section */}
+      <div className="mx-auto
+        grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 mb-10 px-2 md:px-0
+        max-w-[1080px]
+        sm:max-w-[1050px]
+      ">
+        <Link to="/workinaction/medicalcamp" className="group">
           {/* Card 1 */}
-          <div className="bg-white rounded-[30px] shadow-md hover:shadow-lg transition flex flex-col h-104">
+          <div className="bg-white rounded-[30px] shadow-md hover:shadow-lg transition flex flex-col h-104 max-w-[331px] mx-auto md:max-w-none md:mx-0">
             <div className="h-1/2 w-full overflow-hidden rounded-t-[30px]">
               <img
                 src={Cancer}
                 alt="Tobacco Awareness Session"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
               />
             </div>
-            <div className="flex-1 flex items-center justify-center">
+            <div className="flex-1 flex items-center justify-center p-4">
               <h2 className="text-purple-900 text-center text-3xl font-visby font-semibold">
                 Cancer Screening
                 <br />
@@ -82,46 +88,53 @@ const VIBGYOR = () => {
               </h2>
             </div>
           </div>
-          </Link>
-  
+        </Link>
+
+        <Link to="/workinaction/mobilescreening" className="group">
           {/* Card 2 */}
-          <Link to="/workinaction/mobilescreening">
-          <div className="bg-white rounded-[30px] shadow-md hover:shadow-lg transition flex flex-col h-104">
+          <div className="bg-white rounded-[30px] shadow-md hover:shadow-lg transition flex flex-col h-104 max-w-[331px] mx-auto md:max-w-none md:mx-0">
             <div className="h-1/2 w-full overflow-hidden rounded-t-[30px]">
               <img
                 src={Mobile}
                 alt="VIBGYOR Fundraising Concert"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
               />
             </div>
             <div className="flex-1 flex items-center justify-center p-4">
               <h2 className="text-purple-900 text-center text-3xl font-visby font-semibold">
-                Mobile Screening <br></br>Camps
+                Mobile Screening
+                <br />
+                Camps
               </h2>
             </div>
           </div>
-          </Link>
-  
+        </Link>
+
+        <Link to="/workinaction/tobaccoawareness" className="group">
           {/* Card 3 */}
-          <Link to="/workinaction/tobaccoawareness">
-          <div className="bg-white rounded-[30px] shadow-md hover:shadow-lg transition flex flex-col h-104">
+          <div className="bg-white rounded-[30px] shadow-md hover:shadow-lg transition flex flex-col h-104 max-w-[331px] mx-auto md:max-w-none md:mx-0">
             <div className="h-1/2 w-full overflow-hidden rounded-t-[30px]">
               <img
                 src={Tobacco}
                 alt="Mobile Screening Camps"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
               />
             </div>
             <div className="flex-1 flex items-center justify-center p-4">
-              <h2 className="text-purple-900 text-center text-3xl font-visby font-semibold">
-                Tobacco<br></br>Awareness<br></br>Session
+              <h2 className="text-purple-900 text-center text-3xl font-visby font-semibold leading-snug">
+                Tobacco
+                <br />
+                Awareness
+                <br />
+                Session
               </h2>
             </div>
           </div>
-          </Link>
-        </div>
+        </Link>
       </div>
-    );
+    </div>
+  );
 };
 
 export default VIBGYOR;
+

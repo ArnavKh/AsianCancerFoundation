@@ -27,7 +27,7 @@ const SupportCards = () => {
       ].map((item, idx) => (
         <div
           key={idx}
-          className="group flex flex-col justify-center bg-white rounded-[30px] p-6 shadow-sm hover:shadow transition w-128 h-51 align-middle"
+          className="w-75 group flex flex-col justify-center bg-white rounded-[30px] p-6 shadow-sm hover:shadow transition md:w-128 h-51 align-middle"
         >
           <h3 className="text-lg md:text-3xl font-semibold font-visby mb-2 group-hover:hidden">
             {item.title}
