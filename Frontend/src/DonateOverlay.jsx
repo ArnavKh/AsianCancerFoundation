@@ -56,7 +56,7 @@ export default function DonateOverlay({ isOpen, onClose }) {
 
       <div className="flex flex-col md:flex-row gap-6 relative">
         {/* Left Panel */}
-        <div className="bg-white rounded-[20px] shadow h-159 w-125 flex flex-col">
+        <div className="hidden md:flex bg-white rounded-[20px] shadow h-159 w-125 flex-col">
           <img
             src={DonateImage}
             alt="Foundation"
@@ -402,50 +402,50 @@ export default function DonateOverlay({ isOpen, onClose }) {
 
                   {/* Checkboxes */}
                   <div className="space-y-2">
-                  <label className="font-didact flex items-center gap-2 cursor-pointer">
-                  <input
-                    type="checkbox"
-                    className="w-5 h-5 bg-[#EDE2FF] border-2 border-[#583490] rounded-[6px] 
+                    <label className="font-didact flex items-center gap-2 cursor-pointer">
+                      <input
+                        type="checkbox"
+                        className="w-5 h-5 bg-[#EDE2FF] border-2 border-[#583490] rounded-[6px] 
     appearance-none relative checked:after:content-['✔'] checked:after:absolute 
     checked:after:text-[#583490] checked:after:text-[12px] 
     checked:after:left-[3px] checked:after:top-[-1px]"
-                    checked={dedicate}
-                    onChange={(e) => setDedicate(e.target.checked)}
-                  />
-                  Donate as an organisation
-                </label>
+                        checked={dedicate}
+                        onChange={(e) => setDedicate(e.target.checked)}
+                      />
+                      Donate as an organisation
+                    </label>
 
-                <label className="font-didact flex items-center gap-2 cursor-pointer">
-                  <input
-                    type="checkbox"
-                    className="w-5 h-5 bg-[#EDE2FF] border-2 border-[#583490] rounded-[6px] 
+                    <label className="font-didact flex items-center gap-2 cursor-pointer">
+                      <input
+                        type="checkbox"
+                        className="w-5 h-5 bg-[#EDE2FF] border-2 border-[#583490] rounded-[6px] 
     appearance-none relative checked:after:content-['✔'] checked:after:absolute 
     checked:after:text-[#583490] checked:after:text-[12px] 
     checked:after:left-[3px] checked:after:top-[-1px]"
-                    checked={dedicate}
-                    onChange={(e) => setDedicate(e.target.checked)}
-                  />
-                  Dedicate anonymously
-                </label>
+                        checked={dedicate}
+                        onChange={(e) => setDedicate(e.target.checked)}
+                      />
+                      Dedicate anonymously
+                    </label>
 
-                <label className="font-didact flex items-center gap-2 cursor-pointer">
-                  <input
-                    type="checkbox"
-                    className="w-5 h-5 bg-[#EDE2FF] border-2 border-[#583490] rounded-[6px] 
+                    <label className="font-didact flex items-center gap-2 cursor-pointer">
+                      <input
+                        type="checkbox"
+                        className="w-5 h-5 bg-[#EDE2FF] border-2 border-[#583490] rounded-[6px] 
     appearance-none relative checked:after:content-['✔'] checked:after:absolute 
     checked:after:text-[#583490] checked:after:text-[12px] 
     checked:after:left-[3px] checked:after:top-[-1px]"
-                    checked={dedicate}
-                    onChange={(e) => setDedicate(e.target.checked)}
-                  />
-                    <span className="font-didact">
-                      I agree to Terms and{" "}
-                      <a href="/privacypolicy" className="">
-                        Privacy Notice
-                      </a>
-                    </span>
-                </label>
-                </div>
+                        checked={dedicate}
+                        onChange={(e) => setDedicate(e.target.checked)}
+                      />
+                      <span className="font-didact">
+                        I agree to Terms and{" "}
+                        <a href="/privacypolicy" className="">
+                          Privacy Notice
+                        </a>
+                      </span>
+                    </label>
+                  </div>
                 </div>
               </form>
 
