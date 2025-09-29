@@ -109,7 +109,7 @@ export default function FlagshipInitiatives() {
         {initiatives.map((item) => (
           <div
             key={item.id}
-            className="bg-white rounded-[30px] border-4 border-[#7DA586] shadow-sm w-full p-5"
+            className="bg-white rounded-[30px] border-4 border-[#7DA586] shadow-sm w-full p-5 hover:bg-[#583490] hover:text-white"
           >
             <button
               onClick={() => setOpenIndex(openIndex === item.id ? null : item.id)}
