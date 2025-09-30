@@ -15,7 +15,7 @@ import MobileScreening from "./pages/OurWorkInAction/MobileScreening.jsx";
 import PrivacyPolicy from "./pages/PrivacyPolicy/PrivacyPolicy.jsx";
 import DonateOverlay from "./DonateOverlay.jsx";
 import DonateButton from "./DonateButton.jsx";
-import ScrollToTop from "./ScrolltoTop.jsx";
+import ScrollToTop from "./ScrollToTop.jsx";
 
 export default function App() {
   return (
