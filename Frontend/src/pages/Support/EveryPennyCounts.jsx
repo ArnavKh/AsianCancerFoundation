@@ -19,7 +19,7 @@ const EveryPennyCounts = () => {
         <p className="text-base md:text-3xl mb-6 font-visby font-semibold">
           You Can Start By Donating A Little Monthly
         </p>
-        <div className="flex flex-wrap gap-4 mb-12">
+        <div className="flex flex-wrap gap-4 mb-12 justify-center md:justify-start">
         {["₹ 1,000", "₹ 2,500", "₹ 5,000", "₹ 10,000+"].map((amt, i) => (
           <button
             key={i}
@@ -36,7 +36,7 @@ const EveryPennyCounts = () => {
           Support Breast Cancer Surgeries
         </p>
 
-        <div className="flex flex-wrap gap-4 mb-12">
+        <div className="flex flex-wrap gap-4 mb-12 justify-center md:justify-start">
           {["₹ 2,50,000", "₹250,00,000"].map((amt, i) => (
             <button
               key={i}
@@ -59,7 +59,7 @@ const EveryPennyCounts = () => {
           Support Head And Neck Cancer Surgeries
         </p>
 
-        <div className="flex flex-wrap gap-4 mb-12">
+        <div className="flex flex-wrap gap-4 mb-12 justify-center md:justify-start">
           {["₹ 3,00,000", "₹300,00,000"].map((amt, i) => (
             <button
               key={i}
