@@ -21,7 +21,7 @@ const ContactUs = () => {
       </div>
 
       {/* Contact Info + Form */}
-      <div className="container mx-20 grid grid-cols-1 md:grid-cols-2 gap-8 py-12">
+      <div className="container mx-4 md:mx-20 grid grid-cols-1 md:grid-cols-2 gap-8 py-12">
         {/* Contact Information */}
         <div className="relative bg-[#583490] text-white rounded-[30px] p-6 md:p-8 shadow-lg overflow-hidden
                         max-w-full md:max-w-[480px] mx-auto md:mx-0">
@@ -246,7 +246,7 @@ const ContactUs = () => {
 
       <section className="mx-4 md:mx-20 py-12 pb-20">
         <h2 className="text-2xl md:text-4xl font-bold mb-6 text-[#D2635D] font-visby text-center md:text-left">
-          Why Give to Asian Cancer Foundation?
+          Why Give to Indian Cancer Foundation?
         </h2>
         <ul className="space-y-3 mb-8 text-base md:text-2xl font-didact max-w-3xl mx-auto md:mx-0">
           <li>

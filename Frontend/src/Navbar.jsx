@@ -18,13 +18,27 @@ const Navbar = () => {
 
           {/* Desktop Links */}
           <div className="hidden md:flex space-x-12 text-black text-sm font-visby">
-            <Link to="/" className="hover:text-gray-600">Home</Link>
-            <Link to="/ourteam" className="hover:text-gray-600">Our Team</Link>
-            <Link to="/ourimpact" className="hover:text-gray-600">Our Impact</Link>
-            <Link to="/workinaction" className="hover:text-gray-600">Our Work in Action</Link>
-            <Link to="/flagshipninit" className="hover:text-gray-600">Flagship Initiatives</Link>
-            <Link to="/support" className="hover:text-gray-600">Support</Link>
-            <Link to="/contactus" className="hover:text-gray-600">Contact Us</Link>
+            <Link to="/" className="hover:text-gray-600">
+              Home
+            </Link>
+            <Link to="/ourteam" className="hover:text-gray-600">
+              Our Team
+            </Link>
+            <Link to="/ourimpact" className="hover:text-gray-600">
+              Our Impact
+            </Link>
+            <Link to="/workinaction" className="hover:text-gray-600">
+              Our Work in Action
+            </Link>
+            <Link to="/flagshipninit" className="hover:text-gray-600">
+              Flagship Initiatives
+            </Link>
+            <Link to="/support" className="hover:text-gray-600">
+              Support
+            </Link>
+            <Link to="/contactus" className="hover:text-gray-600">
+              Contact Us
+            </Link>
           </div>
 
           {/* Desktop Donate Button */}
@@ -33,7 +47,7 @@ const Navbar = () => {
           </div>
 
           {/* Mobile Hamburger + Donate */}
-          <div className="md:hidden flex items-center space-x-2">
+          <div className="md:hidden flex items-center space-x-2 px-3">
             <DonateButton />
             <button
               onClick={() => setMenuOpen(!menuOpen)}
@@ -48,13 +62,55 @@ const Navbar = () => {
       {/* Mobile Menu */}
       {menuOpen && (
         <div className="md:hidden bg-[#f8f5f0] px-4 pb-4 space-y-3 text-center">
-          <Link to="/" className="block py-2 text-black hover:text-gray-600">Home</Link>
-          <Link to="/ourteam" className="block py-2 text-black hover:text-gray-600">Our Team</Link>
-          <Link to="/ourimpact" className="block py-2 text-black hover:text-gray-600">Our Impact</Link>
-          <Link to="/workinaction" className="block py-2 text-black hover:text-gray-600">Our Work in Action</Link>
-          <Link to="/flagshipninit" className="block py-2 text-black hover:text-gray-600">Flagship Initiatives</Link>
-          <Link to="/support" className="block py-2 text-black hover:text-gray-600">Support</Link>
-          <Link to="/contactus" className="block py-2 text-black hover:text-gray-600">Contact Us</Link>
+          <Link
+            to="/"
+            onClick={() => setMenuOpen(false)}
+            className="block py-2 text-black hover:text-gray-600"
+          >
+            Home
+          </Link>
+          <Link
+            to="/ourteam"
+            onClick={() => setMenuOpen(false)}
+            className="block py-2 text-black hover:text-gray-600"
+          >
+            Our Team
+          </Link>
+          <Link
+            to="/ourimpact"
+            onClick={() => setMenuOpen(false)}
+            className="block py-2 text-black hover:text-gray-600"
+          >
+            Our Impact
+          </Link>
+          <Link
+            to="/workinaction"
+            onClick={() => setMenuOpen(false)}
+            className="block py-2 text-black hover:text-gray-600"
+          >
+            Our Work in Action
+          </Link>
+          <Link
+            to="/flagshipninit"
+            onClick={() => setMenuOpen(false)}
+            className="block py-2 text-black hover:text-gray-600"
+          >
+            Flagship Initiatives
+          </Link>
+          <Link
+            to="/support"
+            onClick={() => setMenuOpen(false)}
+            className="block py-2 text-black hover:text-gray-600"
+          >
+            Support
+          </Link>
+          <Link
+            to="/contactus"
+            onClick={() => setMenuOpen(false)}
+            className="block py-2 text-black hover:text-gray-600"
+          >
+            Contact Us
+          </Link>
         </div>
       )}
     </nav>

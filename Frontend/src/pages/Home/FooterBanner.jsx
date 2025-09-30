@@ -15,7 +15,7 @@
           />
 
           {/* White tint gradient overlay */}
-          <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-white/40 to-white/30 h-72 rounded-[30px]"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-white/40 to-white/30 rounded-[30px]"></div>
 
           {/* Content on top */}
           <div className="absolute inset-0 flex flex-col justify-center items-start px-4 md:px-8 text-white">
