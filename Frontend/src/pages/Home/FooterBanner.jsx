@@ -6,7 +6,7 @@
   const FooterBanner = () => {
     return (
       <section className="bg-[#f8f5f0] px-4 md:px-8 pb-45">
-        <div className="relative rounded-[30px] overflow-hidden w-330 h-76 mx-auto">
+        <div className="relative rounded-[30px] overflow-hidden md:w-330 w-75 h-76 mx-auto items-center">
           {/* Background image */}
           <img
             src={FooterImage}
@@ -15,7 +15,7 @@
           />
 
           {/* White tint gradient overlay */}
-          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-white/30"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-white/40 to-white/30 h-72 rounded-[30px]"></div>
 
           {/* Content on top */}
           <div className="absolute inset-0 flex flex-col justify-center items-start px-4 md:px-8 text-white">

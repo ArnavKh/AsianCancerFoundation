@@ -109,7 +109,8 @@ export default function FlagshipInitiatives() {
         {initiatives.map((item) => (
           <div
             key={item.id}
-            className="bg-white rounded-[30px] border-4 border-[#7DA586] shadow-sm w-full p-5 hover:bg-[#583490] hover:text-white"
+            className={`group bg-white rounded-[30px] border-4 border-[#7DA586] shadow-sm w-full p-5 
+              ${openIndex !== item.id ? "hover:bg-[#583490] hover:text-white" : ""}`}
           >
             <button
               onClick={() => setOpenIndex(openIndex === item.id ? null : item.id)}
@@ -120,7 +121,8 @@ export default function FlagshipInitiatives() {
                 <img
                   src={item.img}
                   alt={item.alt}
-                  className="w-20 h-20 object-contain"
+                  className={`w-20 h-20 object-contain transition 
+                    ${openIndex !== item.id ? "group-hover:invert" : ""}`}
                 />
                 <div>
                   <h3 className="font-bold text-2xl sm:text-4xl font-visby">{item.title}</h3>

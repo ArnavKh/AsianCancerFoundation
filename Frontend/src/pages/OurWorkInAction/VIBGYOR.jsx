@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { CircleChevronLeft } from "lucide-react";
 import Tobacco from "../../assets/VIBGYOR/Tobacco.png";
 import Cancer from "../../assets/VIBGYOR/Cancer.png";
-import VIBGYORImage from "../../assets/VIBGYOR/VIBGYOR.png";
+import VIBGYORImage from "../../assets/VIBGYOR/VIBGYOR2.png";
 import Mobile from "../../assets/VIBGYOR/MobileScreening.png";
 
 const VIBGYOR = () => {

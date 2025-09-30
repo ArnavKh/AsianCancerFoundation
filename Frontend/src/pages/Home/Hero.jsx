@@ -11,7 +11,7 @@ const Hero = () => {
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-0">
         {/* Left Section */}
         <div>
-          <h1 className="text-4xl sm:text-5xl md:text-7xl font-visby font-semibold pt-4 md:pt-12 leading-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-visby font-semibold pt-4 md:pt-12">
             Asian Cancer <br /> Foundation
           </h1>
           <p className="mt-4 text-base sm:text-lg font-visby pb-3 font-medium">
@@ -20,11 +20,11 @@ const Hero = () => {
           </p>
 
           {/* White Box */}
-          <div className="flex items-center mt-6 bg-white text-black rounded-[30px] w-full max-w-[95%] sm:max-w-[460px] h-auto p-3 sm:p-4">
+          <div className="flex items-center mt-6 bg-white text-black rounded-[30px] w-full max-w-[95%] sm:max-w-[460px] h-auto sm:p-2 p-3">
             <img
               src={MotherSon}
               alt="Join Us"
-              className="w-[80px] sm:w-[120px] h-[100px] sm:h-[147px] object-cover rounded-[30px] grayscale mr-3"
+              className="w-[80px] sm:w-[120px] h-[100px] sm:h-[147px] object-cover rounded-[22px] grayscale mr-5"
             />
             <div className="flex-1">
               <p className="text-xs sm:text-sm mb-2 font-didact leading-snug">
@@ -38,7 +38,7 @@ const Hero = () => {
         </div>
 
         {/* Right Section: Image Grid — hidden on small screens */}
-        <div className="hidden md:grid grid-cols-2 pt-10">
+        <div className="hidden md:grid grid-cols-2 pt-14">
           <div className="space-y-4 ml-16">
             <div className="w-55 h-38">
               <img

@@ -21,7 +21,7 @@ const Consultants = () => {
               className="absolute inset-0 rounded-[30px] overflow-hidden border-2 border-[#A2A1A1]"
               style={{ backfaceVisibility: "hidden" }}
             >
-              <img src={Somma} className="w-full h-full object-cover" />
+              <img src={Somma} className="w-full h-full object-cover pb-10 pl-2" />
               <div className="absolute bottom-0 w-full text-center p-4">
                 <div className="bg-white/80 text-gray-900 rounded-xl p-1">
                   <h3 className="text-[20px] font-visby font-extrabold">

@@ -5,7 +5,7 @@ import { FaFacebook } from "react-icons/fa";
 
 const ContactUs = () => {
   return (
-    <div className="bg-[#fefaf6] text-gray-900">
+    <div className="bg-[#fefaf6] text-gray-900 pb-10">
       {/* Header Section */}
       <div className="relative">
         <img
@@ -21,15 +21,15 @@ const ContactUs = () => {
       </div>
 
       {/* Contact Info + Form */}
-      <div className="container mx-auto px-4 md:px-8 grid grid-cols-1 md:grid-cols-2 gap-10 py-12">
+      <div className="container mx-20 grid grid-cols-1 md:grid-cols-2 gap-8 py-12">
         {/* Contact Information */}
         <div className="relative bg-[#583490] text-white rounded-[30px] p-6 md:p-8 shadow-lg overflow-hidden
-                        max-w-full md:max-w-[420px] mx-auto md:mx-0">
+                        max-w-full md:max-w-[480px] mx-auto md:mx-0">
           {/* Content */}
           <h2 className="text-2xl font-visby font-medium mb-2">Contact Information</h2>
           <p className="mb-8 font-didact text-lg">Got questions? Let’s Connect!</p>
 
-          <ul className="space-y-4 font-didact text-[14px]">
+          <ul className="space-y-4 font-didact text-[14px] pt-10">
             <li className="flex items-center gap-2">
               <PhoneCall className="w-4 h-4" />
               <span>+91 2262771134</span>
@@ -156,7 +156,7 @@ const ContactUs = () => {
         </form>
       </div>
 
-      <section className="p-6 md:p-10 mx-4 md:mx-20 pb-12 bg-[#583490] text-white rounded-[30px]">
+      <section className="p-6 md:p-10 mx-4 md:mx-20 pb-12 bg-[#583490] text-white rounded-[30px] mt-25 mb-10">
         <h3 className="text-lg md:text-3xl text-[#D2635D] font-semibold mb-6 font-visby text-center md:text-left">
           Help us save lives. Donate or partner today.
         </h3>
@@ -228,15 +228,15 @@ const ContactUs = () => {
                 </tr>
                 <tr>
                   <td className="py-2 px-3 font-medium border border-gray-300">Bank Name</td>
-                  <td className="py-2 px-3 border border-gray-300">Federal Bank</td>
+                  <td className="py-2 px-3 border border-gray-300">SBI Bank</td>
                 </tr>
                 <tr>
                   <td className="py-2 px-3 font-medium border border-gray-300">Branch</td>
-                  <td className="py-2 px-3 border border-gray-300">Chembur</td>
+                  <td className="py-2 px-3 border border-gray-300">New Delhi Main Branch</td>
                 </tr>
                 <tr>
                   <td className="py-2 px-3 font-medium border border-gray-300">IFSC Code</td>
-                  <td className="py-2 px-3 border border-gray-300">FDRL0001399</td>
+                  <td className="py-2 px-3 border border-gray-300">SBIN0000691</td>
                 </tr>
               </tbody>
             </table>
