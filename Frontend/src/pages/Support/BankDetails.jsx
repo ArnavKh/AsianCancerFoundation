@@ -85,7 +85,7 @@ const BankDetails = () => {
                       Account No
                     </td>
                     <td className="py-2 px-3 border border-gray-300">
-                      13990200006309
+                    43851259104
                     </td>
                   </tr>
                   <tr>
@@ -101,7 +101,7 @@ const BankDetails = () => {
                       Bank Name
                     </td>
                     <td className="py-2 px-3 border border-gray-300">
-                      Federal Bank
+                    SBI Bank
                     </td>
                   </tr>
                   <tr>
@@ -109,7 +109,7 @@ const BankDetails = () => {
                       Branch
                     </td>
                     <td className="py-2 px-3 border border-gray-300">
-                      Chembur
+                    New Delhi Main Branch
                     </td>
                   </tr>
                   <tr>
@@ -117,7 +117,7 @@ const BankDetails = () => {
                       IFSC Code
                     </td>
                     <td className="py-2 px-3 border border-gray-300">
-                      FDRL0001399
+                    SBIN0000691
                     </td>
                   </tr>
                 </tbody>

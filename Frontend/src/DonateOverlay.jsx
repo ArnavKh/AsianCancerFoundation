@@ -345,9 +345,8 @@ export default function DonateOverlay({ isOpen, onClose }) {
             <>
               {/* Green dedication bar */}
               <div className="bg-[#DCE6D9] -m-6 mb-4 py-2 rounded-t-[20px] flex items-center justify-center gap-2">
-                <Heart size={18} className="text-red-500" />
                 <span className="font-visby font-semibold text-sm text-black">
-                  Dedicated to name
+                ❤️ Dedicated to name
                 </span>
               </div>
 
@@ -465,9 +464,8 @@ export default function DonateOverlay({ isOpen, onClose }) {
             <>
               {/* Green dedication bar (flush to top/left/right) */}
               <div className="bg-[#DCE6D9] -m-6 mb-4 py-2 rounded-t-[20px] flex items-center justify-center gap-2">
-                <Heart size={18} className="text-rose-500" />
                 <span className="font-visby font-semibold text-sm text-black">
-                  Dedicated to name
+                ❤️ Dedicated to name
                 </span>
               </div>
 
