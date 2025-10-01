@@ -246,7 +246,7 @@ const ContactUs = () => {
 
       <section className="mx-4 md:mx-20 py-12 pb-20">
         <h2 className="text-2xl md:text-4xl font-bold mb-6 text-[#D2635D] font-visby text-center md:text-left">
-          Why Give to Indian Cancer Foundation?
+          Why Give to Asian Cancer Foundation?
         </h2>
         <ul className="space-y-3 mb-8 text-base md:text-2xl font-didact max-w-3xl mx-auto md:mx-0">
           <li>
