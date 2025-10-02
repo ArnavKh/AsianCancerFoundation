@@ -63,7 +63,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="md:hidden bg-[#f8f5f0] px-4 pb-4 space-y-3 text-center">
+        <div className="md:hidden bg-[#f8f5f0] px-4 pb-4 space-y-3 text-center font-visby">
           <Link
             to="/"
             onClick={() => setMenuOpen(false)}

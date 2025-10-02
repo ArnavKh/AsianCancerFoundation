@@ -12,6 +12,14 @@
     /* Static solid border when not hovered */
     border: 6px solid currentColor;
   }
+
+  @media (max-width: 767px) {
+    .card {
+      width: 20rem;      /* shrink width for small screens */
+      height: 22rem;     /* shrink height for small screens */
+      padding: 1.5rem;   /* optional: slightly reduce padding */
+    }
+  }
   
   /* Register the animatable custom property */
   @property --angle {

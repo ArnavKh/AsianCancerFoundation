@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#f8f5f0] py-12 border-t border-gray-200">
+    <footer className="bg-[#f8f5f0] py-12 border-t border-gray-200 pt-25">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Top section */}
         <div className="flex flex-col md:flex-row items-center md:items-start justify-between gap-8">
@@ -40,7 +40,7 @@ const Footer = () => {
         </div>
 
         {/* Copyright */}
-        <div className="text-gray-700 font-didact text-center pt-8">
+        <div className="text-gray-700 font-didact text-center pt-8 text-sm">
           <p>&copy; {new Date().getFullYear()} Asian Cancer Foundations. All rights reserved.</p>
         </div>
       </div>

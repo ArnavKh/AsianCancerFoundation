@@ -8,7 +8,7 @@ import Mobile from "../../assets/Tobacco/MobileScreening.png";
 
 const TobaccoAwareness = () => {
   return (
-    <div className="bg-[#f8f5f0] min-h-screen py-8 px-4 md:px-0">
+    <div className="bg-[#f8f5f0] min-h-screen pt-8 py-4 px-4 md:px-0">
       <div className="relative mb-6 mt-8 max-w-[1080px] mx-auto px-4 md:px-0">
         <Link
           to="/workinaction"
@@ -23,7 +23,9 @@ const TobaccoAwareness = () => {
       </div>
 
       {/* Top image */}
-      <div className="mx-auto rounded-[30px] overflow-hidden mb-6 w-[270px] md:w-270 md:h-88 h-[280px]">
+      <div className="mx-auto rounded-[30px] overflow-hidden mb-6 
+        w-[390px] md:w-270 md:h-88 h-[280px]
+      ">
         <img
           src={Tobacco}
           alt="Tobacco Awareness Session"
@@ -44,21 +46,21 @@ const TobaccoAwareness = () => {
       </div>
 
       {/* Highlight & Key Partner */}
-      <div className="md:w-270 mx-auto mb-6 text-gray-800">
-        <p className="text-2xl mb-2 font-didact">
+      <div className="md:w-270 mx-auto pb-10 text-gray-800">
+        <p className="text-lg md:text-2xl mb-2 font-didact">
           <span className="font-bold font-visby">Highlight - </span>
           Preventive awareness on tobacco consumption
         </p>
-        <p className="text-2xl mb-15 font-didact">
+        <p className="text-lg md:text-2xl md:mb-15 mb-5 font-didact">
           <span className="font-bold font-visby">Key Partner - </span>
           Nargis Dutt Foundation
         </p>
 
-        <p className="text-2xl mb-4 font-didact">
+        <p className="text-lg md:text-2xl mb-4 font-didact">
           In partnership with the Nargis Dutt Foundation, ACF conducted an
           engaging tobacco awareness session for 100 students aged 12-16.
         </p>
-        <p className="text-2xl font-didact">
+        <p className="text-lg md:text-2xl font-didact">
           Led by Dr. Shravan Shetty & supported by teams from both
           organisations, the session highlighted the broader health risks of
           tobacco use beyond cancer, using real-life examples & relatable
@@ -74,7 +76,7 @@ const TobaccoAwareness = () => {
           sm:max-w-[1050px]"
       >
         <Link to="/workinaction/medicalcamp" className="group">
-          <div className="bg-white rounded-[30px] shadow-md hover:shadow-lg transition flex flex-col h-104 max-w-[331px] mx-auto md:max-w-none md:mx-0">
+          <div className="bg-white rounded-[30px] shadow-md hover:shadow-lg transition flex flex-col md:h-104 max-w-[331px] mx-auto md:max-w-none md:mx-0 h-[350px] w-[300px]">
             <div className="h-1/2 w-full overflow-hidden rounded-t-[30px]">
               <img
                 src={Cancer}
@@ -93,7 +95,7 @@ const TobaccoAwareness = () => {
         </Link>
 
         <Link to="/workinaction/vibgyor" className="group">
-          <div className="bg-white rounded-[30px] shadow-md hover:shadow-lg transition flex flex-col h-104 max-w-[331px] mx-auto md:max-w-none md:mx-0">
+          <div className="bg-white rounded-[30px] shadow-md hover:shadow-lg transition flex flex-col md:h-104 max-w-[331px] mx-auto md:max-w-none md:mx-0 h-[350px] w-[300px]">
             <div className="h-1/2 w-full overflow-hidden rounded-t-[30px]">
               <img
                 src={VIBGYOR}
@@ -110,7 +112,7 @@ const TobaccoAwareness = () => {
         </Link>
 
         <Link to="/workinaction/mobilescreening" className="group">
-          <div className="bg-white rounded-[30px] shadow-md hover:shadow-lg transition flex flex-col h-104 max-w-[331px] mx-auto md:max-w-none md:mx-0">
+          <div className="bg-white rounded-[30px] shadow-md hover:shadow-lg transition flex flex-col md:h-104 max-w-[331px] mx-auto md:max-w-none md:mx-0 h-[350px] w-[300px]">
             <div className="h-1/2 w-full overflow-hidden rounded-t-[30px]">
               <img
                 src={Mobile}

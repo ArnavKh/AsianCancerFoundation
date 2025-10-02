@@ -52,7 +52,7 @@ export default function DonateOverlay({ isOpen, onClose }) {
             onClose(); // second click actually closes
           }
         }}
-        className="absolute top-4 right-4 text-white text-3xl md:text-base"
+        className="absolute top-4 right-4 text-white text-3xl font-black"
       >
         ✕
       </button>

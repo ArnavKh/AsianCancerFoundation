@@ -2,7 +2,7 @@ import React from 'react'
 
 const BankDetails = () => {
   return (
-    <section className="px-4 md:px-20 pb-15 bg-[#583490] text-white mb-25">
+    <section className="px-4 md:px-20 pb-15 bg-[#583490] text-white md:mb-25 mb-10">
 
         <h3 className="text-lg md:text-3xl text-[#D2635D] font-semibold mb-6 font-visby">
           Help us save lives. Donate or partner today.
@@ -13,7 +13,7 @@ const BankDetails = () => {
           <div>
             <h4 className="mb-2 md:text-xl">Bank Details</h4>
             <div className="overflow-x-auto">
-              <table className="w-124 text-white rounded-lg border border-gray-300 border-collapse">
+              <table className="w-full text-white rounded-lg border border-gray-300 border-collapse">
                 <tbody>
                   <tr>
                     <td className="py-2 px-3 font-medium border border-gray-300 bg-[#60438f]">
@@ -70,7 +70,7 @@ const BankDetails = () => {
           <div>
             <h4 className="mb-2 md:text-xl">Bank Details (For International Donors)</h4>
             <div className="overflow-x-auto">
-              <table className="w-124 text-white rounded-lg border border-gray-300 border-collapse">
+              <table className="w-full text-white rounded-lg border border-gray-300 border-collapse">
                 <tbody>
                   <tr>
                     <td className="py-2 px-3 font-medium border border-gray-300 bg-[#60438f]">
@@ -126,7 +126,7 @@ const BankDetails = () => {
           </div>
         </div>
 
-        <div className="pt-15 font-didact text-2xl">
+        <div className="pt-15 font-didact text-lg md:text-3xl">
           <p className="mb-8">
             Asia Cancer Foundation is registered & compliant under Indian
             nonprofit & CSR <br></br>guidelines:{" "}

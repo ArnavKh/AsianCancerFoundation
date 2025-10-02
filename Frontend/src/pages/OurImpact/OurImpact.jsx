@@ -17,6 +17,9 @@ export default function OurImpact() {
     c4: false,
   });
 
+  // detect mobile
+  const [isMobile, setIsMobile] = useState(false);
+
   // refs for each counter div
   const c1Ref = useRef(null);
   const c2Ref = useRef(null);
@@ -24,8 +27,18 @@ export default function OurImpact() {
   const c4Ref = useRef(null);
 
   useEffect(() => {
+    // check on mount + resize
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
+  useEffect(() => {
+    if (isMobile) return; // ❌ skip animation on mobile
+
     function handleMouseMove(e) {
-      const y = e.clientY; // mouse position relative to viewport
+      const y = e.clientY;
 
       const counters = [
         { id: "c1", ref: c1Ref },
@@ -35,12 +48,11 @@ export default function OurImpact() {
       ];
 
       counters.forEach(({ id, ref }) => {
-        if (triggered[id]) return; // already animated
+        if (triggered[id]) return;
 
         const rect = ref.current?.getBoundingClientRect();
         if (!rect) return;
 
-        // check if mouse Y is inside the row’s vertical span
         if (y >= rect.top && y <= rect.bottom) {
           setTriggered((prev) => ({ ...prev, [id]: true }));
         }
@@ -49,10 +61,10 @@ export default function OurImpact() {
 
     window.addEventListener("mousemove", handleMouseMove);
     return () => window.removeEventListener("mousemove", handleMouseMove);
-  }, [triggered]);
+  }, [triggered, isMobile]);
 
   return (
-    <div className="bg-[#fdf9f6] py-20 px-6 md:px-20 text-white pb-65">
+    <div className="bg-[#fdf9f6] py-20 px-6 md:px-35 text-white md:pb-45 pb-25">
       <h2 className="font-bold text-center text-[#583490] mb-15 font-visby text-[40px]">
         Our Impact
       </h2>
@@ -70,7 +82,11 @@ export default function OurImpact() {
             className="bg-[#EF8B67] h-54 rounded-[30px] text-center text-4xl font-visby font-bold"
           >
             <h1 className="pt-10">
-              {triggered.c1 ? <CountUp end={100} duration={2} /> : 0}+
+              {isMobile
+                ? "100"
+                : triggered.c1
+                ? <CountUp end={100} duration={2} /> 
+                : 0}+
             </h1>
             <p className="pt-4">
               Medical
@@ -85,7 +101,7 @@ export default function OurImpact() {
               awareness sessions on oral & lung cancer across six community
               centres in Mumbai, reaching senior citizens, youth & patients
               with chronic illnesses […] We are grateful to ACF for recognising
-              the importance of health education in underserved communities &
+              the importance of health education in underserved communities & 
               look forward to continued collaboration.”
             </p>
             <p className="pt-12">- Rangoonwala Foundation (India) Trust</p>
@@ -108,7 +124,11 @@ export default function OurImpact() {
             className="bg-[#EF8B67] h-78 rounded-[30px] text-center text-4xl font-visby font-bold"
           >
             <h1 className="pt-15">
-              {triggered.c2 ? <CountUp end={100} duration={2} /> : 0}+
+              {isMobile
+                ? "100"
+                : triggered.c2
+                ? <CountUp end={100} duration={2} />
+                : 0}+
             </h1>
             <p className="pt-4">
               Life-saving
@@ -159,7 +179,11 @@ export default function OurImpact() {
             className="bg-[#EF8B67] h-39 rounded-[30px] text-center text-4xl font-visby font-bold"
           >
             <h1 className="pt-7">
-              {triggered.c3 ? <CountUp end={100} duration={2} /> : 0}+
+              {isMobile
+                ? "100"
+                : triggered.c3
+                ? <CountUp end={100} duration={2} />
+                : 0}+
             </h1>
             <p className="pt-4">Patients Supported</p>
           </div>
@@ -189,14 +213,14 @@ export default function OurImpact() {
             className="bg-[#EF8B67] h-67 rounded-[30px] text-4xl font-visby font-bold text-center"
           >
             <h1 className="pt-10 text-5xl">
-              {triggered.c4 ? <CountUp end={550} duration={2.5} /> : 0}
+              {isMobile
+                ? "550"
+                : triggered.c4
+                ? <CountUp end={550} duration={2.5} />
+                : 0}
             </h1>
             <p className="pt-4">
-              Screening &
-              <br />
-              diagnostic
-              <br />
-              tests
+              Screening &<br /> diagnostic <br /> tests
             </p>
           </div>
         </div>

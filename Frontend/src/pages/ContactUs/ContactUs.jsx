@@ -5,7 +5,7 @@ import { FaFacebook } from "react-icons/fa";
 
 const ContactUs = () => {
   return (
-    <div className="bg-[#fefaf6] text-gray-900 pb-10">
+    <div className="bg-[#fefaf6] text-gray-900 md:pb-10">
       {/* Header Section */}
       <div className="relative">
         <img
@@ -24,10 +24,10 @@ const ContactUs = () => {
       <div className="container mx-4 md:mx-20 grid grid-cols-1 md:grid-cols-2 gap-8 py-12">
         {/* Contact Information */}
         <div className="relative bg-[#583490] text-white rounded-[30px] p-6 md:p-8 shadow-lg overflow-hidden
-                        max-w-full md:max-w-[480px] mx-auto md:mx-0">
+                        max-w-full md:max-w-[480px] mx-auto md:mx-0 w-[350px]">
           {/* Content */}
           <h2 className="text-2xl font-visby font-medium mb-2">Contact Information</h2>
-          <p className="mb-8 font-didact text-lg">Got questions? Let’s Connect!</p>
+          <p className="mb-4 md:mb-8 font-didact text-lg">Got questions? Let’s Connect!</p>
 
           <ul className="space-y-4 font-didact text-[14px] pt-10">
             <li className="flex items-center gap-2">
@@ -156,7 +156,7 @@ const ContactUs = () => {
         </form>
       </div>
 
-      <section className="p-6 md:p-10 mx-4 md:mx-20 pb-12 bg-[#583490] text-white rounded-[30px] mt-25 mb-10">
+      <section className="p-6 md:p-10 mx-4 md:mx-20 pb-12 bg-[#583490] text-white rounded-[30px] mt-5 md:mt-25 mb-10">
         <h3 className="text-lg md:text-3xl text-[#D2635D] font-semibold mb-6 font-visby text-center md:text-left">
           Help us save lives. Donate or partner today.
         </h3>

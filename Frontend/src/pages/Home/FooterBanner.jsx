@@ -5,8 +5,8 @@
 
   const FooterBanner = () => {
     return (
-      <section className="bg-[#f8f5f0] px-4 md:px-8 pb-45">
-        <div className="relative rounded-[30px] overflow-hidden md:w-330 w-75 h-76 mx-auto items-center">
+      <section className="bg-[#f8f5f0] px-4 md:px-8">
+        <div className="relative rounded-[30px] overflow-hidden md:w-330 w-95 h-76 mx-auto items-center">
   {/* Background image */}
   <img
     src={FooterImage}
