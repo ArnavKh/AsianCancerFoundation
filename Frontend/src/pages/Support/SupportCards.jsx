@@ -9,7 +9,7 @@ const SupportCards = () => {
   const cards = [
     {
       title: "CSR Partnerships",
-      subtitle: "Align Your Brand With A Life- Saving Mission.",
+      subtitle: "Align Your Brand With A Life-Saving Mission.",
       hoverText:
         "Support surgeries, awareness drives & patient care initiatives through your CSR program. Partner with ACF to make a measurable impact on public health.",
       action: "contact", // 👈 go to contact

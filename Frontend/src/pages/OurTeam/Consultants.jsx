@@ -1,8 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import Somma from "../../assets/Our Team/Consultants/Somaa.svg";
 import Neha from "../../assets/Our Team/Consultants/Neha.png";
 
 const Consultants = () => {
+  // state for each card
+  const [isSomaaFlipped, setIsSomaaFlipped] = useState(false);
+  const [isNehaFlipped, setIsNehaFlipped] = useState(false);
+
+  // utility to detect small screens
+  const isMobile = window.innerWidth < 768;
+
   return (
     <div className="font-visby px-20 pb-45">
       <h2 className="text-4xl font-bold text-black mt-10 pt-15 text-center md:text-left md:pl-15">
@@ -14,14 +21,22 @@ const Consultants = () => {
         <div
           className="relative w-[264px] h-[300px] rounded-[30px] cursor-pointer group"
           style={{ perspective: "1000px" }}
+          onClick={() => isMobile && setIsSomaaFlipped(!isSomaaFlipped)}
         >
-          <div className="relative w-full h-full duration-700 transform-style-preserve-3d group-hover:rotate-y-180">
+          <div
+            className={`relative w-full h-full duration-700 transform-style-preserve-3d 
+              ${isMobile ? (isSomaaFlipped ? "rotate-y-180" : "") : "group-hover:rotate-y-180"}`}
+          >
             {/* FRONT */}
             <div
               className="absolute inset-0 rounded-[30px] overflow-hidden border-2 border-[#A2A1A1]"
               style={{ backfaceVisibility: "hidden" }}
             >
-              <img src={Somma} className="w-full h-full object-cover pb-10 pl-2" />
+              <img
+                src={Somma}
+                className="w-full h-full object-cover pb-10 pl-2"
+                alt="Somaa Health"
+              />
               <div className="absolute bottom-0 w-full text-center p-4">
                 <div className="bg-white/80 text-gray-900 rounded-xl p-1">
                   <h3 className="text-[20px] font-visby font-extrabold">
@@ -40,7 +55,9 @@ const Consultants = () => {
               style={{ backfaceVisibility: "hidden" }}
             >
               <p className="text-sm leading-relaxed font-didact p-5">
-              Somaa Health, a boutique healthcare consulting company, is spearheading the revitalization of ACF’s mission through strategic fundraising, program development, and high-impact collaborations.
+                Somaa Health, a boutique healthcare consulting company, is spearheading
+                the revitalization of ACF’s mission through strategic fundraising,
+                program development, and high-impact collaborations.
               </p>
               <a
                 href="https://www.somaa.health/"
@@ -58,14 +75,18 @@ const Consultants = () => {
         <div
           className="relative w-[264px] h-[300px] rounded-[30px] cursor-pointer group"
           style={{ perspective: "1000px" }}
+          onClick={() => isMobile && setIsNehaFlipped(!isNehaFlipped)}
         >
-          <div className="relative w-full h-full duration-700 transform-style-preserve-3d group-hover:rotate-y-180">
+          <div
+            className={`relative w-full h-full duration-700 transform-style-preserve-3d 
+              ${isMobile ? (isNehaFlipped ? "rotate-y-180" : "") : "group-hover:rotate-y-180"}`}
+          >
             {/* FRONT */}
             <div
               className="absolute inset-0 rounded-[30px] overflow-hidden shadow-lg"
               style={{ backfaceVisibility: "hidden" }}
             >
-              <img src={Neha} className="w-full h-full object-cover" />
+              <img src={Neha} className="w-full h-full object-cover" alt="Dr Neha" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
               <div className="absolute bottom-0 w-full text-center p-4">
                 <div className="bg-white/80 text-gray-900 rounded-xl p-1">
@@ -85,7 +106,8 @@ const Consultants = () => {
               style={{ backfaceVisibility: "hidden" }}
             >
               <p className="text-sm leading-relaxed font-didact p-5">
-              Dr. Neha D. Kamat is a practicing Psychologist in Mumbai, with a focus on Health, Nutrition, & Mental Wellness.
+                Dr. Neha D. Kamat is a practicing Psychologist in Mumbai, with a focus on
+                Health, Nutrition, & Mental Wellness.
               </p>
               <a
                 href="https://www.nehadkamat.com/"
