@@ -12,9 +12,11 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
+          <Link to="/">
           <div className="flex items-center">
             <img src={Logo} alt="Logo" className="h-14 w-30" />
           </div>
+          </Link>
 
           {/* Desktop Links */}
           <div className="hidden md:flex space-x-12 text-black text-sm font-visby">

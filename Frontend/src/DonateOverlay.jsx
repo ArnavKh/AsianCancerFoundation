@@ -9,7 +9,10 @@ export default function DonateOverlay({ isOpen, onClose }) {
   const [donationType, setDonationType] = useState("monthly");
   const [amount, setAmount] = useState("");
   const [dedicate, setDedicate] = useState(false);
+
+  const [selectedOption, setSelectedOption] = useState("");
   const [panelView, setPanelView] = useState("donation"); // 'donation' | 'once' | 'comment' | 'reminder | "details" | "address details"
+
   useEffect(() => {
     if (isOpen) {
       setPanelView("donation");
@@ -49,7 +52,7 @@ export default function DonateOverlay({ isOpen, onClose }) {
             onClose(); // second click actually closes
           }
         }}
-        className="absolute top-4 right-4 text-white"
+        className="absolute top-4 right-4 text-white text-3xl md:text-base"
       >
         ✕
       </button>
@@ -346,7 +349,7 @@ export default function DonateOverlay({ isOpen, onClose }) {
               {/* Green dedication bar */}
               <div className="bg-[#DCE6D9] -m-6 mb-4 py-2 rounded-t-[20px] flex items-center justify-center gap-2">
                 <span className="font-visby font-semibold text-sm text-black">
-                ❤️ Dedicated to name
+                  ❤️ Dedicated to name
                 </span>
               </div>
 
@@ -400,16 +403,23 @@ export default function DonateOverlay({ isOpen, onClose }) {
                   />
 
                   {/* Checkboxes */}
+                  {/* Checkboxes (only one selectable at a time) */}
                   <div className="space-y-2">
                     <label className="font-didact flex items-center gap-2 cursor-pointer">
                       <input
                         type="checkbox"
                         className="w-5 h-5 bg-[#EDE2FF] border-2 border-[#583490] rounded-[6px] 
-    appearance-none relative checked:after:content-['✔'] checked:after:absolute 
-    checked:after:text-[#583490] checked:after:text-[12px] 
-    checked:after:left-[3px] checked:after:top-[-1px]"
-                        checked={dedicate}
-                        onChange={(e) => setDedicate(e.target.checked)}
+      appearance-none relative checked:after:content-['✔'] checked:after:absolute 
+      checked:after:text-[#583490] checked:after:text-[12px] 
+      checked:after:left-[3px] checked:after:top-[-1px]"
+                        checked={selectedOption === "organisation"}
+                        onChange={() =>
+                          setSelectedOption(
+                            selectedOption === "organisation"
+                              ? ""
+                              : "organisation"
+                          )
+                        }
                       />
                       Donate as an organisation
                     </label>
@@ -418,11 +428,15 @@ export default function DonateOverlay({ isOpen, onClose }) {
                       <input
                         type="checkbox"
                         className="w-5 h-5 bg-[#EDE2FF] border-2 border-[#583490] rounded-[6px] 
-    appearance-none relative checked:after:content-['✔'] checked:after:absolute 
-    checked:after:text-[#583490] checked:after:text-[12px] 
-    checked:after:left-[3px] checked:after:top-[-1px]"
-                        checked={dedicate}
-                        onChange={(e) => setDedicate(e.target.checked)}
+      appearance-none relative checked:after:content-['✔'] checked:after:absolute 
+      checked:after:text-[#583490] checked:after:text-[12px] 
+      checked:after:left-[3px] checked:after:top-[-1px]"
+                        checked={selectedOption === "anonymous"}
+                        onChange={() =>
+                          setSelectedOption(
+                            selectedOption === "anonymous" ? "" : "anonymous"
+                          )
+                        }
                       />
                       Dedicate anonymously
                     </label>
@@ -431,11 +445,15 @@ export default function DonateOverlay({ isOpen, onClose }) {
                       <input
                         type="checkbox"
                         className="w-5 h-5 bg-[#EDE2FF] border-2 border-[#583490] rounded-[6px] 
-    appearance-none relative checked:after:content-['✔'] checked:after:absolute 
-    checked:after:text-[#583490] checked:after:text-[12px] 
-    checked:after:left-[3px] checked:after:top-[-1px]"
-                        checked={dedicate}
-                        onChange={(e) => setDedicate(e.target.checked)}
+      appearance-none relative checked:after:content-['✔'] checked:after:absolute 
+      checked:after:text-[#583490] checked:after:text-[12px] 
+      checked:after:left-[3px] checked:after:top-[-1px]"
+                        checked={selectedOption === "terms"}
+                        onChange={() =>
+                          setSelectedOption(
+                            selectedOption === "terms" ? "" : "terms"
+                          )
+                        }
                       />
                       <span className="font-didact">
                         I agree to Terms and{" "}
@@ -465,7 +483,7 @@ export default function DonateOverlay({ isOpen, onClose }) {
               {/* Green dedication bar (flush to top/left/right) */}
               <div className="bg-[#DCE6D9] -m-6 mb-4 py-2 rounded-t-[20px] flex items-center justify-center gap-2">
                 <span className="font-visby font-semibold text-sm text-black">
-                ❤️ Dedicated to name
+                  ❤️ Dedicated to name
                 </span>
               </div>
 

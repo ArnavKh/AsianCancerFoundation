@@ -42,7 +42,7 @@ const Card = ({ image, name, description, short }) => {
 
         {/* BACK */}
         <div
-          className="flex items-center justify-center absolute inset-0 rounded-[30px] overflow-hidden shadow-lg bg-[#583490] text-white p-6 rotate-y-180"
+          className="flex items-center justify-center absolute inset-0 rounded-[30px] overflow-hidden shadow-lg bg-[#583490] text-white p-6 rotate-y-180 font-didact"
           style={{ backfaceVisibility: "hidden" }}
         >
           <p className="text-sm leading-relaxed text-center">{description}</p>
