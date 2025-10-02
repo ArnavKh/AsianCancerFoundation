@@ -5,7 +5,7 @@ import { FaFacebook } from "react-icons/fa";
 
 const ContactUs = () => {
   return (
-    <div className="bg-[#fefaf6] text-gray-900 md:pb-10">
+    <div className="bg-[#fefaf6] text-gray-900 md:pb-10 overflow-x-hidden">
       {/* Header Section */}
       <div className="relative">
         <img
@@ -24,7 +24,7 @@ const ContactUs = () => {
       <div className="container mx-4 md:mx-20 grid grid-cols-1 md:grid-cols-2 gap-8 py-12">
         {/* Contact Information */}
         <div className="relative bg-[#583490] text-white rounded-[30px] p-6 md:p-8 shadow-lg overflow-hidden
-                        max-w-full md:max-w-[480px] mx-auto md:mx-0 w-[350px]">
+                        w-full max-w-[350px] md:max-w-[480px] mx-auto md:mx-0">
           {/* Content */}
           <h2 className="text-2xl font-visby font-medium mb-2">Contact Information</h2>
           <p className="mb-4 md:mb-8 font-didact text-lg">Got questions? Let’s Connect!</p>
@@ -50,12 +50,12 @@ const ContactUs = () => {
             </li>
           </ul>
 
-          {/* Facebook icon at bottom-left */}
-          <div className="absolute bottom-3 left-4 bg-white rounded-full p-1">
+          {/* Facebook icon at bottom-left (hidden on mobile) */}
+          <div className="absolute bottom-3 left-4 bg-white rounded-full p-1 sm:block hidden">
             <FaFacebook className="text-black w-4 h-4" />
           </div>
 
-          {/* Decorative circles bottom-right */}
+          {/* Decorative circles bottom-right (hidden on mobile) */}
           <div className="absolute bottom-[-40px] right-[-20px] w-40 h-40 bg-[#4B1B95] rounded-full opacity-90 hidden sm:block"></div>
           <div className="absolute bottom-20 right-3 w-20 h-20 bg-[#FFFF]/40 rounded-full opacity-80 hidden sm:block"></div>
         </div>
@@ -156,6 +156,7 @@ const ContactUs = () => {
         </form>
       </div>
 
+      {/* Donation Section */}
       <section className="p-6 md:p-10 mx-4 md:mx-20 pb-12 bg-[#583490] text-white rounded-[30px] mt-5 md:mt-25 mb-10">
         <h3 className="text-lg md:text-3xl text-[#D2635D] font-semibold mb-6 font-visby text-center md:text-left">
           Help us save lives. Donate or partner today.
@@ -176,21 +177,15 @@ const ContactUs = () => {
                   </td>
                 </tr>
                 <tr>
-                  <td className="py-2 px-3 font-medium border border-gray-300">
-                    Account No
-                  </td>
+                  <td className="py-2 px-3 font-medium border border-gray-300">Account No</td>
                   <td className="py-2 px-3 border border-gray-300">00802560000419</td>
                 </tr>
                 <tr>
-                  <td className="py-2 px-3 font-medium border border-gray-300">
-                    Account Type
-                  </td>
+                  <td className="py-2 px-3 font-medium border border-gray-300">Account Type</td>
                   <td className="py-2 px-3 border border-gray-300">Current</td>
                 </tr>
                 <tr>
-                  <td className="py-2 px-3 font-medium border border-gray-300">
-                    Bank Name
-                  </td>
+                  <td className="py-2 px-3 font-medium border border-gray-300">Bank Name</td>
                   <td className="py-2 px-3 border border-gray-300">HDFC Bank</td>
                 </tr>
                 <tr>
@@ -244,6 +239,7 @@ const ContactUs = () => {
         </div>
       </section>
 
+      {/* Why Give Section */}
       <section className="mx-4 md:mx-20 py-12 pb-20">
         <h2 className="text-2xl md:text-4xl font-bold mb-6 text-[#D2635D] font-visby text-center md:text-left">
           Why Give to Asian Cancer Foundation?
