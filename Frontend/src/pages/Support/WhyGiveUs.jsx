@@ -2,7 +2,7 @@ import React from 'react'
 
 const WhyGiveUs = () => {
   return (
-    <section className="px-4 md:px-20 pt-20 pb-15 bg-[#583490] text-white">
+    <section className="px-4 md:px-20 md:pt-20 pt-5 pb-15 bg-[#583490] text-white">
         <h2 className="text-2xl md:text-4xl font-semibold mb-6 text-[#D2635D] font-visby">
           Why Give to Asian Cancer Foundation?
         </h2>

@@ -24,7 +24,7 @@ const VIBGYOR = () => {
 
       {/* Top image */}
       <div className="mx-auto rounded-[30px] overflow-hidden mb-6 
-        w-[270px] md:w-270 md:h-88 h-[280px]
+        w-[390px] md:w-270 md:h-88 h-[280px]
       ">
         <img
           src={VIBGYORImage}
@@ -46,20 +46,20 @@ const VIBGYOR = () => {
       </div>
 
       {/* Highlight & Key Partner */}
-      <div className="md:w-270 mx-auto mb-6 text-gray-800">
-           <p className="text-2xl mb-2 font-didact">
+      <div className="md:w-270 mx-auto pb-10 text-gray-800">
+           <p className="text-lg md:text-2xl mb-2 font-didact">
              <span className="font-bold font visby">Highlight - </span>
              Fundraising for paedatric cancer care through musical performances & community engagement
            </p>
-           <p className="text-2xl mb-15 font-didact">
+           <p className="text-lg md:text-2xl md:mb-15 mb-5 font-didact">
              <span className="font-bold font-visby">Key Partner - </span>
              C-Kids
            </p>
   
-           <p className="text-2xl mb-4 font-didact">
+           <p className="text-lg md:text-2xl mb-4 font-didact">
              VIBGYOR was a unique musical fundraiser for children with cancer, featuring seven music genres inspired by the chakras & musical notes, including classical, devotional, Sufi, ghazals, instrumental & cotemporary styles.
            </p>
-           <p className="text-2xl font-didact">
+           <p className="text-lg md:text-2xl font-didact">
              Proceeds supported the C-Kids program that provides care for underprivileged children undergoing cancer treatment.
            </p>
          </div>
@@ -72,7 +72,7 @@ const VIBGYOR = () => {
       ">
         <Link to="/workinaction/medicalcamp" className="group">
           {/* Card 1 */}
-          <div className="bg-white rounded-[30px] shadow-md hover:shadow-lg transition flex flex-col h-104 max-w-[331px] mx-auto md:max-w-none md:mx-0">
+          <div className="bg-white rounded-[30px] shadow-md hover:shadow-lg transition flex flex-col md:h-104 max-w-[331px] mx-auto md:max-w-none md:mx-0 h-[350px] w-[300px]">
             <div className="h-1/2 w-full overflow-hidden rounded-t-[30px]">
               <img
                 src={Cancer}
@@ -92,7 +92,7 @@ const VIBGYOR = () => {
 
         <Link to="/workinaction/mobilescreening" className="group">
           {/* Card 2 */}
-          <div className="bg-white rounded-[30px] shadow-md hover:shadow-lg transition flex flex-col h-104 max-w-[331px] mx-auto md:max-w-none md:mx-0">
+          <div className="bg-white rounded-[30px] shadow-md hover:shadow-lg transition flex flex-col md:h-104 max-w-[331px] mx-auto md:max-w-none md:mx-0 h-[350px] w-[300px]">
             <div className="h-1/2 w-full overflow-hidden rounded-t-[30px]">
               <img
                 src={Mobile}
@@ -112,7 +112,7 @@ const VIBGYOR = () => {
 
         <Link to="/workinaction/tobaccoawareness" className="group">
           {/* Card 3 */}
-          <div className="bg-white rounded-[30px] shadow-md hover:shadow-lg transition flex flex-col h-104 max-w-[331px] mx-auto md:max-w-none md:mx-0">
+          <div className="bg-white rounded-[30px] shadow-md hover:shadow-lg transition flex flex-col md:h-104 max-w-[331px] mx-auto md:max-w-none md:mx-0 h-[350px] w-[300px]">
             <div className="h-1/2 w-full overflow-hidden rounded-t-[30px]">
               <img
                 src={Tobacco}

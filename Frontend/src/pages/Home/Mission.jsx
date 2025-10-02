@@ -6,14 +6,14 @@ import Logo from "../../assets/Home/acf.png";
 
 const Mission = () => {
   return (
-    <section className="bg-[#f8f5f0] px-6 md:px-16 py-35 pb-40 flex flex-col md:flex-row items-center justify-center gap-70">
+    <section className="bg-[#f8f5f0] px-6 md:px-16 md:py-35 pt-20 pb-40 flex flex-col md:flex-row items-center justify-center md:gap-70 gap-40">
   {/* Left image with colored background */}
   <div className="relative w-[300px] md:w-[350px]">
     {/* <div className="absolute -top-10 -left-10 w-full h-50 bg-[#dc6458] rounded-[30px]"></div> */}
     <img
       src={Logo}
       alt="Mission"
-      className="relative rounded-xl w-full h-auto z-10"
+      className="relative rounded-xl md:w-full md:h-auto h-60 w-60 z-10"
     />
   </div>
 

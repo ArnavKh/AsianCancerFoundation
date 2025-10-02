@@ -5,7 +5,7 @@ import DonateButton from "../../DonateButton";
 
 const FooterBanner = () => {
   return (
-    <section className="bg-[#f8f5f0] px-4 md:px-8">
+    <section className="bg-[#f8f5f0] px-4 md:px-8 pb-24">
       <div className="relative rounded-[30px] overflow-hidden w-330 h-76 mx-auto">
         {/* Background image */}
         <img

@@ -11,7 +11,7 @@ const Consultants = () => {
   const isMobile = window.innerWidth < 768;
 
   return (
-    <div className="font-visby px-20 pb-45">
+    <div className="font-visby px-20 md:pb-45 pb-10">
       <h2 className="text-4xl font-bold text-black mt-10 pt-15 text-center md:text-left md:pl-15">
         Consultants
       </h2>
