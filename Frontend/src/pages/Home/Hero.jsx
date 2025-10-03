@@ -1,6 +1,7 @@
 import React from "react";
 import BlueImage from "../../assets/Home/Blue.jpg";
 import TeachingImage from "../../assets/Home/teaching.png";
+import HomeHeroImage from "../../assets/Home/HomeHero.JPG"
 import vibgyor from "../../assets/Home/vibgyor.jpeg";
 import MotherSon from "../../assets/Home/Hero.JPG";
 import DonateButton from "../../DonateButton";
@@ -49,7 +50,7 @@ const Hero = () => {
             </div>
             <div className="w-55 h-59">
               <img
-                src={BlueImage}
+                src={HomeHeroImage}
                 alt=""
                 className="w-full h-full rounded-[30px] object-cover"
               />
@@ -58,7 +59,7 @@ const Hero = () => {
 
           <div className="w-55 h-101">
             <img
-              src={TeachingImage}
+              src={BlueImage}
               alt=""
               className="rounded-[30px] object-cover w-full h-full"
             />

@@ -2,7 +2,7 @@ import React from "react";
 
 const ProfileCard = ({ image, name, role }) => {
   return (
-    <div className="relative w-[317px] h-[360px] rounded-[30px] overflow-hidden shadow-lg">
+    <div className="relative w-[317px] h-[320px] rounded-[30px] overflow-hidden shadow-lg">
       {/* Image */}
       <img
         src={image}

@@ -24,7 +24,7 @@ const ContactUs = () => {
       <div className="container mx-4 md:mx-20 grid grid-cols-1 md:grid-cols-2 gap-8 py-12">
         {/* Contact Information */}
         <div className="relative bg-[#583490] text-white rounded-[30px] p-6 md:p-8 shadow-lg overflow-hidden
-                        w-full max-w-[350px] md:max-w-[480px] mx-auto md:mx-0">
+                        w-full max-w-[330px] md:max-w-[480px] mx-auto md:mx-0">
           {/* Content */}
           <h2 className="text-2xl font-visby font-medium mb-2">Contact Information</h2>
           <p className="mb-4 md:mb-8 font-didact text-lg">Got questions? Let’s Connect!</p>
