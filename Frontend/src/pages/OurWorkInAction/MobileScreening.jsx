@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { CircleChevronLeft } from "lucide-react";
-import MobileScreeningImage from "../../assets/MobileScreening/MobileScreening.png";
+import MobileScreeningImage from "../../assets/MobileScreening/MobileScreening.jpg";
 import Tobacco from "../../assets/MobileScreening/Tobacco.png";
 import Cancer from "../../assets/MobileScreening/Cancer.png";
 import VIBGYOR from "../../assets/MobileScreening/VIBGYOR.png";

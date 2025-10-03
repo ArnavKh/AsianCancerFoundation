@@ -64,7 +64,7 @@ export default function OurImpact() {
   }, [triggered, isMobile]);
 
   return (
-    <div className="bg-[#fdf9f6] py-20 px-6 md:px-35 text-white md:pb-45 pb-25">
+    <div className="bg-[#fdf9f6] py-20 px-12 md:px-35 text-white md:pb-45 pb-25">
       <h2 className="font-bold text-center text-[#583490] mb-15 font-visby text-[40px]">
         Our Impact
       </h2>
