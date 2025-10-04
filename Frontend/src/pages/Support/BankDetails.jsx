@@ -11,7 +11,7 @@ const BankDetails = () => {
         {/* Bank Details */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm md:text-base font-didact">
           <div>
-            <h4 className="mb-2 md:text-xl">Bank Details</h4>
+            <h4 className="mb-2 md:text-xl">Bank Details (For National Donors)</h4>
             <div className="overflow-x-auto">
               <table className="w-full text-white rounded-lg border border-gray-300 border-collapse">
                 <tbody>

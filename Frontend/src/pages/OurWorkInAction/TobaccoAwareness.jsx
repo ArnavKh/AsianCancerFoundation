@@ -73,7 +73,7 @@ const TobaccoAwareness = () => {
         className="mx-auto
           grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 mb-10 px-2 md:px-0
           max-w-[1080px]
-          sm:max-w-[1050px]"
+          sm:max-w-[1050px] pt-20"
       >
         <Link to="/workinaction/medicalcamp" className="group">
           <div className="bg-white rounded-[30px] shadow-md hover:shadow-lg transition flex flex-col md:h-104 max-w-[331px] mx-auto md:max-w-none md:mx-0 h-[350px] w-[300px]">

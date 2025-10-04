@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import OurTeam from "./pages/OurTeam/OurTeam.jsx";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
@@ -16,13 +16,23 @@ import PrivacyPolicy from "./pages/PrivacyPolicy/PrivacyPolicy.jsx";
 import DonateOverlay from "./DonateOverlay.jsx";
 import DonateButton from "./DonateButton.jsx";
 import ScrollToTop from "./ScrollToTop.jsx";
+import SupportFightPopup from "./SupportFightPopup.jsx";
+import Floater from "./Floater.jsx";
+
+function ConditionalFloater() {
+  const location = useLocation();
+  return location.pathname === "/" ? <Floater /> : null;
+}
 
 export default function App() {
   return (
     // <DonateButton/>
     <Router>
       <ScrollToTop/>
+      <SupportFightPopup/>
       <Navbar/>
+
+      <ConditionalFloater />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/ourteam" element={<OurTeam />} />
