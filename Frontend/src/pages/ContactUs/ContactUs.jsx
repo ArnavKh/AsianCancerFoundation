@@ -21,7 +21,7 @@ const ContactUs = () => {
       </div>
 
       {/* Contact Info + Form */}
-      <div className="container mx-4 md:mx-20 grid grid-cols-1 md:grid-cols-2 gap-8 py-12">
+      <div className="container mx-4 md:mx-20 grid grid-cols-1 md:grid-cols-2 py-12">
         {/* Contact Information */}
         <div className="relative bg-[#583490] text-white rounded-[30px] p-6 md:p-8 shadow-lg overflow-hidden
                         w-full max-w-[330px] md:max-w-[480px] mx-auto md:mx-0">
@@ -61,7 +61,7 @@ const ContactUs = () => {
         </div>
 
         {/* Contact Form */}
-        <form className="rounded-xl space-y-6 pr-0 md:pr-10 font-visby max-w-full mx-auto md:mx-0">
+        <form className="rounded-xl space-y-6 pr-0 font-visby max-w-full mx-auto md:mx-0">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
               <label className="block text-lg mb-2 font-semibold">First Name</label>
@@ -165,7 +165,7 @@ const ContactUs = () => {
         {/* Bank Details */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm md:text-base font-didact">
           <div className="overflow-x-auto">
-            <h4 className="mb-2 md:text-xl">Bank Details</h4>
+            <h4 className="mb-2 md:text-xl">Bank Details (For National Donors)</h4>
             <table className="w-full text-white rounded-lg border border-gray-300 border-collapse">
               <tbody>
                 <tr>
