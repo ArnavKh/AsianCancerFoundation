@@ -85,7 +85,7 @@ const BankDetails = () => {
                       Account No
                     </td>
                     <td className="py-2 px-3 border border-gray-300">
-                    43851259104
+                    40195215834
                     </td>
                   </tr>
                   <tr>

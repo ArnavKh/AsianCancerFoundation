@@ -215,7 +215,7 @@ const ContactUs = () => {
                 </tr>
                 <tr>
                   <td className="py-2 px-3 font-medium border border-gray-300">Account No</td>
-                  <td className="py-2 px-3 border border-gray-300">13990200006309</td>
+                  <td className="py-2 px-3 border border-gray-300">40195215834</td>
                 </tr>
                 <tr>
                   <td className="py-2 px-3 font-medium border border-gray-300">Account Type</td>

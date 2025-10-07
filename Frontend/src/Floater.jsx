@@ -25,11 +25,13 @@ export default function Floater() {
               </p>
             </div>
 
+            <a href="https://www.thesouledstore.com/artists/asian-cancer-relief">
             <button
-              className="mt-1 py-1 text-[12.5px] font-semibold rounded-[30px] bg-[#FFA3B5] text-white w-[85px]"
+              className="mt-1 py-1 text-[12.5px] font-semibold rounded-[30px] bg-[#FFA3B5] text-white w-[85px] cursor-pointer"
             >
               SHOP HERE
             </button>
+            </a>
           </div>
         </div>
       </div>

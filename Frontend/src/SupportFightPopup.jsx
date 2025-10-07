@@ -19,12 +19,14 @@ export default function SupportFightPopup() {
     <div className="fixed inset-0 flex items-center justify-center bg-black/40 z-50 px-4">
       <div className="relative bg-pink-50 rounded-2xl shadow-lg p-6 sm:p-10 w-full max-w-[780px] h-auto sm:h-[432px] py-15">
         {/* Close button */}
+        <a href="https://www.thesouledstore.com/artists/asian-cancer-relief" className="cursor-pointer">
         <button
           onClick={() => setShowPopup(false)}
-          className="absolute top-3 right-4 sm:top-4 sm:right-6 text-2xl font-bold text-black hover:text-gray-600"
+          className="absolute top-3 right-4 sm:top-4 sm:right-6 text-2xl font-bold text-black hover:text-gray-600 cursor-pointer"
         >
           &times;
         </button>
+        </a>
 
         {/* Text content */}
         <h1 className="text-[#E31C79] text-[36px] sm:text-[60px] font-extrabold font-visby leading-tight sm:leading-[1.15]">
