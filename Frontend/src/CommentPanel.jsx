@@ -1,7 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import { ArrowLeft } from "lucide-react";
+import { useDonationStore } from "./store/useDonationStore.js";
 
 export default function CommentPanel({ setPanelView }) {
+  const { newcomment, newsetComment } = useDonationStore();
+  const [localComment, setLocalComment] = useState(newcomment || ""); // Initialize with existing comment if any
+
+  const handleSave = () => {
+    newsetComment(localComment); // Update Zustand store
+    setPanelView("donation"); // Navigate back
+  };
+
   return (
     <>
       {/* Header */}
@@ -24,13 +33,15 @@ export default function CommentPanel({ setPanelView }) {
           className="w-full border-2 rounded-lg p-4 mb-4 font-didact border-purple-600 shadow-purple-600 shadow-sm"
           rows={18}
           placeholder="Enter your comment"
+          value={localComment}
+          onChange={(e) => setLocalComment(e.target.value)}
         ></textarea>
       </div>
 
       {/* Footer */}
       <div className="shrink-0">
         <button
-          onClick={() => setPanelView("donation")}
+          onClick={handleSave}
           className="px-4 py-2 bg-[#EDE2FF] text-lg rounded-[10px] w-full font-visby font-semibold"
         >
           Save

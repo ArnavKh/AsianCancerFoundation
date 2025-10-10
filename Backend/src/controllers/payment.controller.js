@@ -45,15 +45,37 @@ export const createINTLOrder = async (req, res) => {
 // ✅ Common Verify Payment
 export const verifyPayment = (req, res) => {
   try {
-    const { razorpay_order_id, razorpay_payment_id, razorpay_signature, type } = req.body;
+    const {
+      razorpay_order_id,
+      razorpay_payment_id,
+      razorpay_subscription_id,
+      razorpay_signature,
+      type
+    } = req.body;
 
-    // Decide which secret key to use (INR or INTL)
+
+    console.log(" req body : ",req.body);
+    // Select correct secret key
     const secret =
       type === "intl"
         ? process.env.RAZORPAY_SECRET_INTL
         : process.env.RAZORPAY_SECRET_INR;
 
-    const body = razorpay_order_id + "|" + razorpay_payment_id;
+    let body = "";
+
+    // 🟢 If it’s a subscription payment
+    if (razorpay_subscription_id) {
+      body = razorpay_payment_id + "|" + razorpay_subscription_id;
+    }
+    // 🟢 If it’s a one-time order payment
+    else if (razorpay_order_id) {
+      body = razorpay_order_id + "|" + razorpay_payment_id;
+    } else {
+      return res.status(400).json({
+        success: false,
+        message: "Invalid payment verification payload.",
+      });
+    }
 
     const expectedSignature = crypto
       .createHmac("sha256", secret)
@@ -66,16 +88,20 @@ export const verifyPayment = (req, res) => {
       return res.status(400).json({ success: false, message: "Payment verification failed" });
     }
   } catch (error) {
+    console.error("Verification error:", error);
     res.status(500).json({ success: false, message: error.message });
   }
 };
-
 // ✅ Create INR Plan
 export const createINRPlan = async (req, res) => {
    const razorpayINR = new Razorpay({
   key_id: process.env.RAZORPAY_KEY_ID_INR,
   key_secret: process.env.RAZORPAY_SECRET_INR,
 });
+
+// console.log("Razorpy key id : ",process.env.RAZORPAY_KEY_ID_INR);
+// console.log("Razorpy key secret : ",process.env.RAZORPAY_SECRET_INR);
+console.log("amount from frontend : ",req.body);
   try {
     const plan = await razorpayINR.plans.create({
       period: "monthly",   // daily, weekly, monthly, yearly
@@ -94,10 +120,12 @@ export const createINRPlan = async (req, res) => {
 
 // ✅ Create International Plan
 export const createINTLPlan = async (req, res) => {
+    console.log("Body received:", req.body);
   const razorpayINTL = new Razorpay({
   key_id: process.env.RAZORPAY_KEY_ID_INTL,
   key_secret: process.env.RAZORPAY_SECRET_INTL,
 });
+console.log("req body amount : ",req.body.amount);
   try {
     const plan = await razorpayINTL.plans.create({
       period: "monthly",

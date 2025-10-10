@@ -22,14 +22,12 @@ const donationSchema = new mongoose.Schema(
       required: true,
       trim: true,
     },
-    donationType: {
+    donationFeature: {
       type: String,
-      enum: [
-        "Donate as Organisation",
-        "Donate Anonymously",
-        "I agree to Terms and Privacy Notice",
-      ],
-      required: true,
+      
+    },
+    donationType:{
+      type: String,
     },
     comment: {
       type: String,

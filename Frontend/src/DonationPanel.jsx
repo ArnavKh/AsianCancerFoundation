@@ -1,5 +1,5 @@
 import React from "react";
-
+import { useDonationStore } from "./store/useDonationStore.js";
 const presetAmounts = ["1000", "2500", "5000", "10000", "12000", "20000"];
 
 export default function DonationPanel({
@@ -10,7 +10,27 @@ export default function DonationPanel({
   dedicate,
   setDedicate,
   setPanelView,
-}) {
+}) 
+
+{
+
+  const {
+    newamount,
+    newcomment,
+    newname,
+    newemail,
+    newmobileNumber,
+    newdonationType,
+    newaddress,
+    newsetAmount,
+    newsetComment,
+    newsetName,
+    newsetEmail,
+    newsetMobileNumber,
+    newsetDonationType,
+    newsetAddress,
+  } = useDonationStore();
+
   const handleDonateClick = (e) => {
     e?.preventDefault?.();
 
@@ -21,6 +41,13 @@ export default function DonationPanel({
       alert("Please enter a valid donation amount.");
       return;
     }
+    console.log("numericamount : ",numericAmount);
+
+    newsetAmount(numericAmount);
+    newsetDonationType(donationType);
+
+     console.log("amount in zustand : ", useDonationStore.getState().newamount);
+  console.log("donation type : ", useDonationStore.getState().newdonationType);
 
     if (donationType === "once") {
       setPanelView("once");

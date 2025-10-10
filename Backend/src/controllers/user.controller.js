@@ -3,7 +3,7 @@ import Donation from "../models/user.model.js";
 
 export const createDonation = async (req, res) => {
   try {
-    const { name, email, mobileNumber, address, donationType, comment } = req.body;
+    const { name, email, mobileNumber,donationFeature, address, donationType, comment } = req.body;
 
     // Basic validation
     // if (!name || !email || !mobileNumber || !address || !donationType) {
@@ -11,6 +11,8 @@ export const createDonation = async (req, res) => {
     // }
 
     // Create donation record
+
+    console.log(" data arrived : ",req.body);
     const donation = await Donation.create({
       name,
       email,
@@ -18,6 +20,7 @@ export const createDonation = async (req, res) => {
       address,
       donationType,
       comment,
+      donationFeature
     });
 
     res.status(201).json({

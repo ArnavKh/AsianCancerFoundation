@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { ArrowLeft } from "lucide-react";
+import { useDonationStore } from "./store/useDonationStore.js";
 
 export default function DetailsPanel({ setPanelView }) {
   const [title, setTitle] = useState("");
@@ -17,6 +18,29 @@ export default function DetailsPanel({ setPanelView }) {
   const isMobileValid = /^[0-9]{10}$/.test(mobile);
   const isPanValid = !optInFor80G || /^[A-Z]{5}[0-9]{4}[A-Z]{1}$/.test(pan);
 
+  //  zustand 
+    const {
+    newamount,
+    newcomment,
+    newpan,
+    newname,
+    newemail,
+    newmobileNumber,
+    newdonationType,
+    newaddress,
+    newsetAmount,
+    newsetComment,
+    newsetName,
+    newsetEmail,
+    newsetMobileNumber,
+    newsetpan,
+    newsetDonationType,
+    newsetAddress,
+    newsetidentityOption,newidentityOption
+  } = useDonationStore();
+
+
+
   const isFormValid =
     title &&
     firstName.trim() &&
@@ -32,6 +56,19 @@ export default function DetailsPanel({ setPanelView }) {
       alert("Please fill in all required fields correctly before continuing.");
       return;
     }
+
+      const fullName = `${title} ${firstName} ${lastName}`.trim();
+
+      console.log(`Loacl ---> name : ${fullName} , email : ${email} , mobile :${mobile} identity: ${identityOption}`);
+
+
+  newsetName(fullName);
+  newsetEmail(email);
+  newsetMobileNumber(mobile);
+  newsetpan(pan);
+  newsetidentityOption(identityOption);
+
+  console.log(`Zustand ----> name : ${newname} , email : ${newemail} , mobile :${newmobileNumber} identity: ${newidentityOption}`);
     setPanelView("addressDetails");
   };
 
