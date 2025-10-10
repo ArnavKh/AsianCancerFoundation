@@ -19,14 +19,12 @@ export default function SupportFightPopup() {
     <div className="fixed inset-0 flex items-center justify-center bg-black/40 z-50 px-4">
       <div className="relative bg-pink-50 rounded-2xl shadow-lg p-6 sm:p-10 w-full max-w-[780px] h-auto sm:h-[432px] py-15">
         {/* Close button */}
-        <a href="https://www.thesouledstore.com/artists/asian-cancer-relief" className="cursor-pointer">
         <button
           onClick={() => setShowPopup(false)}
           className="absolute top-3 right-4 sm:top-4 sm:right-6 text-2xl font-bold text-black hover:text-gray-600 cursor-pointer"
         >
           &times;
         </button>
-        </a>
 
         {/* Text content */}
         <h1 className="text-[#E31C79] text-[36px] sm:text-[60px] font-extrabold font-visby leading-tight sm:leading-[1.15]">
@@ -41,9 +39,12 @@ export default function SupportFightPopup() {
         </p>
 
         {/* Button */}
-        <button className="mt-5 sm:mt-6 bg-[#EE8A9F] text-white font-bold rounded-[10px] font-visby w-full sm:w-57 h-10">
+        
+        <a href="https://www.thesouledstore.com/artists/asian-cancer-relief" className="cursor-pointer">
+        <button className="mt-5 sm:mt-6 bg-[#EE8A9F] text-white font-bold rounded-[10px] font-visby w-full sm:w-57 h-10 cursor-pointer">
           Get Your Merch
         </button>
+        </a>
 
         {/* Logos - desktop version (unchanged) */}
         <div className="absolute sm:right-34 sm:top-20 top-auto right-auto sm:flex hidden flex-col items-center bg-[#F8F2EB] w-[214px] h-[214px] rounded-full">
