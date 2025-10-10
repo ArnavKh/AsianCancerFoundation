@@ -19,11 +19,6 @@ import ScrollToTop from "./ScrollToTop.jsx";
 import SupportFightPopup from "./SupportFightPopup.jsx";
 import Floater from "./Floater.jsx";
 
-function ConditionalFloater() {
-  const location = useLocation();
-  return location.pathname === "/" ? <Floater /> : null;
-}
-
 export default function App() {
   return (
     // <DonateButton/>
@@ -32,7 +27,7 @@ export default function App() {
       <SupportFightPopup/>
       <Navbar/>
 
-      <ConditionalFloater />
+      <Floater />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/ourteam" element={<OurTeam />} />
