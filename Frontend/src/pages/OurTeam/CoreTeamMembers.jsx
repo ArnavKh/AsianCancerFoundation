@@ -1,7 +1,7 @@
 import React from 'react'
 import ProfileCard from './ProfileCard'
 import Sharmila from "../../assets/Our Team/CoreTeam/Sharmila.png"
-import Shweta from "../../assets/Our Team/CoreTeam/Shweta.jpeg"
+import Ravita from "../../assets/Our Team/CoreTeam/Ravita.png"
 import Jyoti from "../../assets/Our Team/CoreTeam/Jyoti.png"
 import Trupti from "../../assets/Our Team/CoreTeam/Trupti.png"
 import Divyaprakash from "../../assets/Our Team/CoreTeam/Divyaprakash.png"
@@ -15,7 +15,7 @@ const CoreTeamMembers = () => {
       <div className="mt-12 grid grid-cols-1 md:grid-cols-3 justify-items-center space-y-20">
         
         <ProfileCard image={Sharmila} name={<>Sharmila Sawant</>} role="Secretary (Operations)"/>
-        <ProfileCard image={Shweta} name={<>Shweta Pagare</>} role="Medical Social Worker" />
+        <ProfileCard image={Ravita} name={<>Ravita Kamble</>} role="Medical Social Worker" />
         <ProfileCard image={Jyoti} name={<>Jyoti Nalawade</>} role="Account & Audit Coordinator (Finance)" />
         
         <ProfileCard image={Trupti} name={<>Trupti Bagalkar</>} role="Clinical Manager (Clinical)"/>
