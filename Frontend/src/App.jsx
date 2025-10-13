@@ -1,4 +1,5 @@
-import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { DonateProvider, useDonate } from "./DonateContext"; // ⬅️ import context
 import OurTeam from "./pages/OurTeam/OurTeam.jsx";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
@@ -14,20 +15,20 @@ import VIBGYOR from "./pages/OurWorkInAction/VIBGYOR.jsx";
 import MobileScreening from "./pages/OurWorkInAction/MobileScreening.jsx";
 import PrivacyPolicy from "./pages/PrivacyPolicy/PrivacyPolicy.jsx";
 import DonateOverlay from "./DonateOverlay.jsx";
-import DonateButton from "./DonateButton.jsx";
 import ScrollToTop from "./ScrollToTop.jsx";
 import SupportFightPopup from "./SupportFightPopup.jsx";
 import Floater from "./Floater.jsx";
 
-export default function App() {
-  return (
-    // <DonateButton/>
-    <Router>
-      <ScrollToTop/>
-      <SupportFightPopup/>
-      <Navbar/>
+function AppContent() {
+  const { isDonateOpen, setIsDonateOpen } = useDonate();
 
-      <Floater />
+  return (
+    <Router>
+      <ScrollToTop />
+      <SupportFightPopup />
+      <Navbar />
+      {!isDonateOpen && <Floater />} {/* Hide floater when donate is open */}
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/ourteam" element={<OurTeam />} />
@@ -38,11 +39,21 @@ export default function App() {
         <Route path="/workinaction/medicalcamp" element={<CancerScreening />} />
         <Route path="/workinaction/mobilescreening" element={<MobileScreening />} />
         <Route path="/flagshipninit" element={<FlagshipInitiatives />} />
-        <Route path="/support" element={<Support/>} />
-        <Route path="/contactus" element={<ContactUs/>} />
-        <Route path="/privacypolicy" element={<PrivacyPolicy/>} />
+        <Route path="/support" element={<Support />} />
+        <Route path="/contactus" element={<ContactUs />} />
+        <Route path="/privacypolicy" element={<PrivacyPolicy />} />
       </Routes>
+
+      <DonateOverlay isOpen={isDonateOpen} onClose={() => setIsDonateOpen(false)} />
       <Footer />
     </Router>
+  );
+}
+
+export default function App() {
+  return (
+    <DonateProvider>
+      <AppContent />
+    </DonateProvider>
   );
 }

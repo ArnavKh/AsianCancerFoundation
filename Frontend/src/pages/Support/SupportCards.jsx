@@ -46,39 +46,40 @@ const SupportCards = () => {
   };
 
   return (
-    <section className="px-4 md:px-20 grid grid-cols-1 sm:grid-cols-2 gap-x-75 md:gap-y-8 gap-y-5 pb-35 mr-76">
-      {cards.map((item, idx) => (
-        <div
-          key={idx}
-          onClick={() => handleClick(item.action)}
-          className="w-95 group flex flex-col justify-center bg-white rounded-[30px] p-6 shadow-sm hover:shadow transition md:w-128 h-51 align-middle cursor-pointer"
-        >
-          <h3 className="text-lg md:text-3xl font-semibold font-visby mb-2 group-hover:hidden">
-            {item.title}
-          </h3>
+    <section className="px-4 md:px-20 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-y-5 md:gap-y-8 gap-x-5 md:gap-x-75 pb-35 md:mr-76">
+  {cards.map((item, idx) => (
+    <div
+      key={idx}
+      onClick={() => handleClick(item.action)}
+      className="w-full sm:w-95 md:w-128 group flex flex-col justify-center bg-white rounded-[30px] p-6 shadow-sm hover:shadow transition h-51 align-middle cursor-pointer mx-auto sm:mx-0"
+    >
+      <h3 className="text-lg md:text-3xl font-semibold font-visby mb-2 group-hover:hidden">
+        {item.title}
+      </h3>
 
-          <p className="text-[#583490] text-sm md:text-lg font-semibold font-visby group-hover:hidden">
-            {item.subtitle}
-          </p>
+      <p className="text-[#583490] text-sm md:text-lg font-semibold font-visby group-hover:hidden">
+        {item.subtitle}
+      </p>
 
-          {/* 👇 Mobile: Always visible */}
-          <p className="block md:hidden font-visby text-sm mt-2">
-            {item.hoverText}
-          </p>
+      {/* 👇 Mobile: Always visible */}
+      <p className="block md:hidden font-visby text-sm mt-2">
+        {item.hoverText}
+      </p>
 
-          {/* 👇 Desktop: Only visible on hover */}
-          <p className="hidden md:group-hover:block font-visby text-center text-xl">
-            {item.hoverText}
-          </p>
-        </div>
-      ))}
+      {/* 👇 Desktop: Only visible on hover */}
+      <p className="hidden md:group-hover:block font-visby text-center text-xl">
+        {item.hoverText}
+      </p>
+    </div>
+  ))}
 
-      {/* Donate overlay */}
-      <DonateOverlay
-        isOpen={showOverlay}
-        onClose={() => setShowOverlay(false)}
-      />
-    </section>
+  {/* Donate overlay */}
+  <DonateOverlay
+    isOpen={showOverlay}
+    onClose={() => setShowOverlay(false)}
+  />
+</section>
+
   );
 };
 

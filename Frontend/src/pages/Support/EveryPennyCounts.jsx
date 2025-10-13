@@ -19,13 +19,13 @@ const EveryPennyCounts = () => {
         <p className="text-base md:text-3xl mb-6 font-visby font-semibold">
           You Can Start By Donating A Little Monthly
         </p>
-        <div className="flex flex-wrap gap-4 mb-12 justify-center md:justify-start">
+        <div className="grid grid-cols-2 gap-4 mb-12 justify-center md:flex md:flex-wrap md:justify-start">
         {["₹ 1,000", "₹ 2,500", "₹ 5,000", "₹ 10,000+"].map((amt, i) => (
           <button
             key={i}
-            onClick={() => handleDonateClick(amt)} // ⬅️ trigger overlay
+            onClick={() => handleDonateClick(amt)}
             className="donation-card bg-[#f9f3ec] border-3 border-[#583490] rounded-[10px]
-             text-[#583490] font-bold w-59 h-29 text-2xl font-visby shadow-[#583490] shadow-sm"
+              text-[#583490] font-bold w-full sm:w-[140px] md:w-59 h-28 sm:h-29 text-lg sm:text-2xl md:text-2xl font-visby shadow-[#583490] shadow-sm break-words"
           >
             {amt}
           </button>
