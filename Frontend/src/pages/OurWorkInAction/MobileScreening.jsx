@@ -25,7 +25,7 @@ const MobileScreening = () => {
 
       {/* Top image */}
       <div className="mx-auto rounded-[30px] overflow-hidden mb-6 
-        w-[390px] md:w-270 md:h-88 h-[280px]">
+        w-[390px] max-w-full md:w-270 md:h-88 h-[280px]">
         <img
           src={MobileScreeningImage}
           alt="Mobile cancer screening camp"
@@ -49,23 +49,23 @@ const MobileScreening = () => {
 
       {/* Highlight & Key Partner */}
       <div className="md:w-270 mx-auto pb-10 text-gray-800">
-        <p className="text-lg md:text-2xl mb-2 font-didact">
+        <p className="text-base md:text-2xl mb-2 font-didact">
           <span className="font-bold font-visby">Highlight – </span>
           Early detection & community awareness focusing on oral, breast & cervical cancer in high-risk communities.
         </p>
-        <p className="text-lg md:text-2xl md:mb-15 mb-5 font-didact">
+        <p className="text-base md:text-2xl md:mb-15 mb-5 font-didact">
           <span className="font-bold font-visby">Key Partner – </span>
           Mankhurd Lok Seva NGO, Niramay Foundation, Hazrat Gaus A Azam Dastagir Sanstha & others
         </p>
-        <p className="text-lg md:text-2xl md:mb-15 mb-5 font-didact">
+        <p className="text-base md:text-2xl md:mb-15 mb-5 font-didact">
           <span className="font-bold font-visby">Location – </span>
           Mankhurd, Vikhroli, Kandivali, Tardeo, Gamdevi, Cumballa Hill
         </p>
 
-        <p className="text-lg md:text-2xl mb-4 font-didact">
+        <p className="text-base md:text-2xl mb-4 font-didact">
           In collaboration with Child Line, Interaide Development India, Kurla Lions & local NGOs, ACF conducted camps across community sites such as police quarters, hospitals & civic offices, using its medical van.
         </p>
-        <p className="text-lg md:text-2xl font-didact">
+        <p className="text-base md:text-2xl font-didact">
           The initiative offered screening for oral, breast, & cervical cancer, along with tobacco de-addiction counselling.
         </p>
       </div>
@@ -75,7 +75,7 @@ const MobileScreening = () => {
         className="mx-auto
           grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 mb-10 px-2 md:px-0
           max-w-[1080px]
-          sm:max-w-[1050px] pt-20"
+          sm:max-w-[1050px] pt-15"
       >
         <Link to="/workinaction/medicalcamp" className="group">
           <div className="bg-white rounded-[30px] shadow-md hover:shadow-lg transition flex flex-col md:h-104 max-w-[331px] mx-auto md:max-w-none md:mx-0 h-[350px] w-[300px]">

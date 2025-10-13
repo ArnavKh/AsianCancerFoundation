@@ -4,7 +4,7 @@ import { CircleChevronLeft } from "lucide-react";
 import Tobacco from "../../assets/Tobacco/Tobacco.png";
 import Cancer from "../../assets/Tobacco/Cancer.png";
 import VIBGYOR from "../../assets/Tobacco/VIBGYOR.png";
-import Mobile from "../../assets/Tobacco/MobileScreening.png";
+import Mobile from "../../assets/MobileScreening/MobileScreening.jpg";
 
 const TobaccoAwareness = () => {
   return (
@@ -24,7 +24,7 @@ const TobaccoAwareness = () => {
 
       {/* Top image */}
       <div className="mx-auto rounded-[30px] overflow-hidden mb-6 
-        w-[390px] md:w-270 md:h-88 h-[280px]
+        w-[390px] max-w-full md:w-270 md:h-88 h-[280px]
       ">
         <img
           src={Tobacco}
@@ -47,20 +47,20 @@ const TobaccoAwareness = () => {
 
       {/* Highlight & Key Partner */}
       <div className="md:w-270 mx-auto pb-10 text-gray-800">
-        <p className="text-lg md:text-2xl mb-2 font-didact">
+        <p className="text-base md:text-2xl mb-2 font-didact">
           <span className="font-bold font-visby">Highlight - </span>
           Preventive awareness on tobacco consumption
         </p>
-        <p className="text-lg md:text-2xl md:mb-15 mb-5 font-didact">
+        <p className="text-base md:text-2xl md:mb-15 mb-5 font-didact">
           <span className="font-bold font-visby">Key Partner - </span>
           Nargis Dutt Foundation
         </p>
 
-        <p className="text-lg md:text-2xl mb-4 font-didact">
+        <p className="text-base md:text-2xl mb-4 font-didact">
           In partnership with the Nargis Dutt Foundation, ACF conducted an
           engaging tobacco awareness session for 100 students aged 12-16.
         </p>
-        <p className="text-lg md:text-2xl font-didact">
+        <p className="text-base md:text-2xl font-didact">
           Led by Dr. Shravan Shetty & supported by teams from both
           organisations, the session highlighted the broader health risks of
           tobacco use beyond cancer, using real-life examples & relatable
@@ -73,7 +73,7 @@ const TobaccoAwareness = () => {
         className="mx-auto
           grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 mb-10 px-2 md:px-0
           max-w-[1080px]
-          sm:max-w-[1050px] pt-20"
+          sm:max-w-[1050px] pt-15"
       >
         <Link to="/workinaction/medicalcamp" className="group">
           <div className="bg-white rounded-[30px] shadow-md hover:shadow-lg transition flex flex-col md:h-104 max-w-[331px] mx-auto md:max-w-none md:mx-0 h-[350px] w-[300px]">

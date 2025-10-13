@@ -37,7 +37,7 @@ export default function DonateOverlay({ isOpen, onClose }) {
             onClose();
           }
         }}
-        className="absolute top-4 right-4 text-white text-3xl font-black"
+        className="fixed top-4 right-4 text-white text-3xl font-black z-50"
       >
         ✕
       </button>

@@ -78,7 +78,7 @@ const Board = () => {
           image={Sanjay}
           name="Dr. Sanjay Sharma"
           short="One of the finest Breast, Thoracic and Gastrointestinal Cancer Surgeons in the Country with 43 years of experience ...."
-          description={`One of the finest Breast, Thoracic and Gastrointestinal Cancer Surgeons in the Country with 43 years of experience, Winner of many professional awards, Trained in Cancer Surgery at Tata Memorial Hospital, Memorial Sloan Kettering cancer Centre & Cornell University at New York and at National Cancer Centre Japan, at Stanford -USA and with over 50 professional publications, one of the promoter Directors of the Asian cancer Institute for past over 20 years with membership and Chairmanship of most professional Indian oncology associations.`}
+          description={`Dr. Sanjay Sharma is one of the country’s leading Breast, Thoracic, and Gastrointestinal Cancer Surgeons, with 43 years of experience and numerous professional awards. He received his training in cancer surgery at Tata Memorial Hospital, Memorial Sloan Kettering Cancer Center and Cornell University in New York, the National Cancer Centre in Japan, and Stanford University in the USA. He has authored over 50 professional publications and has served as a Promoter Director of the Asian Cancer Institute for more than 20 years. In addition, he holds memberships and has chaired most of the major professional oncology associations in India.`}
         />
 
         <Card
