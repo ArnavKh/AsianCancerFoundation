@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { DonateProvider, useDonate } from "./DonateContext"; // ⬅️ import context
+import { DonateProvider, useDonate } from "./DonateContext";
 import OurTeam from "./pages/OurTeam/OurTeam.jsx";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
