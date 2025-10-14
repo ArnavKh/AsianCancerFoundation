@@ -12,42 +12,51 @@
   max-width: 1536px;
   margin-inline: auto;
   position: relative;
-  height: 289px; /* matches card height */
+  height: 289px;
   margin-top: 5rem;
-  overflow: hidden; /* hide overflow for the seamless loop look */
+  overflow: hidden;
 }
 
-/* track must be scrollable horizontally so scrollLeft works */
+/* main scrolling track */
 .impact-track {
   display: flex;
   gap: 1rem;
   align-items: center;
   height: 100%;
-  overflow-x: auto;   /* <-- allow horizontal scroll */
+  overflow-x: scroll;
   overflow-y: hidden;
   scroll-behavior: auto;
-  touch-action: pan-y; /* allow vertical native scrolling, let JS handle horizontal drag */
   -webkit-overflow-scrolling: touch;
-  -ms-overflow-style: none;  /* IE/Edge hide scrollbar */
-  scrollbar-width: none;     /* Firefox hide scrollbar */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
   user-select: none;
   -webkit-user-drag: none;
   cursor: grab;
   padding: 1rem;
+  transform: translateZ(0); /* ✅ enable GPU compositing for iOS smooth scroll */
+  will-change: scroll-position;
 }
 
+/* hide scrollbar */
 .impact-track::-webkit-scrollbar {
-  display: none; /* hide webkit scrollbar */
+  display: none;
 }
 
 .impact-track:active {
   cursor: grabbing;
 }
 
+/* iOS-specific fix */
+@supports (-webkit-touch-callout: none) {
+  .impact-track {
+    touch-action: none !important; /* ✅ allow JS-driven dragging on iPhones */
+  }
+}
+
 .kard {
-  min-width: 264px;    /* card width from your original */
+  min-width: 264px;
   height: 289px;
-  background-color: #F8F2EB;
+  background-color: #f8f2eb;
   border-radius: 30px;
   flex-shrink: 0;
   padding: 2.5rem;
@@ -59,7 +68,7 @@
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
 }
 
-/* responsive: slightly smaller cards on very small screens */
+/* smaller cards on small phones */
 @media (max-width: 420px) {
   .kard {
     min-width: 220px;
