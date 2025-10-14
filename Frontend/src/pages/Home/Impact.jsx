@@ -55,29 +55,31 @@ const Impact = () => {
       /iPad|iPhone|iPod/.test(navigator.userAgent) &&
       !window.MSStream;
 
-    // Skip pointer events on iOS due to bugs
+    // Pointer events are buggy on iOS Safari, skip them
     const supportsPointer =
       typeof window !== "undefined" &&
       "PointerEvent" in window &&
       !isIOS;
 
+    // --- FIX for iOS auto-scroll not working ---
+    // We use scrollTo() instead of directly setting scrollLeft
     const loop = () => {
       if (!isPointerDown.current && !userInteracting.current) {
-        track.scrollLeft += speed.current;
-
         const half = track.scrollWidth / 2 || 0;
-        if (half && track.scrollLeft >= half) {
-          track.scrollLeft -= half;
-        }
-        if (half && track.scrollLeft < 0) {
-          track.scrollLeft += half;
+        const next = track.scrollLeft + speed.current;
+
+        if (half && next >= half) {
+          track.scrollTo({ left: next - half, behavior: "auto" });
+        } else {
+          track.scrollTo({ left: next, behavior: "auto" });
         }
       }
       rafRef.current = requestAnimationFrame(loop);
     };
     rafRef.current = requestAnimationFrame(loop);
 
-    const handlePointerDown = (clientX, pointerId, originalEventTarget) => {
+    // --- Interaction handlers ---
+    const handlePointerDown = (clientX, pointerId, target) => {
       isPointerDown.current = true;
       userInteracting.current = true;
       startX.current = clientX;
@@ -85,11 +87,11 @@ const Impact = () => {
 
       if (
         supportsPointer &&
-        originalEventTarget &&
-        typeof originalEventTarget.setPointerCapture === "function"
+        target &&
+        typeof target.setPointerCapture === "function"
       ) {
         try {
-          originalEventTarget.setPointerCapture(pointerId);
+          target.setPointerCapture(pointerId);
         } catch (e) {}
       }
     };
@@ -106,14 +108,14 @@ const Impact = () => {
       }
     };
 
-    const handlePointerUp = (pointerId, originalEventTarget) => {
+    const handlePointerUp = (pointerId, target) => {
       if (
         supportsPointer &&
-        originalEventTarget &&
-        typeof originalEventTarget.releasePointerCapture === "function"
+        target &&
+        typeof target.releasePointerCapture === "function"
       ) {
         try {
-          originalEventTarget.releasePointerCapture(pointerId);
+          target.releasePointerCapture(pointerId);
         } catch (e) {}
       }
       isPointerDown.current = false;
