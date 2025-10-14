@@ -216,9 +216,11 @@ export default function DetailsPanel({ setPanelView }) {
               />
               <span className="font-didact">
                 I agree to Terms and{" "}
-                <a href="/privacypolicy" className="">
+                <Link to ="/privacypolicy">
+                {/* <a href="/privacypolicy" className=""> */}
                   Privacy Notice
-                </a>
+                {/* </a> */}
+                </Link>
               </span>
             </label>
 

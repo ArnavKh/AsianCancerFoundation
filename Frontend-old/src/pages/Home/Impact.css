@@ -1,0 +1,68 @@
+/* consistent sizing inside the component */
+.impact-wrapper *,
+.impact-wrapper *::before,
+.impact-wrapper *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.impact-wrapper {
+  width: 100%;
+  max-width: 1536px;
+  margin-inline: auto;
+  position: relative;
+  height: 289px; /* matches card height */
+  margin-top: 5rem;
+  overflow: hidden; /* hide overflow for the seamless loop look */
+}
+
+/* track must be scrollable horizontally so scrollLeft works */
+.impact-track {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  height: 100%;
+  overflow-x: auto;   /* <-- allow horizontal scroll */
+  overflow-y: hidden;
+  scroll-behavior: auto;
+  touch-action: pan-y; /* allow vertical native scrolling, let JS handle horizontal drag */
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: none;  /* IE/Edge hide scrollbar */
+  scrollbar-width: none;     /* Firefox hide scrollbar */
+  user-select: none;
+  -webkit-user-drag: none;
+  cursor: grab;
+  padding: 1rem;
+}
+
+.impact-track::-webkit-scrollbar {
+  display: none; /* hide webkit scrollbar */
+}
+
+.impact-track:active {
+  cursor: grabbing;
+}
+
+.kard {
+  min-width: 264px;    /* card width from your original */
+  height: 289px;
+  background-color: #F8F2EB;
+  border-radius: 30px;
+  flex-shrink: 0;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 2;
+  box-sizing: border-box;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+/* responsive: slightly smaller cards on very small screens */
+@media (max-width: 420px) {
+  .kard {
+    min-width: 220px;
+    padding: 0.75rem;
+  }
+}

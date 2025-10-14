@@ -4,7 +4,7 @@ import { CircleChevronLeft } from "lucide-react";
 import Tobacco from "../../assets/VIBGYOR/Tobacco.png";
 import Cancer from "../../assets/VIBGYOR/Cancer.png";
 import VIBGYORImage from "../../assets/VIBGYOR/VIBGYOR2.png";
-import Mobile from "../../assets/VIBGYOR/MobileScreening.png";
+import Mobile from "../../assets/MobileScreening/MobileScreening.jpg";
 
 const VIBGYOR = () => {
   return (
@@ -24,7 +24,7 @@ const VIBGYOR = () => {
 
       {/* Top image */}
       <div className="mx-auto rounded-[30px] overflow-hidden mb-6 
-        w-[390px] md:w-270 md:h-88 h-[280px]
+        w-[390px] max-w-full md:w-270 md:h-88 h-[280px]
       ">
         <img
           src={VIBGYORImage}
@@ -47,19 +47,19 @@ const VIBGYOR = () => {
 
       {/* Highlight & Key Partner */}
       <div className="md:w-270 mx-auto pb-10 text-gray-800">
-           <p className="text-lg md:text-2xl mb-2 font-didact">
+           <p className="text-base md:text-2xl mb-2 font-didact">
              <span className="font-bold font visby">Highlight - </span>
              Fundraising for paedatric cancer care through musical performances & community engagement
            </p>
-           <p className="text-lg md:text-2xl md:mb-15 mb-5 font-didact">
+           <p className="text-base md:text-2xl md:mb-15 mb-5 font-didact">
              <span className="font-bold font-visby">Key Partner - </span>
              C-Kids
            </p>
   
-           <p className="text-lg md:text-2xl mb-4 font-didact">
+           <p className="text-base md:text-2xl mb-4 font-didact">
              VIBGYOR was a unique musical fundraiser for children with cancer, featuring seven music genres inspired by the chakras & musical notes, including classical, devotional, Sufi, ghazals, instrumental & cotemporary styles.
            </p>
-           <p className="text-lg md:text-2xl font-didact">
+           <p className="text-base md:text-2xl font-didact">
              Proceeds supported the C-Kids program that provides care for underprivileged children undergoing cancer treatment.
            </p>
          </div>
@@ -68,7 +68,7 @@ const VIBGYOR = () => {
       <div className="mx-auto
         grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 mb-10 px-2 md:px-0
         max-w-[1080px]
-        sm:max-w-[1050px] pt-20
+        sm:max-w-[1050px] pt-15
       ">
         <Link to="/workinaction/medicalcamp" className="group">
           {/* Card 1 */}

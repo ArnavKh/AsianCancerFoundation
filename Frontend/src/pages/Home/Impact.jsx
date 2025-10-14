@@ -3,7 +3,6 @@ import "./Impact.css";
 import ImpactImage from "../../assets/Home/ImpactImage.png";
 
 const Impact = () => {
-  // Titles/descs as plain strings (no JSX fragments) -> avoids stray attributes like `jsx`
   const items = [
     { title: "Early Detection", desc: "Mobile screening camps" },
     {
@@ -32,10 +31,8 @@ const Impact = () => {
     },
   ];
 
-  // duplicate for seamless loop
   const duplicatedItems = [...items, ...items];
 
-  // refs for DOM + mutable state
   const trackRef = useRef(null);
   const rafRef = useRef(null);
   const isPointerDown = useRef(false);
@@ -43,50 +40,58 @@ const Impact = () => {
   const startScrollLeft = useRef(0);
   const userInteracting = useRef(false);
 
-  // tweak these to change behaviour
-  const speed = useRef(0.6); // pixels per frame auto-scroll speed
-  const resumeAfterMs = 700; // resume auto-scroll this ms after interaction ends
+  const speed = useRef(0.6);
+  const resumeAfterMs = 700;
 
   useEffect(() => {
     const track = trackRef.current;
     if (!track) return;
 
-    // ensure programmatic scroll isn't unexpectedly smooth
     track.style.scrollBehavior = "auto";
 
-    // RAF loop for auto-scroll
-    const loop = () => {
-      // only auto-scroll when user not interacting
-      if (!isPointerDown.current && !userInteracting.current) {
-        track.scrollLeft += speed.current;
+    // Detect iOS
+    const isIOS =
+      typeof navigator !== "undefined" &&
+      /iPad|iPhone|iPod/.test(navigator.userAgent) &&
+      !window.MSStream;
 
-        // wrap when we've passed half (we duplicated items)
+    // Pointer events are buggy on iOS Safari, skip them
+    const supportsPointer =
+      typeof window !== "undefined" &&
+      "PointerEvent" in window &&
+      !isIOS;
+
+    // --- FIX for iOS auto-scroll not working ---
+    // We use scrollTo() instead of directly setting scrollLeft
+    const loop = () => {
+      if (!isPointerDown.current && !userInteracting.current) {
         const half = track.scrollWidth / 2 || 0;
-        if (half && track.scrollLeft >= half) {
-          track.scrollLeft -= half;
-        }
-        if (half && track.scrollLeft < 0) {
-          track.scrollLeft += half;
+        const next = track.scrollLeft + speed.current;
+
+        if (half && next >= half) {
+          track.scrollTo({ left: next - half, behavior: "auto" });
+        } else {
+          track.scrollTo({ left: next, behavior: "auto" });
         }
       }
       rafRef.current = requestAnimationFrame(loop);
     };
     rafRef.current = requestAnimationFrame(loop);
 
-    // ----- Pointer events (preferred) -----
-    const supportsPointer = typeof window !== "undefined" && "PointerEvent" in window;
-
-    // Handlers used for pointer, mouse & touch fallback
-    const handlePointerDown = (clientX, pointerId, originalEventTarget) => {
+    // --- Interaction handlers ---
+    const handlePointerDown = (clientX, pointerId, target) => {
       isPointerDown.current = true;
       userInteracting.current = true;
       startX.current = clientX;
       startScrollLeft.current = track.scrollLeft;
 
-      // try capture so we keep getting moves/up
-      if (supportsPointer && originalEventTarget && typeof originalEventTarget.setPointerCapture === "function") {
+      if (
+        supportsPointer &&
+        target &&
+        typeof target.setPointerCapture === "function"
+      ) {
         try {
-          originalEventTarget.setPointerCapture(pointerId);
+          target.setPointerCapture(pointerId);
         } catch (e) {}
       }
     };
@@ -96,7 +101,6 @@ const Impact = () => {
       const dx = clientX - startX.current;
       track.scrollLeft = startScrollLeft.current - dx;
 
-      // keep loop seamless while dragging
       const half = track.scrollWidth / 2 || 0;
       if (half) {
         if (track.scrollLeft < 0) track.scrollLeft += half;
@@ -104,24 +108,25 @@ const Impact = () => {
       }
     };
 
-    const handlePointerUp = (pointerId, originalEventTarget) => {
-      if (supportsPointer && originalEventTarget && typeof originalEventTarget.releasePointerCapture === "function") {
+    const handlePointerUp = (pointerId, target) => {
+      if (
+        supportsPointer &&
+        target &&
+        typeof target.releasePointerCapture === "function"
+      ) {
         try {
-          originalEventTarget.releasePointerCapture(pointerId);
+          target.releasePointerCapture(pointerId);
         } catch (e) {}
       }
       isPointerDown.current = false;
-      // keep `userInteracting` for a short while to avoid immediate autoplay jerk
       setTimeout(() => {
         userInteracting.current = false;
-      }, resumeAfterMs);
+      }, isIOS ? 1000 : resumeAfterMs);
     };
 
-    // pointer events path
     let onPointerDown, onPointerMove, onPointerUp;
     if (supportsPointer) {
       onPointerDown = (e) => {
-        // only left mouse button for pointerType 'mouse'
         if (e.pointerType === "mouse" && e.button !== 0) return;
         handlePointerDown(e.clientX, e.pointerId, e.currentTarget);
       };
@@ -134,15 +139,12 @@ const Impact = () => {
       track.addEventListener("pointercancel", onPointerUp);
       track.addEventListener("pointerleave", onPointerUp);
     } else {
-      // fallback: mouse & touch
-      let onMouseMove, onMouseUp;
       const onMouseDown = (e) => {
         if (e.button !== 0) return;
         handlePointerDown(e.clientX, null, e.currentTarget);
 
-        // attach to document so moves/up outside element still tracked
-        onMouseMove = (ev) => handlePointerMove(ev.clientX);
-        onMouseUp = (ev) => {
+        const onMouseMove = (ev) => handlePointerMove(ev.clientX);
+        const onMouseUp = (ev) => {
           handlePointerUp(null, e.currentTarget);
           document.removeEventListener("mousemove", onMouseMove);
           document.removeEventListener("mouseup", onMouseUp);
@@ -151,13 +153,13 @@ const Impact = () => {
         document.addEventListener("mouseup", onMouseUp);
       };
 
-      const onTouchMove = (e) => {
-        if (!e.touches || e.touches.length === 0) return;
-        handlePointerMove(e.touches[0].clientX);
-      };
       const onTouchStart = (e) => {
         if (!e.touches || e.touches.length === 0) return;
         handlePointerDown(e.touches[0].clientX, null, track);
+      };
+      const onTouchMove = (e) => {
+        if (!e.touches || e.touches.length === 0) return;
+        handlePointerMove(e.touches[0].clientX);
       };
       const onTouchEnd = () => handlePointerUp(null, track);
 
@@ -166,13 +168,11 @@ const Impact = () => {
       track.addEventListener("touchmove", onTouchMove, { passive: true });
       track.addEventListener("touchend", onTouchEnd);
 
-      // cleanup references for removal
       onPointerDown = onMouseDown;
       onPointerMove = onTouchMove;
       onPointerUp = onTouchEnd;
     }
 
-    // cleanup on unmount
     return () => {
       cancelAnimationFrame(rafRef.current);
       if (supportsPointer) {
@@ -190,7 +190,6 @@ const Impact = () => {
     };
   }, []);
 
-  // helper to render line breaks in desc/title (we used plain strings)
   const renderWithBreaks = (text) =>
     text.split("\n").map((line, i, arr) => (
       <span key={i}>
@@ -223,7 +222,7 @@ const Impact = () => {
               onDragStart={(e) => e.preventDefault()}
             >
               <h3 className="font-semibold text-2xl text-black font-visby">
-                {renderWithBreaks(item.title)}<br></br>
+                {renderWithBreaks(item.title)}<br />
               </h3>
               <p className="font-didact text-lg">{renderWithBreaks(item.desc)}</p>
             </div>
