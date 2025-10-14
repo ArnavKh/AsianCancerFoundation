@@ -49,36 +49,27 @@ const Impact = () => {
 
     track.style.scrollBehavior = "auto";
 
-    // Detect iOS
     const isIOS =
       typeof navigator !== "undefined" &&
-      /iPad|iPhone|iPod/.test(navigator.userAgent) &&
-      !window.MSStream;
+      /iPad|iPhone|iPod/.test(navigator.userAgent);
 
-    // Pointer events are buggy on iOS Safari, skip them
     const supportsPointer =
       typeof window !== "undefined" &&
       "PointerEvent" in window &&
       !isIOS;
 
-    // --- FIX for iOS auto-scroll not working ---
-    // We use scrollTo() instead of directly setting scrollLeft
     const loop = () => {
       if (!isPointerDown.current && !userInteracting.current) {
-        const half = track.scrollWidth / 2 || 0;
-        const next = track.scrollLeft + speed.current;
-
-        if (half && next >= half) {
-          track.scrollTo({ left: next - half, behavior: "auto" });
-        } else {
-          track.scrollTo({ left: next, behavior: "auto" });
-        }
+        const half = track.scrollWidth / 2;
+        let next = track.scrollLeft + speed.current;
+        if (next >= half) next -= half;
+        track.scrollLeft = next;
       }
       rafRef.current = requestAnimationFrame(loop);
     };
+
     rafRef.current = requestAnimationFrame(loop);
 
-    // --- Interaction handlers ---
     const handlePointerDown = (clientX, pointerId, target) => {
       isPointerDown.current = true;
       userInteracting.current = true;
@@ -92,7 +83,7 @@ const Impact = () => {
       ) {
         try {
           target.setPointerCapture(pointerId);
-        } catch (e) {}
+        } catch {}
       }
     };
 
@@ -101,11 +92,9 @@ const Impact = () => {
       const dx = clientX - startX.current;
       track.scrollLeft = startScrollLeft.current - dx;
 
-      const half = track.scrollWidth / 2 || 0;
-      if (half) {
-        if (track.scrollLeft < 0) track.scrollLeft += half;
-        if (track.scrollLeft >= half) track.scrollLeft -= half;
-      }
+      const half = track.scrollWidth / 2;
+      if (track.scrollLeft < 0) track.scrollLeft += half;
+      if (track.scrollLeft >= half) track.scrollLeft -= half;
     };
 
     const handlePointerUp = (pointerId, target) => {
@@ -116,15 +105,16 @@ const Impact = () => {
       ) {
         try {
           target.releasePointerCapture(pointerId);
-        } catch (e) {}
+        } catch {}
       }
       isPointerDown.current = false;
       setTimeout(() => {
         userInteracting.current = false;
-      }, isIOS ? 1000 : resumeAfterMs);
+      }, resumeAfterMs);
     };
 
     let onPointerDown, onPointerMove, onPointerUp;
+
     if (supportsPointer) {
       onPointerDown = (e) => {
         if (e.pointerType === "mouse" && e.button !== 0) return;
@@ -139,42 +129,34 @@ const Impact = () => {
       track.addEventListener("pointercancel", onPointerUp);
       track.addEventListener("pointerleave", onPointerUp);
     } else {
-      const onMouseDown = (e) => {
-        if (e.button !== 0) return;
-        handlePointerDown(e.clientX, null, e.currentTarget);
-
-        const onMouseMove = (ev) => handlePointerMove(ev.clientX);
-        const onMouseUp = (ev) => {
-          handlePointerUp(null, e.currentTarget);
-          document.removeEventListener("mousemove", onMouseMove);
-          document.removeEventListener("mouseup", onMouseUp);
-        };
-        document.addEventListener("mousemove", onMouseMove);
-        document.addEventListener("mouseup", onMouseUp);
-      };
-
       const onTouchStart = (e) => {
-        if (!e.touches || e.touches.length === 0) return;
+        if (!e.touches?.length) return;
         handlePointerDown(e.touches[0].clientX, null, track);
       };
       const onTouchMove = (e) => {
-        if (!e.touches || e.touches.length === 0) return;
+        if (!e.touches?.length) return;
         handlePointerMove(e.touches[0].clientX);
       };
       const onTouchEnd = () => handlePointerUp(null, track);
 
-      track.addEventListener("mousedown", onMouseDown);
       track.addEventListener("touchstart", onTouchStart, { passive: true });
       track.addEventListener("touchmove", onTouchMove, { passive: true });
       track.addEventListener("touchend", onTouchEnd);
 
-      onPointerDown = onMouseDown;
+      onPointerDown = onTouchStart;
       onPointerMove = onTouchMove;
       onPointerUp = onTouchEnd;
     }
 
+    const handleVisibility = () => {
+      if (document.hidden) cancelAnimationFrame(rafRef.current);
+      else rafRef.current = requestAnimationFrame(loop);
+    };
+    document.addEventListener("visibilitychange", handleVisibility);
+
     return () => {
       cancelAnimationFrame(rafRef.current);
+      document.removeEventListener("visibilitychange", handleVisibility);
       if (supportsPointer) {
         track.removeEventListener("pointerdown", onPointerDown);
         track.removeEventListener("pointermove", onPointerMove);
@@ -182,8 +164,7 @@ const Impact = () => {
         track.removeEventListener("pointercancel", onPointerUp);
         track.removeEventListener("pointerleave", onPointerUp);
       } else {
-        track.removeEventListener("mousedown", onPointerDown);
-        track.removeEventListener("touchstart", onPointerMove);
+        track.removeEventListener("touchstart", onPointerDown);
         track.removeEventListener("touchmove", onPointerMove);
         track.removeEventListener("touchend", onPointerUp);
       }

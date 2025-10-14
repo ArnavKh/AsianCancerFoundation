@@ -30,8 +30,9 @@
   -webkit-user-drag: none;
   cursor: grab;
   padding: 1rem;
-  transform: translate3d(0, 0, 0); /* ✅ Force GPU acceleration */
+  transform: translate3d(0, 0, 0);
   will-change: transform, scroll-position;
+  -webkit-overflow-scrolling: touch; /* ✅ enable smooth iOS scroll */
 }
 
 .impact-track::-webkit-scrollbar {
@@ -42,11 +43,13 @@
   cursor: grabbing;
 }
 
-/* iOS-only fix */
+/* ✅ Removed old iOS overrides that froze scrolling */
+
+/* ✅ Keep natural touch momentum working */
 @supports (-webkit-touch-callout: none) {
   .impact-track {
-    -webkit-overflow-scrolling: auto !important; /* ✅ disable momentum scroll for JS updates */
-    touch-action: none !important;
+    -webkit-overflow-scrolling: touch !important;
+    touch-action: pan-x !important;
   }
 }
 
