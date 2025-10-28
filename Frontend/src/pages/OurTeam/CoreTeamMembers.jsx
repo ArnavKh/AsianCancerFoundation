@@ -12,7 +12,7 @@ const CoreTeamMembers = () => {
     <h2 className="text-4xl font-bold text-black mt-10 pt-15 text-center md:text-left md:pl-15">
         Core Team Members
       </h2>
-      <div className="mt-12 grid grid-cols-2 md:grid-cols-3 justify-items-center space-y-20 gap-x-3">
+      <div className="mt-12 grid grid-cols-2 md:grid-cols-3 justify-items-center space-y-20 gap-x-3 odd-last-center">
         
         <ProfileCard image={Sharmila} name={<>Sharmila Sawant</>} role="Secretary (Operations)"/>
         <ProfileCard image={Ravita} name={<>Ravita Kamble</>} role="Medical Social Worker" />

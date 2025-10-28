@@ -74,3 +74,13 @@
   --font-visby: 'Visby', sans-serif;
 }
 
+@layer utilities {
+  @media (max-width: 767px) {
+    .odd-last-center > :last-child:nth-child(odd) {
+      grid-column: 1 / -1;
+      justify-self: center;
+      width: 100%; /* 🧩 Keep same width as others */
+      max-width: min(100%, 160px); /* Optional: lock it to same card width */
+    }
+  }
+}
