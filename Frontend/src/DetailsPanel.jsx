@@ -19,7 +19,7 @@ export default function DetailsPanel({ setPanelView }) {
   const isPanValid = !optInFor80G || /^[A-Z]{5}[0-9]{4}[A-Z]{1}$/.test(pan);
 
   //  zustand 
-    const {
+  const {
     newamount,
     newcomment,
     newpan,
@@ -36,7 +36,8 @@ export default function DetailsPanel({ setPanelView }) {
     newsetpan,
     newsetDonationType,
     newsetAddress,
-    newsetidentityOption,newidentityOption
+    newsetidentityOption, newidentityOption,
+    newsetOptInFor80G,newoptInFor80G,
   } = useDonationStore();
 
 
@@ -57,18 +58,19 @@ export default function DetailsPanel({ setPanelView }) {
       return;
     }
 
-      const fullName = `${title} ${firstName} ${lastName}`.trim();
+    const fullName = ${title} ${firstName} ${lastName}.trim();
 
-      console.log(`Loacl ---> name : ${fullName} , email : ${email} , mobile :${mobile} identity: ${identityOption}`);
+    console.log(Loacl ---> name : ${fullName} , email : ${email} , mobile :${mobile} identity: ${identityOption});
 
 
-  newsetName(fullName);
-  newsetEmail(email);
-  newsetMobileNumber(mobile);
-  newsetpan(pan);
-  newsetidentityOption(identityOption);
+    newsetName(fullName);
+    newsetEmail(email);
+    newsetMobileNumber(mobile);
+    newsetpan(pan);
+    newsetidentityOption(identityOption);
 
-  console.log(`Zustand ----> name : ${newname} , email : ${newemail} , mobile :${newmobileNumber} identity: ${newidentityOption}`);
+    console.log(Zustand ----> name : ${newname} , email : ${newemail} , mobile :${newmobileNumber} identity: ${newidentityOption});
+    console.log("80G Opt-in:", optInFor80G);
     setPanelView("addressDetails");
   };
 
@@ -77,7 +79,7 @@ export default function DetailsPanel({ setPanelView }) {
       {/* Green dedication bar */}
       <div className="bg-[#DCE6D9] -m-6 mb-4 py-2 rounded-t-[20px] flex items-center justify-center gap-2 shrink-0">
         <span className="font-visby font-semibold text-sm text-black">
-          ❤️ Dedicated to name
+          ❤ Dedicated to name
         </span>
       </div>
 
@@ -97,7 +99,7 @@ export default function DetailsPanel({ setPanelView }) {
 
       {/* Scrollable Content */}
       <form
-      id="donation-form"
+        id="donation-form"
         onSubmit={handleContinue}
         className="flex-1 overflow-y-auto px-2 pb-24" // 👈 add padding bottom so last fields don't hide behind button
       >
@@ -138,9 +140,8 @@ export default function DetailsPanel({ setPanelView }) {
             placeholder="Email address"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className={`border rounded-lg p-3 w-full mb-3 text-sm font-didact ${
-              email && !isEmailValid ? "border-red-500" : ""
-            }`}
+            className={`border rounded-lg p-3 w-full mb-3 text-sm font-didact ${email && !isEmailValid ? "border-red-500" : ""
+              }`}
             required
           />
           <input
@@ -148,9 +149,8 @@ export default function DetailsPanel({ setPanelView }) {
             placeholder="Mobile number"
             value={mobile}
             onChange={(e) => setMobile(e.target.value)}
-            className={`border rounded-lg p-3 w-full mb-3 text-sm font-didact ${
-              mobile && !isMobileValid ? "border-red-500" : ""
-            }`}
+            className={`border rounded-lg p-3 w-full mb-3 text-sm font-didact ${mobile && !isMobileValid ? "border-red-500" : ""
+              }`}
             required
           />
 
@@ -161,9 +161,8 @@ export default function DetailsPanel({ setPanelView }) {
               placeholder="PAN Card Number"
               value={pan}
               onChange={(e) => setPan(e.target.value.toUpperCase())}
-              className={`border rounded-lg p-3 w-full mb-3 text-sm font-didact ${
-                pan && !isPanValid ? "border-red-500" : ""
-              }`}
+              className={`border rounded-lg p-3 w-full mb-3 text-sm font-didact ${pan && !isPanValid ? "border-red-500" : ""
+                }`}
               required
             />
           )}
@@ -216,11 +215,9 @@ export default function DetailsPanel({ setPanelView }) {
               />
               <span className="font-didact">
                 I agree to Terms and{" "}
-                {/* <Link to ="/privacypolicy"> */}
                 <a href="/privacypolicy" className="">
                   Privacy Notice
                 </a>
-                {/* </Link> */}
               </span>
             </label>
 
@@ -232,7 +229,11 @@ export default function DetailsPanel({ setPanelView }) {
                   checked:after:text-[#583490] checked:after:text-[12px] 
                   checked:after:left-[3px] checked:after:top-[-1px]"
                 checked={optInFor80G}
-                onChange={(e) => setOptInFor80G(e.target.checked)}
+                onChange={(e) => {
+                  const checked = e.target.checked;
+                  setOptInFor80G(checked);
+                  newsetOptInFor80G(checked); // ✅ store in Zustand
+                }}
               />
               <span className="font-didact">
                 Opt in to receive the 80G Certificate
@@ -248,10 +249,9 @@ export default function DetailsPanel({ setPanelView }) {
           form="donation-form"
           disabled={!isFormValid}
           className={`w-full py-3 rounded-lg font-visby font-semibold text-black
-            ${
-              isFormValid
-                ? "bg-[#EDE2FF]"
-                : "bg-[#EDE2FF] cursor-not-allowed"
+            ${isFormValid
+              ? "bg-[#EDE2FF]"
+              : "bg-[#EDE2FF] cursor-not-allowed"
             }`}
         >
           Continue
