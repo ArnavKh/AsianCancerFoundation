@@ -58,9 +58,9 @@ export default function DetailsPanel({ setPanelView }) {
       return;
     }
 
-    const fullName = ${title} ${firstName} ${lastName}.trim();
-  
-    console.log(Loacl ---> name : ${fullName} , email : ${email} , mobile :${mobile} identity: ${identityOption});
+    const fullName = `${title} ${firstName} ${lastName}`.trim();
+
+    console.log(`Loacl ---> name : ${fullName} , email : ${email} , mobile :${mobile} identity: ${identityOption}`);
 
 
     newsetName(fullName);
@@ -69,7 +69,7 @@ export default function DetailsPanel({ setPanelView }) {
     newsetpan(pan);
     newsetidentityOption(identityOption);
 
-    console.log(Zustand ----> name : ${newname} , email : ${newemail} , mobile :${newmobileNumber} identity: ${newidentityOption});
+    console.log(`Zustand ----> name : ${newname} , email : ${newemail} , mobile :${newmobileNumber} identity: ${newidentityOption}`);
     console.log("80G Opt-in:", optInFor80G);
     setPanelView("addressDetails");
   };
@@ -79,7 +79,7 @@ export default function DetailsPanel({ setPanelView }) {
       {/* Green dedication bar */}
       <div className="bg-[#DCE6D9] -m-6 mb-4 py-2 rounded-t-[20px] flex items-center justify-center gap-2 shrink-0">
         <span className="font-visby font-semibold text-sm text-black">
-          ❤ Dedicated to name
+          ❤️ Dedicated to name
         </span>
       </div>
 
