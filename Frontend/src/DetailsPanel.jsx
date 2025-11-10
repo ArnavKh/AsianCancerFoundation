@@ -59,7 +59,7 @@ export default function DetailsPanel({ setPanelView }) {
     }
 
     const fullName = ${title} ${firstName} ${lastName}.trim();
-
+  
     console.log(Loacl ---> name : ${fullName} , email : ${email} , mobile :${mobile} identity: ${identityOption});
 
 
