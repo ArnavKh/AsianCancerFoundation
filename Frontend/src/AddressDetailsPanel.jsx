@@ -1,44 +1,213 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { ArrowLeft } from "lucide-react";
-import indianCities from "../src/data/indianCities.json";
+import { useDonationStore } from "./store/useDonationStore.js";
 
 export default function AddressDetailsPanel({ setPanelView }) {
-  const [formData, setFormData] = useState({
-    street: "",
-    apartment: "",
-    city: "",
-    state: "",
-    zip: "",
-    country: "",
-  });
+  const [street, setStreet] = useState("");
+  const [apartment, setApartment] = useState("");
+  const [city, setCity] = useState("");
+  const [state, setState] = useState("");
+  const [zip, setZip] = useState("");
+  const [country, setCountry] = useState("India");
 
-  // Handle input changes
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
-  };
+  const {
+    newamount,
+    newaddress,
+    newcomment,
+    newpan,
+    newname,
+    newemail,
+    newmobileNumber,
+    newdonationType,
+    newdonationFeature,
+    newsetAddress,
+    resetDonationData
+  } = useDonationStore();
 
-  // Auto-fill logic: Detect Indian cities and fill state + country
-  useEffect(() => {
-    const cityInput = formData.city.trim().toLowerCase();
+  // ✅ Load Razorpay SDK
+  const loadRazorpay = () =>
+    new Promise((resolve) => {
+      if (window.Razorpay) {
+        resolve(true);
+        return;
+      }
+      const script = document.createElement("script");
+      script.src = "https://checkout.razorpay.com/v1/checkout.js";
+      script.onload = () => resolve(true);
+      script.onerror = () => resolve(false);
+      document.body.appendChild(script);
+    });
 
-    if (!cityInput) return;
+  // ✅ Handle Payment Flow (only INR)
+  const handleClick = async () => {
 
-    const matchedCity = indianCities.find(
-      (item) => item.city.toLowerCase() === cityInput
-    );
 
-    if (matchedCity) {
-      setFormData((prev) => ({
-        ...prev,
-        state: matchedCity.state,
-        country: "India",
-      }));
+
+    try {
+      const fullAddress = `${street}, ${apartment}, ${city}, ${state}, ${zip}, ${country}`;
+      newsetAddress(fullAddress);
+
+      //  Sample sending data to backend before payment
+
+      // await fetch(`${import.meta.env.VITE_SERVER}/api/user/add-donation`, {
+      //   method: "POST",
+      //   headers: { "Content-Type": "application/json" },
+      //   body: JSON.stringify({
+      //     name: newname,
+      //     email: newemail,
+      //     mobileNumber: newmobileNumber,
+      //     address: fullAddress,
+      //     donationType: newdonationType,
+      //     donationFeature: newdonationFeature || "",
+      //     comment: newcomment || "",
+      //   }),
+      // });
+
+      // await fetch(`${import.meta.env.VITE_SERVER}/api/email/thank-you`, {
+      //   method: "POST",
+      //   headers: { "Content-Type": "application/json" },
+      //   body: JSON.stringify({ email: newemail }),
+      // });
+
+
+      const donorDetails = {
+        name: newname,
+        email: newemail,
+        contact: newmobileNumber,
+        address: fullAddress,
+        pan: newpan,
+        comment: newcomment,
+      };
+
+      // Load Razorpay
+      const sdkLoaded = await loadRazorpay();
+      if (!sdkLoaded) {
+        alert("Razorpay SDK failed to load.");
+        return;
+      }
+
+      let checkoutData = {};
+
+      if (newdonationType === "once") {
+        // 🔹 One-time donation (INR)
+        const res = await fetch(`${import.meta.env.VITE_SERVER}/api/payment/order/inr`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ amount: newamount }),
+        });
+        if (!res.ok) throw new Error("Failed to create order");
+        const data = await res.json();
+        checkoutData = { order_id: data.order.id, amount: data.order.amount, currency: "INR" };
+      } else {
+        // 🔹 Monthly donation (INR subscription)
+        const planRes = await fetch(`${import.meta.env.VITE_SERVER}/api/payment/plan/inr`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ amount: newamount }),
+        });
+        if (!planRes.ok) throw new Error("Failed to create plan");
+        const planData = await planRes.json();
+
+        const subRes = await fetch(`${import.meta.env.VITE_SERVER}/api/payment/subscription/inr`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ plan_id: planData.plan.id, total_count: 12 }),
+        });
+        if (!subRes.ok) throw new Error("Failed to create subscription");
+        const subData = await subRes.json();
+
+        checkoutData = { subscription_id: subData.subscription.id, amount: newamount * 100, currency: "INR" };
+      }
+
+      // ✅ Razorpay Checkout
+      const options = {
+        key: import.meta.env.VITE_RAZORPAY_KEY_ID_INR,
+        currency: "INR",
+        amount: checkoutData.amount,
+        name: "ACF",
+        description:
+          newdonationType === "monthly" ? "Monthly Donation Subscription" : "One-time Donation",
+        order_id: checkoutData.order_id || undefined,
+        subscription_id: checkoutData.subscription_id || undefined,
+        prefill: {
+          name: newname,
+          email: newemail,
+          contact: newmobileNumber,
+        },
+        notes: {
+          address: fullAddress,
+          pan: newpan || "",
+          comment: newcomment || "",
+          donationType: newdonationType,
+        },
+        theme: { color: "#6C4AB6" },
+        handler: async function (response) {
+          console.log("Payment response:", response);
+          try {
+            const verifyRes = await fetch(`${import.meta.env.VITE_SERVER}/api/payment/verify`, {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({
+                razorpay_order_id: response.razorpay_order_id,
+                 razorpay_subscription_id: response.razorpay_subscription_id || null,
+                razorpay_payment_id: response.razorpay_payment_id,
+                razorpay_signature: response.razorpay_signature,
+                type: "inr",
+              }),
+            });
+
+            const verifyJson = await verifyRes.json();
+
+            if (verifyJson.success) {
+              // ✅ ADD POST REQUEST HERE AFTER SUCCESSFUL VERIFICATION
+              await fetch(`${import.meta.env.VITE_SERVER}/api/user/add-donation`, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                  name: newname,
+                  email: newemail,
+                  mobileNumber: newmobileNumber,
+                  address: fullAddress,
+                  donationType: newdonationType,
+                  donationFeature: newdonationFeature || "",
+                  comment: newcomment || "",
+                }),
+              });
+
+              //  email sending after 
+              await fetch(`${import.meta.env.VITE_SERVER}/api/email/thank-you`, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ email: newemail }),
+              });
+
+
+              //  clearing all data in context api
+              resetDonationData();
+              alert("🎉 Donation successful! Thank you for your support.");
+              setPanelView("thankYou");
+            } else {
+              alert("⚠️ Payment verification failed. Please contact support.");
+            }
+          } catch (err) {
+            console.error("Payment verification error:", err);
+            alert("⚠️ Payment verification failed. Please contact support.");
+          }
+        },
+      };
+
+      const rzp = new window.Razorpay(options);
+      rzp.on("payment.failed", (response) => {
+        alert("❌ Payment failed. Check console for details.");
+        console.error("Payment failed:", response.error);
+      });
+      rzp.open();
+
+    } catch (error) {
+      console.error("Payment Error:", error);
+      alert("Something went wrong during payment. Check console.");
     }
-  }, [formData.city]);
+  };
 
   return (
     <>
@@ -63,58 +232,55 @@ export default function AddressDetailsPanel({ setPanelView }) {
         <hr className="border-0 h-px bg-gray-300" />
       </div>
 
-      {/* Content */}
+      {/* Address Inputs */}
       <div className="flex-1 overflow-y-auto mt-6">
-        {/* Stacked address block */}
         <div className="mb-6">
           <div className="rounded-[10px] border border-gray-300 overflow-hidden">
             <input
               type="text"
-              name="street"
               placeholder="Street address"
-              value={formData.street}
-              onChange={handleChange}
+              value={street}
+              onChange={(e) => setStreet(e.target.value)}
+              className="w-full p-4 text-sm placeholder-gray-400 outline-none"
+              required
+            />
+            <div className="h-px bg-gray-200" />
+            <input
+              type="text"
+              placeholder="Apartment / suite / floor"
+              value={apartment}
+              onChange={(e) => setApartment(e.target.value)}
               className="w-full p-4 text-sm placeholder-gray-400 outline-none"
             />
             <div className="h-px bg-gray-200" />
             <input
               type="text"
-              name="apartment"
-              placeholder="Apartment / suit / floor"
-              value={formData.apartment}
-              onChange={handleChange}
-              className="w-full p-4 text-sm placeholder-gray-400 outline-none"
-            />
-            <div className="h-px bg-gray-200" />
-            <input
-              type="text"
-              name="city"
               placeholder="Town or City"
-              value={formData.city}
-              onChange={handleChange}
+              value={city}
+              onChange={(e) => setCity(e.target.value)}
               className="w-full p-4 text-sm placeholder-gray-400 outline-none"
+              required
             />
           </div>
         </div>
 
-        {/* State, Zip, Country block */}
+        {/* State, Zip, Country */}
         <div className="mb-6">
           <div className="rounded-[10px] border border-gray-300 overflow-hidden">
             <div className="flex">
               <input
                 type="text"
-                name="state"
                 placeholder="State"
-                value={formData.state}
-                onChange={handleChange}
+                value={state}
+                onChange={(e) => setState(e.target.value)}
                 className="flex-1 p-4 text-sm placeholder-gray-400 outline-none border-r border-gray-200"
+                required
               />
               <input
                 type="text"
-                name="zip"
                 placeholder="Zip code"
-                value={formData.zip}
-                onChange={handleChange}
+                value={zip}
+                onChange={(e) => setZip(e.target.value)}
                 className="w-1/3 p-4 text-sm placeholder-gray-400 outline-none"
               />
             </div>
@@ -122,27 +288,11 @@ export default function AddressDetailsPanel({ setPanelView }) {
             <div className="relative">
               <input
                 type="text"
-                name="country"
                 placeholder="Country"
-                value={formData.country}
-                onChange={handleChange}
-                className="w-full p-4 pr-10 text-sm placeholder-gray-400 outline-none"
+                value={country}
+                disabled
+                className="w-full p-4 pr-10 text-sm placeholder-gray-400 outline-none bg-gray-100"
               />
-              {/* Chevron icon */}
-              <svg
-                className="w-5 h-5 absolute right-3 top-1/2 -translate-y-1/2 text-gray-400"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M19 9l-7 7-7-7"
-                />
-              </svg>
             </div>
           </div>
         </div>
@@ -151,7 +301,7 @@ export default function AddressDetailsPanel({ setPanelView }) {
       {/* Footer */}
       <div className="shrink-0">
         <button
-          onClick={() => console.log("Continue to payment", formData)}
+          onClick={handleClick}
           className="w-full py-3 bg-purple-100 hover:bg-purple-200 rounded-lg font-visby font-semibold text-black"
         >
           Continue
