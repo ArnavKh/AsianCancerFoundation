@@ -11,6 +11,7 @@ export const useDonationStore = create((set) => ({
   newaddress: "",
   newpan:"",
   identityOption:"",
+  newoptInFor80G: false,
 
   // Setter Functions
   newsetAmount: (newamount) => set({ newamount }),
@@ -22,7 +23,7 @@ export const useDonationStore = create((set) => ({
   newsetAddress: (newaddress) => set({ newaddress }),
   newsetpan: (newpan) => set({ newpan }),
   newsetidentityOption: (newidentityOption) => set({ newidentityOption }),
-
+  newsetOptInFor80G: (value) => set({ newoptInFor80G: value }),
   // Optional Reset Function
   resetDonationData: () =>
     set({
