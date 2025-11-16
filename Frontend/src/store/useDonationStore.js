@@ -13,6 +13,9 @@ export const useDonationStore = create((set) => ({
   identityOption:"",
   newoptInFor80G: false,
 
+  //new name field
+  dedicationName: "",
+
   // Setter Functions
   newsetAmount: (newamount) => set({ newamount }),
   newsetComment: (newcomment) => set({ newcomment }),
@@ -24,6 +27,11 @@ export const useDonationStore = create((set) => ({
   newsetpan: (newpan) => set({ newpan }),
   newsetidentityOption: (newidentityOption) => set({ newidentityOption }),
   newsetOptInFor80G: (value) => set({ newoptInFor80G: value }),
+
+  //new setter for name
+  newsetDedicationName: (val) => set({dedicationName: val}),
+
+
   // Optional Reset Function
   resetDonationData: () =>
     set({
@@ -34,5 +42,8 @@ export const useDonationStore = create((set) => ({
       newdonationType: "",
       newaddress: "",
       newcomment:"",
+
+      //new name field
+      dedicationName: "",
     }),
 }));

@@ -5,7 +5,7 @@ import "./OurWorkInAction.css";
 const OurWorkInAction = () => {
   return (
     <div className="bg-[#f8f5f0] min-h-screen py-12 md:pb-55 pb-15">
-      <h1 className="text-center text-4xl font-visby font-semibold text-[#583490] mb-20 mt-10 ">
+      <h1 className="text-3xl md:text-4xl font-bold font-visby text-center text-[#583490] mb-20 mt-10 ">
         Our Work In Action
       </h1>
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 justify-items-center px-25 md:space-y-10 space-y-2">
