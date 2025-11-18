@@ -101,7 +101,7 @@ export default function FlagshipInitiatives() {
 
   return (
     <section className="py-12 bg-[#f9f3ec] pb-15 md:pb-55 px-4">
-      <h2 className="text-center text-3xl sm:text-5xl font-semibold text-[#583490] mb-10 font-visby py-10 pb-20">
+      <h2 className="text-3xl md:text-4xl font-bold font-visby text-center text-[#583490] mb-10 py-10 pb-20">
         Flagship Initiatives
       </h2>
 

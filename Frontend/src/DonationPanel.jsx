@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useDonationStore } from "./store/useDonationStore.js";
 const presetAmounts = ["1000", "2500", "5000", "10000", "12000", "20000"];
 
@@ -13,6 +13,7 @@ export default function DonationPanel({
 }) 
 
 {
+  const [dedicationName, setDedicationName] = useState("");
 
   const {
     newamount,
@@ -29,6 +30,9 @@ export default function DonationPanel({
     newsetMobileNumber,
     newsetDonationType,
     newsetAddress,
+
+    //new field
+    newsetDedicationName,
   } = useDonationStore();
 
   const handleDonateClick = (e) => {
@@ -133,6 +137,21 @@ export default function DonationPanel({
           />
           Dedicate this donation
         </label>
+
+        {/* 👇 NEW – Dedication Name Input */}
+{dedicate && (
+  <input
+    type="text"
+    placeholder="Enter name"
+    className="w-full p-3 border rounded-lg mt-3 font-visby"
+    value={dedicationName}
+    //new name field
+    onChange={(e) => {
+      setDedicationName(e.target.value);          
+      newsetDedicationName(e.target.value);       
+    }}
+  />
+)}
       </div>
 
       {/* Footer */}
