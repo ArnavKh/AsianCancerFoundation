@@ -67,7 +67,7 @@ export default function DonateOverlay({ isOpen, onClose }) {
                 onClose();
               }
             }}
-            className="absolute top-4 right-4 text-black text-lg font-black z-10 hover:opacity-70 transition"
+            className="absolute top-1 right-3 text-black text-lg font-black z-10 hover:opacity-70 transition"
           >
             ✕
           </button>
