@@ -37,7 +37,7 @@ export default function DonateOverlay({ isOpen, onClose }) {
             onClose();
           }
         }}
-        className="fixed top-4 right-4 text-white text-3xl font-black z-50"
+        className="fixed top-4 right-4 text-black text-3xl font-black z-50"
       >
         ✕
       </button>
@@ -108,7 +108,7 @@ export default function DonateOverlay({ isOpen, onClose }) {
           )}
 
           {panelView === "addressDetails" && (
-            <AddressDetailsPanel setPanelView={setPanelView} />
+            <AddressDetailsPanel setPanelView={setPanelView} onClose={onClose}/>
           )}
         </div>
       </div>
