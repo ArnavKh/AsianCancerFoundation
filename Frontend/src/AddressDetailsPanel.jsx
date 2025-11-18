@@ -21,7 +21,8 @@ export default function AddressDetailsPanel({ setPanelView }) {
     newdonationType,
     newdonationFeature,
     newsetAddress,
-    resetDonationData
+    resetDonationData,
+      newoptInFor80G,
   } = useDonationStore();
 
   // ✅ Load Razorpay SDK
@@ -175,11 +176,32 @@ export default function AddressDetailsPanel({ setPanelView }) {
               });
 
               //  email sending after 
-              await fetch(`${import.meta.env.VITE_SERVER}/api/email/thank-you`, {
+               await fetch(`${import.meta.env.VITE_SERVER}/api/email/thank-you`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ email: newemail }),
+                body: JSON.stringify({
+                  name: newname,
+                  phone: newmobileNumber,
+                  email: newemail,
+                  amount: `₹${newamount}`,
+                  date: new Date().toLocaleDateString("en-IN"),
+                  invoiceNo: `INV-${Date.now()}`, // or from backend if you generate there
+                }),
               });
+
+              // 80g certificate sending
+
+              if (newoptInFor80G) {
+                console.log("📩 Sending 80G Certificate to:", newemail);
+                await fetch(`${import.meta.env.VITE_SERVER}/api/email/send-80g`, {
+                  method: "POST",
+                  headers: { "Content-Type": "application/json" },
+                  body: JSON.stringify({
+                    name: newname,
+                    email: newemail,
+                  }),
+                });
+              }
 
 
               //  clearing all data in context api
