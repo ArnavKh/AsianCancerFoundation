@@ -3,11 +3,9 @@ import Somma from "../../assets/Our Team/Consultants/Somaa.svg";
 import Neha from "../../assets/Our Team/Consultants/Neha.png";
 
 const Consultants = () => {
-  // state for each card
   const [isSomaaFlipped, setIsSomaaFlipped] = useState(false);
   const [isNehaFlipped, setIsNehaFlipped] = useState(false);
 
-  // utility to detect small screens
   const isMobile = window.innerWidth < 768;
 
   return (
@@ -16,8 +14,10 @@ const Consultants = () => {
         Consultants
       </h2>
 
-      <div className="mt-12 grid grid-cols-1 md:grid-cols-3 justify-items-center gap-12">
-        {/* SOMAA HEALTH CARD */}
+      {/* ONLY THIS LINE CHANGED – now 2 columns from md+ */}
+      <div className="mt-12 grid grid-cols-1 md:grid-cols-2 justify-items-center gap-12 md:gap-x-20 lg:gap-x-32">
+        
+        {/* SOMAA HEALTH CARD – 100% ORIGINAL */}
         <div
           className="relative w-[264px] h-[300px] rounded-[30px] cursor-pointer group"
           style={{ perspective: "1000px" }}
@@ -71,7 +71,7 @@ const Consultants = () => {
           </div>
         </div>
 
-        {/* DR NEHA D. KAMAT CARD */}
+        {/* DR NEHA D. KAMAT CARD – 100% ORIGINAL */}
         <div
           className="relative w-[264px] h-[300px] rounded-[30px] cursor-pointer group"
           style={{ perspective: "1000px" }}
@@ -122,7 +122,7 @@ const Consultants = () => {
         </div>
       </div>
 
-      {/* custom flip styles */}
+      {/* Your original styles – untouched */}
       <style jsx>{`
         .rotate-y-180 {
           transform: rotateY(180deg);

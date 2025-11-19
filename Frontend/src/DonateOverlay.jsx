@@ -1,9 +1,7 @@
 import { useEffect, useState } from "react";
 import DonateImage from "./assets/DonateOverlay.png";
 import Logo from "./assets/Logo.png";
-import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
-import Notifications from "./assets/Notification.png";
 
 import DonationPanel from "./DonationPanel";
 import OncePanel from "./OncePanel";
@@ -29,22 +27,10 @@ export default function DonateOverlay({ isOpen, onClose }) {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60">
-      <button
-        onClick={() => {
-          if (panelView !== "reminder") {
-            setPanelView("reminder");
-          } else {
-            onClose();
-          }
-        }}
-        className="fixed top-4 right-4 text-black text-3xl font-black z-50"
-      >
-        ✕
-      </button>
-
+      
       <div className="flex flex-col md:flex-row gap-6 relative">
         {/* Left Panel */}
-        <div className="hidden md:flex bg-white rounded-[20px] shadow h-159 w-125 flex-col">
+        <div className="hidden lg:flex bg-white rounded-[20px] shadow h-159 w-125 flex-col">
           <img src={DonateImage} alt="Foundation" className="w-125 rounded-t-[20px]" />
           <div className="p-3">
             <img src={Logo} className="w-40 h-18" alt="Logo" />
@@ -72,6 +58,20 @@ export default function DonateOverlay({ isOpen, onClose }) {
             panelView === "reminder" ? "bg-[#5F6D82] text-white" : "bg-white text-black"
           }`}
         >
+          {/* Close Button – now INSIDE the right panel, top-right */}
+          <button
+            onClick={() => {
+              if (panelView !== "reminder") {
+                setPanelView("reminder");
+              } else {
+                onClose();
+              }
+            }}
+            className="absolute top-1 right-3 text-black text-lg font-black z-10 hover:opacity-70 transition"
+          >
+            ✕
+          </button>
+
           {panelView === "donation" && (
             <DonationPanel
               donationType={donationType}

@@ -16,7 +16,7 @@ const BoardOfAdvisors = () => {
       <h2 className="text-4xl font-bold text-black mt-10 pt-15 text-center md:text-left md:pl-15">
         Board of Advisors
       </h2>
-      <div className="mt-12 grid grid-cols-2 md:grid-cols-3 justify-items-center space-y-20 gap-x-3 odd-last-center">
+      <div className="mt-12 grid grid-cols-2 md:grid-cols-3 justify-items-center space-y-20 gap-x-3">
 
         <ProfileCard image={Anjali} name={<>Dr. Anjali Patil</>} role="Surgical Oncologist"/>
         <ProfileCard image={Hosi} name={<>Dr. Hosi Bhathena</>} role="Plastic Surgeon" />
