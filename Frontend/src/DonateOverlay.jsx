@@ -30,7 +30,7 @@ export default function DonateOverlay({ isOpen, onClose }) {
       
       <div className="flex flex-col md:flex-row gap-6 relative">
         {/* Left Panel */}
-        <div className="hidden md:flex bg-white rounded-[20px] shadow h-159 w-125 flex-col">
+        <div className="hidden lg:flex bg-white rounded-[20px] shadow h-159 w-125 flex-col">
           <img src={DonateImage} alt="Foundation" className="w-125 rounded-t-[20px]" />
           <div className="p-3">
             <img src={Logo} className="w-40 h-18" alt="Logo" />
