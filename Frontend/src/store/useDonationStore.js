@@ -12,7 +12,6 @@ export const useDonationStore = create((set) => ({
   newpan:"",
   identityOption:"",
   newoptInFor80G: false,
-
   //new name field
   dedicationName: "",
 

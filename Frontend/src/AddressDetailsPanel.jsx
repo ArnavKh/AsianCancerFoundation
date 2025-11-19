@@ -26,6 +26,7 @@ export default function AddressDetailsPanel({ setPanelView, onClose }) {
     newsetAddress,
     resetDonationData,
      newoptInFor80G,
+     dedicationName
   } = useDonationStore();
 
   // Handle input
@@ -195,7 +196,24 @@ export default function AddressDetailsPanel({ setPanelView, onClose }) {
               });
 
               //  email sending after 
-              await fetch(`${import.meta.env.VITE_SERVER}/api/email/thank-you`, {
+              if (dedicationName.trim()) {
+                await fetch(`${import.meta.env.VITE_SERVER}/api/email/dedicate-thank-you`, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                  name: newname,
+                  phone: newmobileNumber,
+                  email: newemail,
+                  amount: `₹${newamount}`,
+                  date: new Date().toLocaleDateString("en-IN"),
+                  invoiceNo: `INV-${Date.now()}`, 
+                  dedicateName:dedicationName
+                  // or from backend if you generate there
+                }),
+              });
+                
+              } else {
+                await fetch(`${import.meta.env.VITE_SERVER}/api/email/thank-you`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({
@@ -207,6 +225,7 @@ export default function AddressDetailsPanel({ setPanelView, onClose }) {
                   invoiceNo: `INV-${Date.now()}`, // or from backend if you generate there
                 }),
               });
+              }
 
               // 80g certificate sending
 
