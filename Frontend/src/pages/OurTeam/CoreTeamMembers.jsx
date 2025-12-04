@@ -5,6 +5,7 @@ import Sharmila from "../../assets/Our Team/CoreTeam/Sharmila.png"
 import Jyoti from "../../assets/Our Team/CoreTeam/Jyoti.png"
 import Trupti from "../../assets/Our Team/CoreTeam/Trupti.png"
 import Divyaprakash from "../../assets/Our Team/CoreTeam/Divyaprakash.png"
+import Gandhali from "../../assets/Our Team/CoreTeam/Gandhali.jpeg"
 
 const CoreTeamMembers = () => {
   return (
@@ -19,6 +20,8 @@ const CoreTeamMembers = () => {
         
         <ProfileCard image={Trupti} name={<>Trupti Bagalkar</>} role="Clinical Manager (Clinical)"/>
         <ProfileCard image={Divyaprakash} name={<>Divyaprakash Dubey</>} role="Legal Advisor (Legal)" />
+
+        <ProfileCard image={Gandhali} name={<>Gandhali Wadekar</>} role="MSW" />
         
       </div>
       </div>
