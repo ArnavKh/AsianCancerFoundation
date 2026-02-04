@@ -1,7 +1,7 @@
 
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
-import rhythm_banner from "./assets/rhythm_banner.png";
+import new_pop from "./assets/new_pop.png";
 
 export default function SupportFightPopup() {
   const location = useLocation();
@@ -29,7 +29,7 @@ export default function SupportFightPopup() {
 
         {/* Image placeholder */}
         <img
-          src={rhythm_banner}
+          src={new_pop}
           alt="Support The Fight"
           className="w-full h-full object-contain"
         />
