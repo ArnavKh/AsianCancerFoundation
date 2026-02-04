@@ -27,7 +27,7 @@ function AppContent() {
       <ScrollToTop />
       <SupportFightPopup />
       <Navbar />
-      {!isDonateOpen && <Floater />}
+      {/* {!isDonateOpen && <Floater />} */}
 
       <Routes>
         <Route path="/" element={<Home />} />
