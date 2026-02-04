@@ -17,12 +17,12 @@ export default function SupportFightPopup() {
 
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-black/40 z-50 px-4">
-      <div className="relative bg-white rounded-2xl shadow-lg max-w-[478px] h-[300px] sm:h-[600px] overflow-hidden">
+      <div className="relative bg-white rounded-2xl shadow-lg max-w-[478px] h-[450px] sm:h-[600px] overflow-hidden">
       
         {/* Close button */}
         <button
           onClick={() => setShowPopup(false)}
-          className="absolute top-[-10px] right-[-5px] sm:top-[-7px] sm:right-0 text-3xl font-bold text-black hover:text-gray-600 z-10"
+          className="absolute top-[-8px] right-[-2px] sm:top-[-7px] sm:right-0 text-3xl font-bold text-black hover:text-gray-600 z-10"
         >
           &times;
         </button>
