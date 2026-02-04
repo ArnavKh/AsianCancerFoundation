@@ -22,7 +22,7 @@ export default function SupportFightPopup() {
         {/* Close button */}
         <button
           onClick={() => setShowPopup(false)}
-          className="absolute top-[-8px] right-[-2px] sm:top-[-7px] sm:right-0 text-3xl font-bold text-black hover:text-gray-600 z-10"
+          className="absolute top-[-8px] right-1 sm:top-[-7px] sm:right-0 text-3xl font-bold text-black hover:text-gray-600 z-10"
         >
           &times;
         </button>
