@@ -1,10 +1,11 @@
-
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
+import { useDonate } from "./DonateContext";
 import new_pop from "./assets/new_pop.png";
 
 export default function SupportFightPopup() {
   const location = useLocation();
+  const { setIsDonateOpen } = useDonate();
   const [showPopup, setShowPopup] = useState(false);
 
   useEffect(() => {
@@ -15,26 +16,31 @@ export default function SupportFightPopup() {
 
   if (!showPopup) return null;
 
+  const handleImageClick = () => {
+    setShowPopup(false);
+    setIsDonateOpen(true);
+  };
+
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-black/40 z-50 px-4">
       <div className="relative bg-white rounded-2xl shadow-lg max-w-[478px] h-[450px] sm:h-[600px] overflow-hidden">
-      
+
         {/* Close button */}
         <button
           onClick={() => setShowPopup(false)}
-          className="absolute top-[-8px] right-1 sm:top-[-7px] sm:right-0 text-3xl font-bold text-black hover:text-gray-600 z-10"
+          className="absolute top-[-1px] right-[10px] text-3xl font-bold text-black hover:text-gray-600 z-10"
         >
           &times;
         </button>
 
-        {/* Image placeholder */}
+        {/* Clickable Image */}
         <img
           src={new_pop}
           alt="Support The Fight"
-          className="w-full h-full object-contain"
+          onClick={handleImageClick}
+          className="w-full h-full object-contain cursor-pointer"
         />
       </div>
     </div>
   );
 }
-

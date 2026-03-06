@@ -17,7 +17,7 @@ import PrivacyPolicy from "./pages/PrivacyPolicy/PrivacyPolicy.jsx";
 import DonateOverlay from "./DonateOverlay.jsx";
 import ScrollToTop from "./ScrollToTop.jsx";
 import SupportFightPopup from "./SupportFightPopup.jsx";
-import Floater from "./Floater.jsx";
+// import Floater from "./Floater.jsx";
 
 function AppContent() {
   const { isDonateOpen, setIsDonateOpen } = useDonate();
