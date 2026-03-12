@@ -1,5 +1,5 @@
 import React from "react";
-import BlueImage from "../../assets/Home/Blue.jpg";
+import BlueImage from "../../assets/Home/6.jpeg";
 import HomeHeroImage from "../../assets/Home/HomeHero.JPG";
 import vibgyor from "../../assets/Home/vibgyor.jpeg";
 import MotherSon from "../../assets/Home/Hero.JPG";
@@ -63,7 +63,7 @@ const Hero = () => {
               </div>
             </div>
 
-            <div className="w-55 h-101">
+            <div className="w-70 h-101">
               <img
                 src={BlueImage}
                 alt=""

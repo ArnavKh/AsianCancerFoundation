@@ -16,31 +16,28 @@ const OurWorkInAction = () => {
         <Link to="/workinaction/vibgyor" className="w-full flex justify-center">
           <div className="card card-vibgyor max-w-[560px] w-full">
             <h2 className="text-3xl font-bold font-visby text-black">
-              VIBGYOR<br />Fundraising Concert
+              Walkabout Senior Games Fundraising Event
+
             </h2>
             <p className="text-sm md:mb-4 mb-1 font-didact text-black">
-              Worli, Mumbai
+              Juhu, Mumbai
             </p>
             <p className="font-didact text-sm md:text-lg pt-5 text-black leading-relaxed">
-              VIBGYOR was a unique musical fundraiser for children with cancer,
-              featuring seven music genres inspired by the chakras & musical
-              notes, including classical, devotional, Sufi, ghazals, instrumental
-              & contemporary styles.
+              WalkAbout hosted its Senior Games in Juhu, bringing together 300+ senior HNIs for a sports-focused community day. The event created a platform for the ACF to increase visibility among a highly relevant demographic while raising awareness about cancer care initiatives.
             </p>
           </div>
         </Link>
 
         <Link to="/workinaction/tobaccoawareness" className="w-full flex justify-center">
           <div className="card card-tobacco max-w-[560px] w-full">
-            <h2 className="text-3xl font-bold mb-1 pt-4 font-visby text-black">
-              Tobacco Awareness Session
+            <h2 className="text-3xl font-bold font-visby text-black">
+              Oral Cancer Screening Camp in Sindhudurg
             </h2>
             <p className="text-sm md:mb-4 mb-1 font-didact text-black">
-              Awami School, Bandra West, Mumbai
+              Sindhudurg
             </p>
             <p className="font-didact text-sm md:text-lg pt-5 text-black leading-relaxed">
-              In partnership with the Nargis Dutt Foundation, ACF conducted an
-              engaging tobacco awareness session for 100 students aged 12–16.
+              A community screening initiative addressing high tobacco use and limited access to oncologists in Sindhudurg was conducted with the Nath Pai Foundation (NPF) over 2 days in Devgad & Kudal regions of Sindudurg.
             </p>
           </div>
         </Link>
@@ -48,14 +45,14 @@ const OurWorkInAction = () => {
         <Link to="/workinaction/medicalcamp" className="w-full flex justify-center">
           <div className="card card-medical max-w-[560px] w-full">
             <h2 className="text-3xl font-bold mb-1 pt-4 font-visby text-black">
-              Cancer Screening Camp
+              World Cancer <br /> Day Fundraising Event
+
             </h2>
             <p className="text-sm md:mb-4 mb-1 font-didact text-black">
-              Sindkhedraja, Buldhana District,<br />Maharashtra
+              The Quorum Club
             </p>
             <p className="font-didact text-sm md:text-lg pt-5 text-black leading-relaxed">
-              A free medical camp was held in Sindkhedraja with support from ACF,
-              HCG-Manavata Cancer Centre, Jeevan Amrut Hospital & Aslan Hospital.
+              A conversation and fundraising evening organised around World Cancer Day by the Asian Cancer Foundation in partnership with the Shyamal Music Foundation at The Quorum Club.
             </p>
           </div>
         </Link>
@@ -63,14 +60,13 @@ const OurWorkInAction = () => {
         <Link to="/workinaction/mobilescreening" className="w-full flex justify-center">
           <div className="card card-mobile max-w-[560px] w-full">
             <h2 className="text-3xl font-bold mb-1 pt-4 font-visby text-black">
-              Mobile Screening Camps
+              Breast Cancer Awareness Campaign
             </h2>
             <p className="text-sm md:mb-4 mb-1 font-didact text-black">
-              Sindkhedraja, Buldhana District,<br />Maharashtra
+              
             </p>
             <p className="font-didact text-sm md:text-lg pt-5 text-black leading-relaxed">
-              The initiative offered screenings for oral, breast & cervical cancer,
-              along with tobacco de-addiction counselling.
+              The breast cancer awareness campaign was launched in collaboration with The Souled Store during Breast Cancer Awareness Month (October 2025).
             </p>
           </div>
         </Link>

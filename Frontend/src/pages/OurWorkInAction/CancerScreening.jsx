@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { CircleChevronLeft } from "lucide-react";
-import CancerScreeningImage from "../../assets/CancerScreening/cancerScreening.jpg";
-import Tobacco from "../../assets/CancerScreening/Tobacco.png";
-import VIBGYOR from "../../assets/CancerScreening/VIBGYOR.png";
-import Mobile from "../../assets/MobileScreening/MobileScreening.jpg";
+import CancerScreeningImage from "../../assets/CancerScreening/3.jpg";
+import Tobacco from "../../assets/CancerScreening/2.jpeg";
+import VIBGYOR from "../../assets/CancerScreening/1.jpeg";
+import Mobile from "../../assets/MobileScreening/9.jpeg";
 
 const CancerScreening = () => {
   return (
@@ -21,7 +21,7 @@ const CancerScreening = () => {
           </Link>
 
           <h1 className="text-2xl md:text-3xl font-bold font-visby text-purple-900 text-center">
-            Cancer Screening Camps
+            World Cancer Day Fundraising Event
           </h1>
         </div>
 
@@ -43,18 +43,19 @@ const CancerScreening = () => {
         <div className="mx-auto bg-[rgba(125,165,134,0.31)] rounded-[30px] grid grid-cols-2 text-center py-4 my-10">
           <div className="border-r border-gray-400">
             <p className="md:text-3xl font-bold font-visby text-[#7DA586]">
-              47
+              ₹35,000+ 
             </p>
             <p className="md:text-xl font-didact text-gray-800">
-              Beneficiaries
+              Raised
             </p>
           </div>
           <div>
             <p className="md:text-3xl font-bold font-visby text-[#7DA586]">
-              16th
+              5th
+
             </p>
             <p className="md:text-xl font-didact text-gray-800">
-              December 2022
+               February 2026
             </p>
           </div>
         </div>
@@ -63,22 +64,21 @@ const CancerScreening = () => {
         <div className="mx-auto pb-10 text-gray-800">
           <p className="text-base md:text-2xl mb-2 font-didact">
             <span className="font-bold font-visby">Highlight - </span>
-            Screenings: Pap smears, Oral biopsies, GI OGD scopy, Mammography
+             Increased brand visibility for ACF both in-person and digitally for fundraising. 
           </p>
           <p className="text-base md:text-2xl md:mb-15 mb-5 font-didact">
             <span className="font-bold font-visby">Key Partner - </span>
-            Hazrat Gaus A Azam Dastagir Baba Bahuddeshiya Sanstha
+            Shyamala Music Foundation
+
           </p>
 
           <p className="text-base md:text-2xl mb-4 font-didact">
-            A free medical camp was held in Sindkhedraja with the support from
-            ACF, HCG-Manavata Cancer Centre, Jeevan Amrut Hospital, & Aslan
-            Hospital.
+            A conversation and fundraising evening organised around World Cancer Day by the Asian Cancer Foundation in partnership with the Shyamal Music Foundation at The Quorum Club.
+
           </p>
           <p className="text-base md:text-2xl font-didact">
-            The ACF team conducted cancer screenings & consultations, focusing
-            on oral, breast, & cervical cancer. Follow-up testing was advised in
-            several cases.
+            The event featured a talk by oncologist and director of ACF, Padma Shri Dr Ramakant Deshpande, on lifestyle-related cancer risks, followed by an exclusive classical fusion performance by Aditya Kalyanpur and his team.
+
           </p>
         </div>
 
@@ -107,11 +107,7 @@ const CancerScreening = () => {
                 </div>
                 <div className="flex-1 flex items-center justify-center p-4">
                   <h2 className="text-purple-900 text-center text-3xl font-visby font-semibold leading-snug">
-                    Tobacco
-                    <br />
-                    Awareness
-                    <br />
-                    Session
+                    Oral Cancer Screening Camp in Sindhudurg
                   </h2>
                 </div>
               </div>
@@ -129,11 +125,7 @@ const CancerScreening = () => {
                 </div>
                 <div className="flex-1 flex items-center justify-center p-4">
                   <h2 className="text-purple-900 text-center text-3xl font-visby font-semibold leading-snug">
-                    VIBGYOR
-                    <br />
-                    Fundraising
-                    <br />
-                    Concert
+                    Walkabout Senior Games Fundraising Event
                   </h2>
                 </div>
               </div>
@@ -151,9 +143,7 @@ const CancerScreening = () => {
                 </div>
                 <div className="flex-1 flex items-center justify-center p-4">
                   <h2 className="text-purple-900 text-center text-3xl font-visby font-semibold">
-                    Mobile Screening
-                    <br />
-                    Camps
+                    Breast Cancer Awareness Campaign
                   </h2>
                 </div>
               </div>

@@ -1,10 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { CircleChevronLeft } from "lucide-react";
-import Tobacco from "../../assets/VIBGYOR/Tobacco.png";
-import Cancer from "../../assets/VIBGYOR/Cancer.png";
-import VIBGYORImage from "../../assets/VIBGYOR/VIBGYOR2.png";
-import Mobile from "../../assets/MobileScreening/MobileScreening.jpg";
+import Tobacco from "../../assets/VIBGYOR/2.jpeg";
+import Cancer from "../../assets/VIBGYOR/3.jpg";
+import VIBGYORImage from "../../assets/VIBGYOR/1.jpeg";
+import Mobile from "../../assets/MobileScreening/9.jpeg";
+
+
 
 const VIBGYOR = () => {
   return (
@@ -19,7 +21,7 @@ const VIBGYOR = () => {
         </Link>
 
         <h1 className="text-2xl md:text-3xl font-bold font-visby text-purple-900 text-center">
-             VIBGYOR Fundraising Concert
+             Walkabout Senior Games Fundraising Event
            </h1>
       </div>
 
@@ -37,12 +39,12 @@ const VIBGYOR = () => {
       {/* Beneficiaries & Date */}
       <div className="mx-auto bg-[rgba(125,165,134,0.31)] rounded-[30px] grid grid-cols-2 text-center py-4 my-10">
         <div className="border-r border-gray-400">
-          <p className="md:text-3xl font-bold font-visby text-[#7DA586]">900</p>
+          <p className="md:text-3xl font-bold font-visby text-[#7DA586]">300+ HNIs</p>
           <p className="md:text-xl font-didact text-gray-800">Attendees</p>
         </div>
         <div>
-          <p className="md:text-3xl font-bold font-visby text-[#7DA586]">5th</p>
-          <p className="md:text-xl font-didact text-gray-800">November 2022</p>
+          <p className="md:text-3xl font-bold font-visby text-[#7DA586]">20th</p>
+          <p className="md:text-xl font-didact text-gray-800">December 2025</p>
         </div>
       </div>
 
@@ -50,18 +52,17 @@ const VIBGYOR = () => {
       <div className="mx-auto pb-10 text-gray-800">
            <p className="text-base md:text-2xl mb-2 font-didact">
              <span className="font-bold font visby">Highlight - </span>
-             Fundraising for paedatric cancer care through musical performances & community engagement
+             Community engagement and fundraising event connecting active seniors with cancer awareness initiatives.
            </p>
            <p className="text-base md:text-2xl md:mb-15 mb-5 font-didact">
              <span className="font-bold font-visby">Key Partner - </span>
-             C-Kids
+             WalkAbout
            </p>
   
            <p className="text-base md:text-2xl mb-4 font-didact">
-             VIBGYOR was a unique musical fundraiser for children with cancer, featuring seven music genres inspired by the chakras & musical notes, including classical, devotional, Sufi, ghazals, instrumental & cotemporary styles.
-           </p>
+              WalkAbout hosted its Senior Games in Juhu, bringing together 300+ senior HNIs for a sports-focused community day. The event created a platform for the ACF to increase visibility among a highly relevant demographic while raising awareness about cancer care initiatives.           </p>
            <p className="text-base md:text-2xl font-didact">
-             Proceeds supported the C-Kids program that provides care for underprivileged children undergoing cancer treatment.
+              The event strengthened ACF’s brand presence, enabled meaningful on-ground engagement with seniors, and generated donations through interactive participation and merchandise sales.
            </p>
          </div>
 
@@ -90,9 +91,7 @@ const VIBGYOR = () => {
         </div>
         <div className="flex-1 flex items-center justify-center p-4">
           <h2 className="text-purple-900 text-center text-3xl font-visby font-semibold">
-            Cancer Screening
-            <br />
-            Camp
+            World<br /> Cancer Day Fundraising Event
           </h2>
         </div>
       </div>
@@ -110,9 +109,7 @@ const VIBGYOR = () => {
         </div>
         <div className="flex-1 flex items-center justify-center p-4">
           <h2 className="text-purple-900 text-center text-3xl font-visby font-semibold">
-            Mobile Screening
-            <br />
-            Camps
+            Breast Cancer Awareness Campaign
           </h2>
         </div>
       </div>
@@ -130,11 +127,8 @@ const VIBGYOR = () => {
         </div>
         <div className="flex-1 flex items-center justify-center p-4">
           <h2 className="text-purple-900 text-center text-3xl font-visby font-semibold leading-snug">
-            Tobacco
-            <br />
-            Awareness
-            <br />
-            Session
+            Oral Cancer Screening Camp in Sindhudurg
+
           </h2>
         </div>
       </div>
@@ -148,4 +142,5 @@ const VIBGYOR = () => {
 };
 
 export default VIBGYOR;
+
 

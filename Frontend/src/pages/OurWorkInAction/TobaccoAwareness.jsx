@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { CircleChevronLeft } from "lucide-react";
-import Tobacco from "../../assets/Tobacco/Tobacco.png";
-import Cancer from "../../assets/Tobacco/Cancer.png";
-import VIBGYOR from "../../assets/Tobacco/VIBGYOR.png";
-import Mobile from "../../assets/MobileScreening/MobileScreening.jpg";
+import Tobacco from "../../assets/Tobacco/2.jpeg";
+import Cancer from "../../assets/Tobacco/3.jpg";
+import VIBGYOR from "../../assets/Tobacco/1.jpeg";
+import Mobile from "../../assets/MobileScreening/9.jpeg";
 
 const TobaccoAwareness = () => {
   return (
@@ -20,7 +20,7 @@ const TobaccoAwareness = () => {
           </Link>
 
           <h1 className="text-2xl md:text-3xl font-bold font-visby text-purple-900 text-center">
-            Tobacco Awareness Session
+            Oral Cancer Screening Camp in Sindhudurg
           </h1>
         </div>
 
@@ -42,17 +42,19 @@ const TobaccoAwareness = () => {
         <div className="mx-auto bg-[rgba(125,165,134,0.31)] rounded-[30px] grid grid-cols-2 text-center py-4 my-10">
           <div className="border-r border-gray-400">
             <p className="md:text-3xl font-bold font-visby text-[#7DA586]">
-              100+
+              150
             </p>
             <p className="md:text-xl font-didact text-gray-800">
-              Beneficiaries
+              Screened
             </p>
           </div>
           <div>
             <p className="md:text-3xl font-bold font-visby text-[#7DA586]">
-              11th
+              31st - 1st
             </p>
-            <p className="md:text-xl font-didact text-gray-800">January 2023</p>
+            <p className="md:text-xl font-didact text-gray-800"> January February 2026
+</p>
+            
           </div>
         </div>
 
@@ -60,22 +62,19 @@ const TobaccoAwareness = () => {
         <div className="mx-auto pb-10 text-gray-800">
           <p className="text-base md:text-2xl mb-2 font-didact">
             <span className="font-bold font-visby">Highlight - </span>
-            Preventive awareness on tobacco consumption
+            150 individuals screened for oral cancer in underserved regions.
           </p>
           <p className="text-base md:text-2xl md:mb-15 mb-5 font-didact">
             <span className="font-bold font-visby">Key Partner - </span>
-            Nargis Dutt Foundation
+            Nath Pai Foundation
           </p>
 
           <p className="text-base md:text-2xl mb-4 font-didact">
-            In partnership with the Nargis Dutt Foundation, ACF conducted an
-            engaging tobacco awareness session for 100 students aged 12–16.
+            A community screening initiative addressing high tobacco use and limited access to oncologists in Sindhudurg was conducted with the Nath Pai Foundation (NPF) over 2 days in Devgad & Kudal regions of Sindudurg.
           </p>
           <p className="text-base md:text-2xl font-didact">
-            Led by Dr. Shravan Shetty & supported by teams from both
-            organisations, the session highlighted the broader health risks of
-            tobacco use beyond cancer, using real-life examples & relatable
-            insights.
+            The initiative mobilised oncologists, enabled community outreach through the local network, and increased awareness through coordinated communication and social media.
+
           </p>
         </div>
 
@@ -103,9 +102,7 @@ const TobaccoAwareness = () => {
                 </div>
                 <div className="flex-1 flex items-center justify-center p-4">
                   <h2 className="text-purple-900 text-center text-3xl font-visby font-semibold">
-                    Cancer Screening
-                    <br />
-                    Camp
+                    World <br />Cancer Day Fundraising Event
                   </h2>
                 </div>
               </div>
@@ -123,11 +120,8 @@ const TobaccoAwareness = () => {
                 </div>
                 <div className="flex-1 flex items-center justify-center p-4">
                   <h2 className="text-purple-900 text-center text-3xl font-visby font-semibold leading-snug">
-                    VIBGYOR
-                    <br />
-                    Fundraising
-                    <br />
-                    Concert
+                    
+                    Walkabout <br />Senior Games Fundraising Event
                   </h2>
                 </div>
               </div>
@@ -145,9 +139,7 @@ const TobaccoAwareness = () => {
                 </div>
                 <div className="flex-1 flex items-center justify-center p-4">
                   <h2 className="text-purple-900 text-center text-3xl font-visby font-semibold">
-                    Mobile Screening
-                    <br />
-                    Camps
+                    Breast Cancer Awareness Campaign
                   </h2>
                 </div>
               </div>

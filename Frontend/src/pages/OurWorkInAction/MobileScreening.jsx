@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { CircleChevronLeft } from "lucide-react";
-import MobileScreeningImage from "../../assets/MobileScreening/MobileScreening.jpg";
-import Tobacco from "../../assets/MobileScreening/Tobacco.png";
-import Cancer from "../../assets/MobileScreening/Cancer.png";
-import VIBGYOR from "../../assets/MobileScreening/VIBGYOR.png";
+import MobileScreeningImage from "../../assets/MobileScreening/9.jpeg";
+import Tobacco from "../../assets/MobileScreening/2.jpeg";
+import Cancer from "../../assets/MobileScreening/3.jpg";
+import VIBGYOR from "../../assets/MobileScreening/1.jpeg";
 
 const MobileScreening = () => {
   return (
@@ -21,7 +21,7 @@ const MobileScreening = () => {
           </Link>
 
           <h1 className="text-2xl md:text-3xl font-bold font-visby text-purple-900 text-center">
-            Mobile Screening Camps
+            Breast Cancer Awareness Campaign
           </h1>
         </div>
 
@@ -35,7 +35,7 @@ const MobileScreening = () => {
           <img
             src={MobileScreeningImage}
             alt="Mobile cancer screening camp"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover object-top"
           />
         </div>
 
@@ -51,9 +51,9 @@ const MobileScreening = () => {
           </div>
           <div>
             <p className="md:text-3xl font-bold font-visby text-[#7DA586]">
-              March–July
+              October
             </p>
-            <p className="md:text-xl font-didact text-gray-800">2023</p>
+            <p className="md:text-xl font-didact text-gray-800"> 2025</p>
           </div>
         </div>
 
@@ -61,8 +61,7 @@ const MobileScreening = () => {
         <div className="mx-auto pb-10 text-gray-800">
           <p className="text-base md:text-2xl mb-2 font-didact">
             <span className="font-bold font-visby">Highlight – </span>
-            Early detection & community awareness focusing on oral, breast &
-            cervical cancer in high-risk communities.
+             increased brand visibility for ACF while promoting breast cancer awareness.
           </p>
 
           <p className="text-base md:text-2xl md:mb-15 mb-5 font-didact">
@@ -71,21 +70,14 @@ const MobileScreening = () => {
             Dastagir Sanstha & others
           </p>
 
-          <p className="text-base md:text-2xl md:mb-15 mb-5 font-didact">
-            <span className="font-bold font-visby">Location – </span>
-            Mankhurd, Vikhroli, Kandivali, Tardeo, Gamdevi, Cumballa Hill
-          </p>
+          
 
           <p className="text-base md:text-2xl mb-4 font-didact">
-            In collaboration with Child Line, Interaide Development India, Kurla
-            Lions & local NGOs, ACF conducted camps across community sites such
-            as police quarters, hospitals & civic offices, using its medical
-            van.
+            The breast cancer awareness campaign was launched in collaboration with The Souled Store during Breast Cancer Awareness Month (October 2025). The initiative featured themed T-shirts sold on The Souled Store’s website, using creative merchandise to promote cancer awareness.
           </p>
 
           <p className="text-base md:text-2xl font-didact">
-            The initiative offered screening for oral, breast & cervical cancer,
-            along with tobacco de-addiction counselling.
+             The proceeds from T-shirt sales will support the Asian Cancer Foundation's work in cancer care and awareness.
           </p>
         </div>
 
@@ -113,9 +105,8 @@ const MobileScreening = () => {
                 </div>
                 <div className="flex-1 flex items-center justify-center p-4">
                   <h2 className="text-purple-900 text-center text-3xl font-visby font-semibold">
-                    Cancer Screening
-                    <br />
-                    Camp
+                    World,<br /> Cancer Day Fundraising Event
+
                   </h2>
                 </div>
               </div>
@@ -133,11 +124,8 @@ const MobileScreening = () => {
                 </div>
                 <div className="flex-1 flex items-center justify-center p-4">
                   <h2 className="text-purple-900 text-center text-3xl font-visby font-semibold leading-snug">
-                    VIBGYOR
-                    <br />
-                    Fundraising
-                    <br />
-                    Concert
+                    Walkabout Senior Games Fundraising Event
+
                   </h2>
                 </div>
               </div>
@@ -155,11 +143,7 @@ const MobileScreening = () => {
                 </div>
                 <div className="flex-1 flex items-center justify-center p-4">
                   <h2 className="text-purple-900 text-center text-3xl font-visby font-semibold">
-                    Tobacco
-                    <br />
-                    Awareness
-                    <br />
-                    Session
+                    Oral Cancer Screening Camp in Sindhudurg
                   </h2>
                 </div>
               </div>
