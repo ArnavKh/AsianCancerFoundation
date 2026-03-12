@@ -4,7 +4,7 @@ import CountUp from "react-countup";
 import TopLeft from "../../assets/Our-Impact/Topleft.png";
 import TopRight from "../../assets/Our-Impact/TopRight.png";
 import Middle from "../../assets/Our-Impact/Middle.png";
-import BottomLeft from "../../assets/Our-Impact/BottomLeft.jpeg";
+import BottomLeft from "../../assets/Our-Impact/Bottomleft.jpeg";
 import BottomMiddle from "../../assets/Our-Impact/MiddleBottom.png";
 import BottomRight from "../../assets/Our-Impact/bottomRight.png";
 
