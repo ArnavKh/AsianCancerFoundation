@@ -1,12 +1,12 @@
 import { useState, useRef, useEffect } from "react";
 import CountUp from "react-countup";
 
-import TopLeft from "../../assets/Our Impact/Topleft.png";
-import TopRight from "../../assets/Our Impact/TopRight.png";
-import Middle from "../../assets/Our Impact/Middle.png";
-import BottomLeft from "../../assets/Our Impact/BottomLeft.jpeg";
-import BottomMiddle from "../../assets/Our Impact/MiddleBottom.png";
-import BottomRight from "../../assets/Our Impact/bottomRight.png";
+import TopLeft from "../../assets/Our-Impact/Topleft.png";
+import TopRight from "../../assets/Our-Impact/TopRight.png";
+import Middle from "../../assets/Our-Impact/Middle.png";
+import BottomLeft from "../../assets/Our-Impact/BottomLeft.jpeg";
+import BottomMiddle from "../../assets/Our-Impact/MiddleBottom.png";
+import BottomRight from "../../assets/Our-Impact/bottomRight.png";
 
 export default function OurImpact() {
   const [triggered, setTriggered] = useState({
