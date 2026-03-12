@@ -134,7 +134,7 @@ const TobaccoAwareness = () => {
                   <img
                     src={Mobile}
                     alt="Mobile Screening Camps"
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
                 <div className="flex-1 flex items-center justify-center p-4">

@@ -86,7 +86,7 @@ const VIBGYOR = () => {
           <img
             src={Cancer}
             alt="Tobacco Awareness Session"
-            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+            className="w-full h-full object-cover  group-hover:scale-105 transition-transform duration-300"
           />
         </div>
         <div className="flex-1 flex items-center justify-center p-4">
@@ -104,7 +104,7 @@ const VIBGYOR = () => {
           <img
             src={Mobile}
             alt="VIBGYOR Fundraising Concert"
-            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+            className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300"
           />
         </div>
         <div className="flex-1 flex items-center justify-center p-4">
