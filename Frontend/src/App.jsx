@@ -13,6 +13,10 @@ import ContactUs from "./pages/ContactUs/ContactUs.jsx";
 import TobaccoAwareness from "./pages/OurWorkInAction/TobaccoAwareness.jsx";
 import VIBGYOR from "./pages/OurWorkInAction/VIBGYOR.jsx";
 import MobileScreening from "./pages/OurWorkInAction/MobileScreening.jsx";
+import Walkabout from "./pages/OurWorkInAction/walkabout";
+import OralCancer from "./pages/OurWorkInAction/oralcancer";
+import WorldCancerDay from "./pages/OurWorkInAction/worldcancerday";
+import BreastCancer from "./pages/OurWorkInAction/breastcancer";
 import PrivacyPolicy from "./pages/PrivacyPolicy/PrivacyPolicy.jsx";
 import DonateOverlay from "./DonateOverlay.jsx";
 import ScrollToTop from "./ScrollToTop.jsx";
@@ -38,6 +42,10 @@ function AppContent() {
         <Route path="/workinaction/tobaccoawareness" element={<TobaccoAwareness />} />
         <Route path="/workinaction/medicalcamp" element={<CancerScreening />} />
         <Route path="/workinaction/mobilescreening" element={<MobileScreening />} />
+        <Route path="/workinaction/walkabout" element={<Walkabout />} />
+        <Route path="/workinaction/oralcancer" element={<OralCancer />} />
+        <Route path="/workinaction/worldcancerday" element={<WorldCancerDay />} />
+        <Route path="/workinaction/breastcancer" element={<BreastCancer />} />
         <Route path="/flagshipninit" element={<FlagshipInitiatives />} />
         <Route path="/support" element={<Support />} />
         <Route path="/contactus" element={<ContactUs />} />
