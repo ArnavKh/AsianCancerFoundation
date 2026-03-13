@@ -122,7 +122,7 @@ const Walkabout = () => {
             </Link>
 
             {/* Card 2 */}
-            <Link to="/workinaction/breastcancerawareness" className="group">
+            <Link to="/workinaction/breastcancer" className="group">
               <div className="bg-white rounded-[30px] shadow-md hover:shadow-lg transition flex flex-col md:h-104 max-w-[331px] h-[350px] w-[300px]">
                 <div className="h-1/2 w-full overflow-hidden rounded-t-[30px]">
                   <img
@@ -141,7 +141,7 @@ const Walkabout = () => {
             </Link>
 
             {/* Card 3 */}
-            <Link to="/workinaction/oralcancerscreening" className="group">
+            <Link to="/workinaction/oralcancer" className="group">
               <div className="bg-white rounded-[30px] shadow-md hover:shadow-lg transition flex flex-col md:h-104 max-w-[331px] h-[350px] w-[300px]">
                 <div className="h-1/2 w-full overflow-hidden rounded-t-[30px]">
                   <img
