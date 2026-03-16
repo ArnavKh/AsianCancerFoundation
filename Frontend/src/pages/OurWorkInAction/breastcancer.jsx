@@ -39,10 +39,10 @@ const BreastCancer = () => {
         <div className="mx-auto bg-[rgba(125,165,134,0.31)] rounded-[30px] grid grid-cols-2 text-center py-4 my-10">
           <div className="border-r border-gray-400">
             <p className="md:text-3xl font-bold font-visby text-[#7DA586]">
-              405
+              1st
             </p>
             <p className="md:text-xl font-didact text-gray-800">
-              Beneficiaries
+              social media awareness campaign
             </p>
           </div>
 
@@ -66,8 +66,8 @@ const BreastCancer = () => {
 
           <p className="text-base md:text-2xl md:mb-15 mb-5 font-didact">
             <span className="font-bold font-visby">Key Partner – </span>
-            Mankhurd Lok Seva NGO, Niramay Foundation, Hazrat Gaus A Azam
-            Dastagir Sanstha & others
+            The Souled Store
+
           </p>
 
           <p className="text-base md:text-2xl mb-4 font-didact">

@@ -66,7 +66,7 @@ const WorldCancerDay = () => {
 
           <p className="text-base md:text-2xl md:mb-15 mb-5 font-didact">
             <span className="font-bold font-visby">Key Partner - </span>
-            Shyamala Music Foundation
+            Shyamal Music Foundation
           </p>
 
           <p className="text-base md:text-2xl mb-4 font-didact">

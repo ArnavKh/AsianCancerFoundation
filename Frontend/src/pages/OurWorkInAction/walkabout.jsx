@@ -42,7 +42,7 @@ const Walkabout = () => {
         <div className="mx-auto bg-[rgba(125,165,134,0.31)] rounded-[30px] grid grid-cols-2 text-center py-4 my-10">
           <div className="border-r border-gray-400">
             <p className="md:text-3xl font-bold font-visby text-[#7DA586]">
-              300+ HNIs
+              300+
             </p>
             <p className="md:text-xl font-didact text-gray-800">
               Attendees

@@ -75,7 +75,7 @@ const OralCancer = () => {
           <p className="text-base md:text-2xl mb-4 font-didact">
             A community screening initiative addressing high tobacco use and
             limited access to oncologists in Sindhudurg was conducted with the
-            Nath Pai Foundation (NPF) over 2 days in Devgad & Kudal regions of
+            Nath Pai Foundation over 2 days in Devgad & Kudal regions of
             Sindhudurg.
           </p>
 
