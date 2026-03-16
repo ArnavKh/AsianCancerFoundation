@@ -43,7 +43,7 @@ const OurWorkInAction = () => {
             <p className="font-didact text-sm md:text-lg pt-5 text-black">
               A community screening initiative addressing high tobacco use
               and limited access to oncologists in Sindhudurg was conducted
-              with the Nath Pai Foundation (NPF) over 2 days in Devgad &
+              with the Nath Pai Foundation over 2 days in Devgad &
               Kudal regions of Sindhudurg.
             </p>
           </div>
