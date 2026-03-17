@@ -10,20 +10,23 @@ const TobaccoAwareness = () => {
   return (
     <div className="bg-[#f8f5f0] min-h-screen pt-6 pb-6 px-4 sm:px-6 md:px-0">
 
-      {/* Header */}
+      
       <div className="relative mb-6 mt-6 max-w-[1080px] mx-auto">
-
+      
+        {/* Back Button */}
         <Link
           to="/workinaction"
-          className="absolute left-2 sm:left-0 top-1/2 -translate-y-1/2"
+          className="absolute sm:left-0 top-1/2 -translate-y-1/2 z-10"
         >
           <CircleChevronLeft className="w-8 h-8 sm:w-10 sm:h-10" />
         </Link>
-
-        <h1 className="text-xl sm:text-2xl md:text-3xl font-bold font-visby text-purple-900 text-center">
-          Tobacco Awareness Session
+      
+        {/* Heading */}
+        <h1 className="text-xl sm:text-2xl md:text-3xl font-bold font-visby text-purple-900 text-center px-10 sm:px-12 md:px-0">
+         Tobacco Awareness Session
         </h1>
-      </div>
+      
+      </div> 
 
       {/* Top image */}
       <div className="mx-auto rounded-[30px] overflow-hidden mb-6 
