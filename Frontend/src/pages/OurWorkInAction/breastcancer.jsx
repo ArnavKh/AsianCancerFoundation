@@ -9,25 +9,32 @@ import Walkabout from "../../assets/MobileScreening/1.jpeg";
 
 const BreastCancer = () => {
   return (
-    <div className="bg-[#f8f5f0] min-h-screen py-8 px-4 md:px-0 mx-auto">
-      <div className="w-[70%] mx-auto">
+    <div className="bg-[#f8f5f0] min-h-screen pt-6 pb-6 px-4 sm:px-6 md:px-0">
+      
+      <div className="w-full max-w-[1080px] mx-auto">
 
-        {/* Header */}
-        <div className="relative mb-6 mt-8 max-w-[1080px] mx-auto px-4 md:px-0">
-          <Link
-            to="/workinaction"
-            className="absolute left-0 top-1/2 -translate-y-1/2"
-          >
-            <CircleChevronLeft className="absolute left-[-7rem] top-1/3 -translate-y-1/2 w-10 h-10" />
-          </Link>
 
-          <h1 className="text-2xl md:text-3xl font-bold font-visby text-purple-900 text-center">
-            Breast Cancer Awareness Campaign
-          </h1>
-        </div>
+<div className="relative mb-6 mt-6 max-w-[1080px] mx-auto">
+
+  {/* Back Button */}
+  <Link
+    to="/workinaction"
+    className="absolute sm:left-0 top-1/2 -translate-y-1/2 z-10"
+  >
+    <CircleChevronLeft className="w-8 h-8 sm:w-10 sm:h-10" />
+  </Link>
+
+  {/* Heading */}
+  <h1 className="text-xl sm:text-2xl md:text-3xl font-bold font-visby text-purple-900 text-center px-10 sm:px-12 md:px-0">
+   Breast Cancer Awareness Campaign
+  </h1>
+
+</div>        
 
         {/* Top image */}
-        <div className="mx-auto rounded-[30px] overflow-hidden mb-6 w-[390px] max-w-full md:w-270 md:h-88 h-[280px]">
+        <div className="mx-auto rounded-[30px] overflow-hidden mb-6 
+          w-full h-[220px] sm:h-[260px] md:h-[350px] lg:h-[380px]"
+        >
           <img
             src={BreastCancerImage}
             alt="Breast cancer awareness campaign"
@@ -36,41 +43,42 @@ const BreastCancer = () => {
         </div>
 
         {/* Stats */}
-        <div className="mx-auto bg-[rgba(125,165,134,0.31)] rounded-[30px] grid grid-cols-2 text-center py-4 my-10">
+        <div className="mx-auto bg-[rgba(125,165,134,0.31)] rounded-[30px] 
+          grid grid-cols-2 text-center py-4 my-8 sm:my-10"
+        >
           <div className="border-r border-gray-400">
-            <p className="md:text-3xl font-bold font-visby text-[#7DA586]">
+            <p className="text-xl sm:text-2xl md:text-3xl font-bold font-visby text-[#7DA586]">
               1st
             </p>
-            <p className="md:text-xl font-didact text-gray-800">
+            <p className="text-sm sm:text-base md:text-xl font-didact text-gray-800">
               social media awareness campaign
             </p>
           </div>
 
           <div>
-            <p className="md:text-3xl font-bold font-visby text-[#7DA586]">
+            <p className="text-xl sm:text-2xl md:text-3xl font-bold font-visby text-[#7DA586]">
               October
             </p>
-            <p className="md:text-xl font-didact text-gray-800">
+            <p className="text-sm sm:text-base md:text-xl font-didact text-gray-800">
               2025
             </p>
           </div>
         </div>
 
         {/* Content */}
-        <div className="mx-auto pb-10 text-gray-800">
+        <div className="pb-8 sm:pb-10 text-gray-800 px-1 sm:px-0">
 
-          <p className="text-base md:text-2xl mb-2 font-didact">
+          <p className="text-base sm:text-lg md:text-2xl mb-2 font-didact">
             <span className="font-bold font-visby">Highlight – </span>
             Increased brand visibility for ACF while promoting breast cancer awareness.
           </p>
 
-          <p className="text-base md:text-2xl md:mb-15 mb-5 font-didact">
+          <p className="text-base sm:text-lg md:text-2xl mb-4 sm:mb-8 md:mb-12 font-didact">
             <span className="font-bold font-visby">Key Partner – </span>
             The Souled Store
-
           </p>
 
-          <p className="text-base md:text-2xl mb-4 font-didact">
+          <p className="text-base sm:text-lg md:text-2xl mb-4 font-didact">
             The breast cancer awareness campaign was launched in collaboration
             with The Souled Store during Breast Cancer Awareness Month
             (October 2025). The initiative featured themed T-shirts sold on
@@ -78,7 +86,7 @@ const BreastCancer = () => {
             cancer awareness.
           </p>
 
-          <p className="text-base md:text-2xl font-didact">
+          <p className="text-base sm:text-lg md:text-2xl font-didact">
             The proceeds from T-shirt sales will support the Asian Cancer
             Foundation's work in cancer care and awareness.
           </p>
@@ -89,19 +97,15 @@ const BreastCancer = () => {
         <div className="w-full flex justify-center mt-8 mb-10 px-2">
           <div
             className="
-              grid
-              gap-8
-              justify-items-center
-              grid-cols-[repeat(auto-fit,minmax(300px,1fr))]
-              w-full
-              max-w-[1200px]
+              grid gap-6 sm:gap-8
+              grid-cols-1 sm:grid-cols-2 md:grid-cols-3
+              w-full max-w-[1080px]
             "
           >
 
             {/* Card 1 */}
             <Link to="/workinaction/worldcancerday" className="group">
-              <div className="bg-white rounded-[30px] shadow-md hover:shadow-lg transition flex flex-col md:h-104 h-[350px] w-[300px] max-w-[331px]">
-
+              <div className="bg-white rounded-[30px] shadow-md hover:shadow-lg transition flex flex-col h-[320px] sm:h-[340px] md:h-[380px]">
                 <div className="h-1/2 w-full overflow-hidden rounded-t-[30px]">
                   <img
                     src={Cancer}
@@ -111,18 +115,16 @@ const BreastCancer = () => {
                 </div>
 
                 <div className="flex-1 flex items-center justify-center p-4">
-                  <h2 className="text-purple-900 text-center text-3xl font-visby font-semibold">
+                  <h2 className="text-purple-900 text-center text-xl sm:text-2xl md:text-3xl font-visby font-semibold">
                     World <br /> Cancer Day Fundraising Event
                   </h2>
                 </div>
-
               </div>
             </Link>
 
             {/* Card 2 */}
             <Link to="/workinaction/walkabout" className="group">
-              <div className="bg-white rounded-[30px] shadow-md hover:shadow-lg transition flex flex-col md:h-104 h-[350px] w-[300px] max-w-[331px]">
-
+              <div className="bg-white rounded-[30px] shadow-md hover:shadow-lg transition flex flex-col h-[320px] sm:h-[340px] md:h-[380px]">
                 <div className="h-1/2 w-full overflow-hidden rounded-t-[30px]">
                   <img
                     src={Walkabout}
@@ -132,18 +134,16 @@ const BreastCancer = () => {
                 </div>
 
                 <div className="flex-1 flex items-center justify-center p-4">
-                  <h2 className="text-purple-900 text-center text-3xl font-visby font-semibold leading-snug">
+                  <h2 className="text-purple-900 text-center text-xl sm:text-2xl md:text-3xl font-visby font-semibold leading-snug">
                     Walkabout Senior Games Fundraising Event
                   </h2>
                 </div>
-
               </div>
             </Link>
 
             {/* Card 3 */}
             <Link to="/workinaction/oralcancer" className="group">
-              <div className="bg-white rounded-[30px] shadow-md hover:shadow-lg transition flex flex-col md:h-104 h-[350px] w-[300px] max-w-[331px]">
-
+              <div className="bg-white rounded-[30px] shadow-md hover:shadow-lg transition flex flex-col h-[320px] sm:h-[340px] md:h-[380px]">
                 <div className="h-1/2 w-full overflow-hidden rounded-t-[30px]">
                   <img
                     src={Tobacco}
@@ -153,11 +153,10 @@ const BreastCancer = () => {
                 </div>
 
                 <div className="flex-1 flex items-center justify-center p-4">
-                  <h2 className="text-purple-900 text-center text-3xl font-visby font-semibold">
+                  <h2 className="text-purple-900 text-center text-xl sm:text-2xl md:text-3xl font-visby font-semibold">
                     Oral Cancer Screening Camp in Sindhudurg
                   </h2>
                 </div>
-
               </div>
             </Link>
 
