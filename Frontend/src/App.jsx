@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Analytics } from "@vercel/analytics/react";
 import { DonateProvider, useDonate } from "./DonateContext";
 import OurTeam from "./pages/OurTeam/OurTeam.jsx";
 import Navbar from "./Navbar";
@@ -62,6 +63,7 @@ export default function App() {
   return (
     <DonateProvider>
       <AppContent />
+      <Analytics />
     </DonateProvider>
   );
 }
