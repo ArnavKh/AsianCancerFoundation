@@ -104,7 +104,7 @@ export default function OurImpact() {
               className="bg-[#EF8B67] rounded-[30px] text-center pt-12 lg:pt-16 pb-10 px-6 text-4xl md:text-4xl lg:text-4xl font-visby font-bold leading-none"
             >
               <h1>
-                {isMobile ? "100" : triggered.c2 ? <CountUp end={100} duration={2} /> : "0"}+
+                {isMobile ? "50" : triggered.c2 ? <CountUp end={50} duration={2} /> : "0"}+
               </h1>
               <p className="mt-6 text-2xl lg:text-3xl xl:text-4xl leading-tight">
                 Life-saving<br className="lg:hidden" /> surgeries<br className="lg:hidden" /> funded
